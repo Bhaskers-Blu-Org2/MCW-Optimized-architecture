@@ -1,11 +1,11 @@
 ﻿# HTML Files for Workshop
-[Hands-on lab step-by-step - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Hands-on%20lab%20step-by-step%20-%20Optimized%20architecture.html)
+[WDS student guide - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Whiteboard%20design%20session/WDS%20student%20guide%20-%20Optimized%20architecture.html)
 
-[Hands-on lab unguided - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Hands-on%20lab%20unguided%20-%20Optimized%20architecture.html)
+[WDS trainer guide - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Optimized%20architecture.html)
 
-[Setup.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Setup.html)
+[Before the lab - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Hands-on%20lab/Before%20the%20lab%20-%20Optimized%20architecture.html)
 
-[Whiteboard design session student guide - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Whiteboard%20design%20session%20student%20guide%20-%20Optimized%20architecture.html)
+[HOL step-by-step - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Hands-on%20lab/HOL%20step-by-step%20-%20Optimized%20architecture.html)
 
-[Whiteboard design session trainer guide - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Whiteboard%20design%20session%20trainer%20guide%20-%20Optimized%20architecture.html)
+[HOL unguided - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Hands-on%20lab/HOL%20unguided%20-%20Optimized%20architecture.html)
 

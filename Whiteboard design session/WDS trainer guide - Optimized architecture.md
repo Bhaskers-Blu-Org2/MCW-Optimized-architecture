@@ -198,23 +198,11 @@ ask again. You will usually get a response.
 
 ## Abstract and learning objectives 
 
-In this workshop, you will learn how to optimize a lift and shift style
-IaaS architecture in Azure to improve cost savings. You will also
-compare IaaS and PaaS hosting options to save cost even further using
-Azure App Service. Additionally, students will learn to improve
-resiliency and high availability through multi-region deployment.
 
-Attendees will learn how to:
+In this whiteboard design session, you will review how to size and optimize a migrated workload to Azure infrastructure as a service. From there, you will consider the cost and benefit of optimizing the solution using Azure Platform as a Service (PaaS) services and then design and price the optimized solution.
 
--   Optimize Azure IaaS for cost savings
+At the end of this whiteboard design session, you will be better able to design and plan for optimizing Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
 
--   Migrate an Azure IaaS optimized
-
--   Compare cost between Azure IaaS versus Azure PaaS
-
--   Setup SQL Database geo-replication
-
--   Configure multi-region deployment
 
 
 ## Step 1: Review the customer case study 

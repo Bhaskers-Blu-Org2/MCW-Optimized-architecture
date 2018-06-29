@@ -133,23 +133,12 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 ## Abstract and learning objectives 
 
-In this workshop, students will learn how to optimize a lift and shift
-style IaaS architecture in Azure to improve cost savings. Students will
-also compare IaaS and PaaS hosting options to save cost even further
-using Azure App Service. Additionally, students will learn to improve
-resiliency and high availability through multi-region deployment.
+In this hands-on lab, you will determine the appropriate hosting tiers for the Contoso Financial application
+and estimate the total cost savings on a monthly and annual basis. Then, you will implement
+and integrate Azure Traffic Manager. You will then migrate the Web, API and Background App Tiers of the application to the Azure App Service. You will then de-commission the old application infrastructure. Then, you will setup geo-replication for the Azure SQL Database in preparation for the next step, which is deploying an European instance of the Web App Tier. Finally, you will add an endpoint for this new Web App Tier to the Azure Traffic Manager.  
 
-Attendees will learn how to:
+At the end of this hands-on lab, you will be better able to implement optimization of Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
 
--   Optimize Azure IaaS for cost savings
-
--   Migrate an Azure IaaS optimized
-
--   Compare cost between Azure IaaS versus Azure PaaS
-
--   Setup SQL Database geo-replication
-
--   Configure multi-region deployment
 
 ## Overview
 
@@ -174,8 +163,7 @@ overall solutions.
 
 ## Solution architecture
 
-![Using Traffic
-Manager](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image2.png "Solution architecture")
+![Using Traffic Manager](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image2.png "Solution architecture")
 
 ## Requirements
 

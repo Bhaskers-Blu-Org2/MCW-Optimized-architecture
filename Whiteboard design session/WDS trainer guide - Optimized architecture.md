@@ -60,59 +60,50 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
         
 # Trainer information
 
-Thank you for taking time to support the whiteboard design sessions as a
-trainer!
+Thank you for taking time to support the whiteboard design sessions as a trainer!
 
 ## Role of the trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place.
+-   Creates a safe environment in which learning can take place
 
--   Stimulates the participant's thinking.
+-   Stimulates the participant's thinking
 
--   Involves the participant in the learning process.
+-   Involves the participant in the learning process
 
 -   Manages the learning process (on time, on topic, and adjusting to
-    benefit participants).
+    benefit participants)
 
--   Ensures individual participant accountability.
+-   Ensures individual participant accountability
 
--   Ties it all together for the participant.
+-   Ties it all together for the participant
 
--   Provides insight and experience to the learning process.
+-   Provides insight and experience to the learning process
 
--   Effectively leads the whiteboard design session discussion.
+-   Effectively leads the whiteboard design session discussion
 
--   Monitors quality and appropriateness of participant deliverables.
+-   Monitors quality and appropriateness of participant deliverables
 
--   Effectively leads the feedback process.
+-   Effectively leads the feedback process
 
 ## Whiteboard design session flow 
 
 Each whiteboard design session uses the following flow:
 
+**Step 1: Review the customer case study (15 minutes)** 
 
-## Step 1: Review the customer case study 
+Outcome: Analyze your customer's needs
 
-**Outcome**
+-   Customer's background, situation, needs and technical requirements
 
-Analyze your customer’s needs.
+-   Current customer infrastructure and architecture
 
-Time frame: 15 minutes 
-
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-
-1.  Meet your table participants and trainer.
-
-2.  Read all the directions for Steps 1--3 in the student guide.
-
-3.  As a table team, review the following customer case study.
-
+-   Potential issues, objectives and blockers
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Prepare to present a solution for your target customer audience
+Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 -   Determine your target customer audience
 
@@ -124,7 +115,7 @@ Outcome: Prepare to present a solution for your target customer audience
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer
+Outcome: Present solution to your customer.
 
 -   Present solution
 
@@ -142,15 +133,15 @@ Before conducting your first whiteboard design session:
 
 -   Read the Student guide (including the case study) and Trainer guide
 
--   Become familiar with all key points and activities.
+-   Become familiar with all key points and activities
 
 -   Plan the point you want to stress, which questions you want to
-    drive, transitions, and be ready to answer questions.
+    drive, transitions, and be ready to answer questions
 
 -   Prior to the whiteboard design session, discuss the case study to
-    pick up more ideas.
+    pick up more ideas
 
--   Make notes for later.
+-   Make notes for later
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -163,7 +154,7 @@ When participants are doing activities, you can **look ahead to refresh
 your memory**.
 
 -   **Adjust activity and whiteboard design session pace** as needed to
-    allow time for presenting, feedback, and sharing.
+    allow time for presenting, feedback, and sharing
 
 -   **Add examples, points, and stories** from your own experience.
     Think about stories you can share that help you make your points
@@ -198,19 +189,18 @@ ask again. You will usually get a response.
 
 ## Abstract and learning objectives 
 
-
 In this whiteboard design session, you will review how to size and optimize a migrated workload to Azure infrastructure as a service. From there, you will consider the cost and benefit of optimizing the solution using Azure Platform as a Service (PaaS) services and then design and price the optimized solution.
 
 At the end of this whiteboard design session, you will be better able to design and plan for optimizing Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
-
-
 
 ## Step 1: Review the customer case study 
 
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
@@ -363,36 +353,34 @@ SQL Server VM. According to Naina, "It gave me the result that our
 database requires about 400 DTUs. I am really not sure what a DTU is,
 but I know Azure SQL Databases use that for billing."
 
-
 ### Customer needs 
 
 1.  Design a two-phase approach to the process of migrating Azure
-    resources towards the goal of optimized spending.
+    resources towards the goal of optimized spending
 
 2.  Fix the SQL Server database hosting to be more robust, reliable, and
-    enterprise-grade.
+    enterprise-grade
 
 3.  Automatic scaling needs to be implemented to reduce the manual
-    process involved.
+    process involved
 
 4.  Identify the appropriate method to use for scaling out the different
-    application tiers to meet increases in load.
+    application tiers to meet increases in load
 
-5.  Identify the appropriate VM sizes for each application tier.
+5.  Identify the appropriate VM sizes for each application tier
 
 6.  Validate the appropriate Azure Regions are used for hosting and
     create a plan to migrate any necessary resources to a different
-    region.
+    region
 
 7.  Identify the PaaS services to use, and the App Service Plans, and
-    create a migration plan.
+    create a migration plan
 
 8.  Identify a strategy to reduce server maintenance as the system is
-    scaled out to meet increased load.
+    scaled out to meet increased load
 
 9.  The migration steps should not require any changes to application
-    code.
-
+    code
 
 ### Customer objections 
 
@@ -418,7 +406,6 @@ but I know Azure SQL Databases use that for billing."
     am worried the savings from optimizing spending using Azure PaaS
     services will not be significant to be worth it.
 
-
 ### Infographic for common scenarios
 
 Azure virtual network with VMs and load balancers
@@ -442,9 +429,10 @@ Instances.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimag
 ## Step 2: Design a proof of concept solution
 
 **Outcome** 
+
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
@@ -453,6 +441,7 @@ Directions: With all participants at your table, answer the following questions 
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
+
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 **Two-phase solution**
@@ -533,16 +522,14 @@ design.
 
 -   Diagram the solution
 
-
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
+1.  Identify any customer needs that are not addressed with the proposed solution
+2.  Identify the benefits of your solution
+3.  Determine how you will respond to the customer’s objections
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
-
-Prepare a 15-minute chalk-talk style presentation to the customer. 
+Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
@@ -550,28 +537,26 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
-
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team.
+7.  Tables switch roles and repeat Steps 2–6
 
 ##  Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
--   Tables reconvene with the larger group to hear a SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Additional references
-
 
 |    |            |
 |----------|:-------------:|
@@ -595,62 +580,54 @@ Time frame: 15 minutes
 | Azure SQL database DTU calculator| <http://dtucalculator.azurewebsites.net/> |
 
 	
-
 # Optimized architecture whiteboard design session trainer guide
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer.
+-   Check in with your table participants to introduce yourself as the trainer
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session.
+-   Briefly review the steps and time frames of the whiteboard design session
 
--   Ready, set, go! Let the table participants begin.
+-   Ready, set, go! Let the table participants begin
 
 ## Step 2: Design a proof of concept solution
 
 -   Check in with your tables to ensure they are transitioning from step
-    to step on time.
+    to step on time
 
 -   Provide some feedback on their responses to the business needs and
-    design.
+    design
 
     -   Try asking questions first that will lead the participants to
-        discover the answers on their own.
+        discover the answers on their own
 
--   Provide feedback for their responses to the customer's objections.
+-   Provide feedback for their responses to the customer's objections
 
     -   Try asking questions first that will lead the participants to
-        discover the answers on their own.
+        discover the answers on their own
 
 ## Step 3: Present the solution
 
 -   Determine which table will be paired with your table before Step 3
-    begins.
+    begins
 
 -   For the first round, assign one table as the Microsoft team and the
-    other table as the customer.
+    other table as the customer
 
--   Have the Microsoft team present their solution to the customer team.
+-   Have the Microsoft team present their solution to the customer team
 
     -   Have the customer team provide one objection for the Microsoft
-        team to respond to.
+        team to respond to
 
-    -   The presentation and objections should be no longer than
-        10-minutes.
+    -   The presentation, objections, and feedback should take no longer than 15 minutes
 
--   Have participants on the customer team give feedback to the
-    Microsoft team.
-
-    -   The feedback should be no longer than 5 minutes.
-
-    -   If needed, the trainer may also provide feedback.
+    -   If needed, the trainer may also provide feedback
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group
-    to hear a SME share the following preferred solution.
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution
 
 ##  Preferred target audience
 
@@ -668,26 +645,26 @@ The Phase 1 design solution involves the following technologies and
 modifications:
 
 -   Implementing VM Scale Sets for the Font-end Web App and Back-end Web
-    API application tiers.
+    API application tiers
 
 -   Resizing the VM Sizes used for each of the application tiers should
     be done to eliminate any over provisioning. Over provisioning wastes
     money by paying for resources that are not necessary.
 
     -   Resize the Front-end Web App Tier VMs to the *Standard F4* VM
-        size.
+        size
 
     -   Resize the Back-end Web API Tier VMs to the *Standard F4* VM
-        size.
+        size
 
     -   Resize the Back-end Processing Tier VMs to the *Standard F2* VM
-        size.
+        size
 
 -   Migrating the SQL Database server to the *North Central US* region
-    (same region the rest of the application resides.)
+    (same region the rest of the application resides)
 
 -   Migrating the SQL Database VM to Azure SQL Database using the
-    *Premium P4* pricing tier.
+    *Premium P4* pricing tier
 
 -   Configure SQL Database Active Geo-Replication for added resiliency
 
@@ -735,9 +712,11 @@ App Service Plans, and SQL Database:
 
 **Database server**
 
-**Task:** Which Azure SQL Database hosting solution would you recommend?
+**Task:** 
+Which Azure SQL Database hosting solution would you recommend?
 
-**Answer:** Azure SQL Database: The existing architecture is relying on
+**Answer:** 
+Azure SQL Database: The existing architecture is relying on
 a single VM to host the SQL Server database server. Implementing Azure
 SQL Database with Active Geo-Replication will deliver predictable
 performance, scalability with no downtime, business continuity, and data
@@ -746,47 +725,56 @@ protection---all with near-zero administration.
 Note: The *Standard GS4* VM size the existing architecture is using in
 the West US region is not available in the *North Central US* region.
 
-**Task:** What is the recommended Azure Region to use for the SQL
+**Task:** 
+What is the recommended Azure Region to use for the SQL
 Database?
 
-**Answer:** North Central US: Transferring data between non-paired Azure
+**Answer:** 
+North Central US: Transferring data between non-paired Azure
 regions incurs Egress/Outbound data transfer charges. Placing the
 database in the same Azure region as the rest of the application will
 eliminate these charges.
 
-**Task:** What is the recommended Azure SQL Database pricing tier?
+**Task:** 
+What is the recommended Azure SQL Database pricing tier?
 
-**Answer:** Premium P4: According to the estimated DTU requirements of
+**Answer:** 
+Premium P4: According to the estimated DTU requirements of
 the SQL Server database server it is the appropriate pricing tier.
 
 **Cost Optimization**
 
-**Task:** What VM scaling solution is recommended?
+**Task:** 
+What VM scaling solution is recommended?
 
-**Answer:** VM Scale Sets: Implementing VM Scale Sets allows for the VMs
+**Answer:** 
+VM Scale Sets: Implementing VM Scale Sets allows for the VMs
 supporting the workloads to be scaled in/out automatically.
 
-**Task:** How do you determine the appropriate VM size for each tier?
+**Task:** 
+How do you determine the appropriate VM size for each tier?
 
-**Answer:** Compare the VM CPU/RAM utilization of the existing
+**Answer:** 
+Compare the VM CPU/RAM utilization of the existing
 architecture VM sizes to the list of available VM sizes within the Azure
 North Central US region and determine which VM sizes better fit the VM
 CPU/RAM utilization.
 
-**Task:** What are the recommended VM size and count to use for each
+**Task:** 
+What are the recommended VM size and count to use for each
 application tier?
 
-**Answer:**\
-Front-end Web App VMs: Standard F4 -- three instances\
-Back-end Web API VMs: Standard F4 -- two instances\
-Back-end Processing VMs: Standard F2 -- two instances\
+**Answer:**
+Front-end Web App VMs: Standard F4 -- three instances
+Back-end Web API VMs: Standard F4 -- two instances
+Back-end Processing VMs: Standard F2 -- two instances
 SQL Server VM: None -- it is migrated to Azure SQL Database service
 
-**Task:** What is the calculated cost and overall savings gained from
+**Task:** 
+What is the calculated cost and overall savings gained from
 this design?
 
 **Answer:**
-
 The total estimated cost of the VMs with Reserved Instances and Azure
 SQL pricing tier is \$2,980 (as opposed to \$3,510 without reserved
 instances). This number does not consider the implementation of VM Scale
@@ -807,11 +795,11 @@ tiers:
 
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
-**Task:** How do these optimizations reduce the total cost of server
+**Task:** 
+How do these optimizations reduce the total cost of server
 maintenance and operation?
 
 **Answer:**
-
 1.  Eliminate overprovisioning: It eliminates the cost of paying for
     extra resources that are not being used.
 
@@ -821,16 +809,18 @@ maintenance and operation?
 
 **Migration**
 
-**Task:** What order or steps would you recommend taking when changing
+**Task:** 
+What order or steps would you recommend taking when changing
 the architecture?
 
-**Answer:** It is recommended to modify the architecture for each of the
+**Answer:** 
+It is recommended to modify the architecture for each of the
 Application Tiers individually to reduce the risk of application
 downtime during the migration process. Here is a sample outline of
 recommended steps:
 
 1.  Migrate SQL Server database from VM into Azure SQL Database within
-    Azure North Central US region
+    Azure North Central US region:
 
     a.  Determine appropriate Azure SQL Database pricing tier
 
@@ -843,7 +833,7 @@ recommended steps:
 2.  Setup geo-replication of the Azure SQL database to another Azure
     region
 
-3.  Migrate Web API tier to use VM Scale Set instead of individual VMs
+3.  Migrate Web API tier to use VM Scale Set instead of individual VMs:
 
     a.  Determine appropriate VM size
 
@@ -853,7 +843,7 @@ recommended steps:
 
     d.  Remove old VMs
 
-4.  Migrate Web App tier to use VM Scale Set instead of individual VMs
+4.  Migrate Web App tier to use VM Scale Set instead of individual VMs:
 
     a.  Determine appropriate VM size
 
@@ -867,33 +857,39 @@ recommended steps:
 
 **Cost optimization**
 
-**Task:** What services would you recommend to further optimize the
+**Task:** 
+What services would you recommend to further optimize the
 solution for lower total cost?
 
-**Answer:** Traffic Manager and App Service (Web Apps and Web Jobs)
+**Answer:** 
+Traffic Manager and App Service (Web Apps and Web Jobs).
 
 **Task:** How do you determine the appropriate App Service Plan to use?
 
-**Answer:** Compare the VM CPU/RAM utilization of the existing
+**Answer:** 
+Compare the VM CPU/RAM utilization of the existing
 architecture VM sizes to the list of App Service Plan tiers within the
 Azure North Central US region and determine which App Service Plan
 better fits the specific Application Tier workload. It also needs to
 consider the Instance Count to factor in the setup of Multiple VMs
 appropriately.
 
-**Task:** What are the recommended App Service Plans to use for each
+**Task:** 
+What are the recommended App Service Plans to use for each
 application tier?
 
-**Answer:\
-**Front-end Web App Tier: Standard S3 w/ three instances\
-Back-end Web API Tier: Standard S3 w/ three instances\
-Back-end Processing Tier: Standard S3 w/ one instance\
-SQL Database: No change from Phase 1 using Azure SQL Database service
+**Answer:**
+-   Front-end Web App Tier: Standard S3 w/ three instances
+-   Back-end Web API Tier: Standard S3 w/ three instances
+-   Back-end Processing Tier: Standard S3 w/ one instance
+-   SQL Database: No change from Phase 1 using Azure SQL Database service
 
-**Task:** What is the calculated cost and overall savings gained from
+**Task:** 
+What is the calculated cost and overall savings gained from
 this design?
 
-**Answer:** The total estimated cost of the App Service Plans and Azure
+**Answer:** 
+The total estimated cost of the App Service Plans and Azure
 SQL pricing tier is \$3,582. This number does not consider the
 implementation of Azure Autoscale, so it is possible the actual cost
 will be somewhat lower. The calculated annual savings moving from the
@@ -910,10 +906,12 @@ tiers:
 
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
-**Task:** How do these optimizations reduce the total cost of server
+**Task:** 
+How do these optimizations reduce the total cost of server
 maintenance and operation?
 
-**Answer:** These are the two factors with this design that reduce the
+**Answer:** 
+These are the two factors with this design that reduce the
 total cost:
 
 1.  Lower Maintenance: With implementing Azure App Service PaaS service
@@ -925,10 +923,12 @@ total cost:
 
 **Scalability**
 
-**Task:** What service should be used to ensure expected application
+**Task:** 
+What service should be used to ensure expected application
 performance is maintained when onboarding Lucerne employees?
 
-**Answer:** Traffic Manager in Geographic mode with additional Web App
+**Answer:** 
+Traffic Manager in Geographic mode with additional Web App
 in a European Azure region: Traffic Manager will ensure that the
 application is served up from the Azure region closest to the user. The
 additional Web App in a European Azure region will also help isolate the
@@ -936,10 +936,12 @@ US and European user workload to different servers.
 
 **Migration**
 
-**Task:** What order or steps would you recommend taking when changing
+**Task:** 
+What order or steps would you recommend taking when changing
 the architecture?
 
-**Answer:** It is recommended to modify the architecture for each of the
+**Answer:** 
+It is recommended to modify the architecture for each of the
 application tiers individually to reduce the risk of application
 downtime during the migration process. Here is a sample outline of
 recommended steps:
@@ -998,14 +1000,13 @@ recommended steps:
 
     d.  Add new region to Traffic Manager
 
-
 ## Checklist of preferred objection handling
 
 1.  Reducing the overall spending on Azure is great, but how will we
     ensure costs remain optimized?
 
-    **Potential answer\
-    **The use of automation through Azure services like Autoscale will
+    **Potential answer**
+    The use of automation through Azure services like Autoscale will
     allow the specific pricing tiers and instance counts to be
     controlled in a manner that is immune to the user errors of manual
     processes. Every time a VM instance is scaled out/in it will be done
@@ -1021,7 +1022,7 @@ recommended steps:
 2.  If we drastically change the overall architecture, will we be able
     to migrate it without taking it down for a week?
 
-     **Potential answer**\
+     **Potential answer**
      Overall downtime can be minimized drastically with careful planning
      and a step-by-step phased approach to the migration. The basic idea is
      to migrate a single component of the workload at a time to minimize
@@ -1032,7 +1033,7 @@ recommended steps:
     PaaS services will be difficult to monitor and maintain when mixed
     with IaaS services in our overall environment.
 
-     **Potential answer**\
+     **Potential answer**
      Certainly, there are things an operations team needs to learn when
      adopting a technology, they are not very familiar with. Fortunately,
      with the Azure PaaS services, such as Azure App Service, there will be
@@ -1044,7 +1045,7 @@ recommended steps:
     will not be as good as it needs to be. In the past we have had
     employees work while traveling and the system was slow for them.
 
-     **Potential answer**\
+     **Potential answer**
      Implementing Traffic Manager in Geographic mode with a separate Web
      App instance located in the North Europe Azure Region allocates
      dedicated resources to handle load from the European users. It also
@@ -1054,7 +1055,7 @@ recommended steps:
 5.  The VM sizes currently used appear to be more than we need, but how
     can we determine what the appropriate sizes should be?
 
-     **Potential answer**\
+     **Potential answer**
      Determining the appropriate VM sizes can be done by comparing the
      current utilization percentages of the VMs in the existing
      architecture to the different VM size pricing tiers. This metric can
@@ -1065,7 +1066,7 @@ recommended steps:
     am worried the savings from optimizing spending using Azure PaaS
     services will not be significant to be worth it.
 
-     **Potential answer**\
+     **Potential answer**
      The reduces monthly spending on Azure services as well as the
      reduced workload on IT Operations staff is not just a one-time
      savings. It is a monthly savings that will be realized over the

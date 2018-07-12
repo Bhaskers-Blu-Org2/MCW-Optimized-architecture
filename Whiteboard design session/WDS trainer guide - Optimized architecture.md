@@ -712,10 +712,12 @@ App Service Plans, and SQL Database:
 
 **Database server**
 
-**Task:** 
+**Task:**
+
 Which Azure SQL Database hosting solution would you recommend?
 
-**Answer:** 
+**Answer:**
+
 Azure SQL Database: The existing architecture is relying on
 a single VM to host the SQL Server database server. Implementing Azure
 SQL Database with Active Geo-Replication will deliver predictable
@@ -726,55 +728,67 @@ Note: The *Standard GS4* VM size the existing architecture is using in
 the West US region is not available in the *North Central US* region.
 
 **Task:** 
+
 What is the recommended Azure Region to use for the SQL
 Database?
 
 **Answer:** 
+
 North Central US: Transferring data between non-paired Azure
 regions incurs Egress/Outbound data transfer charges. Placing the
 database in the same Azure region as the rest of the application will
 eliminate these charges.
 
-**Task:** 
+**Task:**
+
 What is the recommended Azure SQL Database pricing tier?
 
 **Answer:** 
+
 Premium P4: According to the estimated DTU requirements of
 the SQL Server database server it is the appropriate pricing tier.
 
 **Cost Optimization**
 
-**Task:** 
+**Task:**
+
 What VM scaling solution is recommended?
 
-**Answer:** 
+**Answer:**
+
 VM Scale Sets: Implementing VM Scale Sets allows for the VMs
 supporting the workloads to be scaled in/out automatically.
 
 **Task:** 
+
 How do you determine the appropriate VM size for each tier?
 
-**Answer:** 
+**Answer:**
+
 Compare the VM CPU/RAM utilization of the existing
 architecture VM sizes to the list of available VM sizes within the Azure
 North Central US region and determine which VM sizes better fit the VM
 CPU/RAM utilization.
 
 **Task:** 
+
 What are the recommended VM size and count to use for each
 application tier?
 
 **Answer:**
+
 Front-end Web App VMs: Standard F4 -- three instances
 Back-end Web API VMs: Standard F4 -- two instances
 Back-end Processing VMs: Standard F2 -- two instances
 SQL Server VM: None -- it is migrated to Azure SQL Database service
 
-**Task:** 
+**Task:**
+
 What is the calculated cost and overall savings gained from
 this design?
 
 **Answer:**
+
 The total estimated cost of the VMs with Reserved Instances and Azure
 SQL pricing tier is \$2,980 (as opposed to \$3,510 without reserved
 instances). This number does not consider the implementation of VM Scale
@@ -795,11 +809,13 @@ tiers:
 
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
-**Task:** 
+**Task:**
+
 How do these optimizations reduce the total cost of server
 maintenance and operation?
 
 **Answer:**
+
 1.  Eliminate overprovisioning: It eliminates the cost of paying for
     extra resources that are not being used.
 
@@ -809,11 +825,13 @@ maintenance and operation?
 
 **Migration**
 
-**Task:** 
+**Task:**
+
 What order or steps would you recommend taking when changing
 the architecture?
 
-**Answer:** 
+**Answer:**
+
 It is recommended to modify the architecture for each of the
 Application Tiers individually to reduce the risk of application
 downtime during the migration process. Here is a sample outline of
@@ -858,15 +876,20 @@ recommended steps:
 **Cost optimization**
 
 **Task:** 
+
 What services would you recommend to further optimize the
 solution for lower total cost?
 
-**Answer:** 
+**Answer:**
+
 Traffic Manager and App Service (Web Apps and Web Jobs).
 
-**Task:** How do you determine the appropriate App Service Plan to use?
+**Task:** 
+
+How do you determine the appropriate App Service Plan to use?
 
 **Answer:** 
+
 Compare the VM CPU/RAM utilization of the existing
 architecture VM sizes to the list of App Service Plan tiers within the
 Azure North Central US region and determine which App Service Plan
@@ -875,20 +898,24 @@ consider the Instance Count to factor in the setup of Multiple VMs
 appropriately.
 
 **Task:** 
+
 What are the recommended App Service Plans to use for each
 application tier?
 
 **Answer:**
+
 -   Front-end Web App Tier: Standard S3 w/ three instances
 -   Back-end Web API Tier: Standard S3 w/ three instances
 -   Back-end Processing Tier: Standard S3 w/ one instance
 -   SQL Database: No change from Phase 1 using Azure SQL Database service
 
 **Task:** 
+
 What is the calculated cost and overall savings gained from
 this design?
 
 **Answer:** 
+
 The total estimated cost of the App Service Plans and Azure
 SQL pricing tier is \$3,582. This number does not consider the
 implementation of Azure Autoscale, so it is possible the actual cost
@@ -907,10 +934,12 @@ tiers:
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
 **Task:** 
+
 How do these optimizations reduce the total cost of server
 maintenance and operation?
 
 **Answer:** 
+
 These are the two factors with this design that reduce the
 total cost:
 
@@ -924,10 +953,12 @@ total cost:
 **Scalability**
 
 **Task:** 
+
 What service should be used to ensure expected application
 performance is maintained when onboarding Lucerne employees?
 
 **Answer:** 
+
 Traffic Manager in Geographic mode with additional Web App
 in a European Azure region: Traffic Manager will ensure that the
 application is served up from the Azure region closest to the user. The
@@ -937,10 +968,12 @@ US and European user workload to different servers.
 **Migration**
 
 **Task:** 
+
 What order or steps would you recommend taking when changing
 the architecture?
 
 **Answer:** 
+
 It is recommended to modify the architecture for each of the
 application tiers individually to reduce the risk of application
 downtime during the migration process. Here is a sample outline of

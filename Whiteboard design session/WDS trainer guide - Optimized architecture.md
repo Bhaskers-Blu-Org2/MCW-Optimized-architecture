@@ -1008,7 +1008,7 @@ recommended steps:
 1.  Reducing the overall spending on Azure is great, but how will we
     ensure costs remain optimized?
 
-    **Potential answer**
+    **Potential answer: **
     The use of automation through Azure services like Autoscale will
     allow the specific pricing tiers and instance counts to be
     controlled in a manner that is immune to the user errors of manual
@@ -1025,7 +1025,7 @@ recommended steps:
 2.  If we drastically change the overall architecture, will we be able
     to migrate it without taking it down for a week?
 
-     **Potential answer**
+     **Potential answer: **
      Overall downtime can be minimized drastically with careful planning
      and a step-by-step phased approach to the migration. The basic idea is
      to migrate a single component of the workload at a time to minimize
@@ -1036,7 +1036,7 @@ recommended steps:
     PaaS services will be difficult to monitor and maintain when mixed
     with IaaS services in our overall environment.
 
-     **Potential answer**
+     **Potential answer: **
      Certainly, there are things an operations team needs to learn when
      adopting a technology, they are not very familiar with. Fortunately,
      with the Azure PaaS services, such as Azure App Service, there will be
@@ -1048,7 +1048,7 @@ recommended steps:
     will not be as good as it needs to be. In the past we have had
     employees work while traveling and the system was slow for them.
 
-     **Potential answer**
+     **Potential answer: **
      Implementing Traffic Manager in Geographic mode with a separate Web
      App instance located in the North Europe Azure Region allocates
      dedicated resources to handle load from the European users. It also
@@ -1058,7 +1058,7 @@ recommended steps:
 5.  The VM sizes currently used appear to be more than we need, but how
     can we determine what the appropriate sizes should be?
 
-     **Potential answer**
+     **Potential answer: **
      Determining the appropriate VM sizes can be done by comparing the
      current utilization percentages of the VMs in the existing
      architecture to the different VM size pricing tiers. This metric can
@@ -1069,7 +1069,7 @@ recommended steps:
     am worried the savings from optimizing spending using Azure PaaS
     services will not be significant to be worth it.
 
-     **Potential answer**
+     **Potential answer: **
      The reduces monthly spending on Azure services as well as the
      reduced workload on IT Operations staff is not just a one-time
      savings. It is a monthly savings that will be realized over the

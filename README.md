@@ -1,4 +1,5 @@
-# Optimized Architecture
+# Optimized architecture
+
 Contoso has recently completed a migration to shift most its enterprise
 data center footprint to the cloud. "The cloud is the future, and as
 such, it is essential for us to proactively adopt the cloud before our
@@ -35,14 +36,14 @@ At the end of this workshop, you will be better able to design, plan and impleme
 -   Configure multi-region deployment
 
 
-### Whiteboard Design Session
+### Whiteboard design session
 
 In this whiteboard design session, you will review how to size and optimize a migrated workload to Azure infrastructure as a service. From there, you will consider the cost and benefit of optimizing the solution using Azure Platform as a Service (PaaS) services and then design and price the optimized solution.
 
 At the end of this whiteboard design session, you will be better able to design and plan for optimizing Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
 
 
-### Hand-on Lab
+### Hands-on lab
 
 In this hands-on lab, you will determine the appropriate hosting tiers for the Contoso Financial application
 and estimate the total cost savings on a monthly and annual basis. Then, you will implement
@@ -51,7 +52,7 @@ and integrate Azure Traffic Manager. You will then migrate the Web, API and Back
 At the end of this hands-on lab, you will be better able to implement optimization of Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
 
 
-### Azure services and related products
+## Azure services and related products
 - App Service
 - Web Apps
 - API Apps
@@ -59,4 +60,8 @@ At the end of this hands-on lab, you will be better able to implement optimizati
 - Load Balancer 
 - SQL Database
 
+## Azure solutions
+TBD
 
+## Related references
+- [MCW](https://github.com/Microsoft/MCW)

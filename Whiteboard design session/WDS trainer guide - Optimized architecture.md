@@ -713,11 +713,9 @@ App Service Plans, and SQL Database:
 **Database server**
 
 **Task:**
-
 Which Azure SQL Database hosting solution would you recommend?
 
 **Answer:**
-
 Azure SQL Database: The existing architecture is relying on
 a single VM to host the SQL Server database server. Implementing Azure
 SQL Database with Active Geo-Replication will deliver predictable
@@ -728,12 +726,10 @@ Note: The *Standard GS4* VM size the existing architecture is using in
 the West US region is not available in the *North Central US* region.
 
 **Task:** 
-
 What is the recommended Azure Region to use for the SQL
 Database?
 
 **Answer:** 
-
 North Central US: Transferring data between non-paired Azure
 regions incurs Egress/Outbound data transfer charges. Placing the
 database in the same Azure region as the rest of the application will

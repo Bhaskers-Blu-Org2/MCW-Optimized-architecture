@@ -9,9 +9,8 @@ Hands-on lab unguided
 </div>
 
 <div class="MCWHeader3">
-March 2018 
+June 2018 
 </div>
-
 
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -28,7 +27,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- TOC -->
 
-- [Optimized Architecture hands-on lab unguided](#optimized-architecture-hands-on-lab-unguided)
+- [Optimized architecture hands-on lab unguided](#optimized-architecture-hands-on-lab-unguided)
 - [Abstract and learning objectives](#abstract-and-learning-objectives)
 - [Overview](#overview)
 - [Solution architecture](#solution-architecture)
@@ -129,7 +128,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
-## Optimized Architecture hands-on lab unguided
+## Optimized architecture hands-on lab unguided
 
 ## Abstract and learning objectives 
 
@@ -238,73 +237,72 @@ the exercises in this lab.
 
 #### Tasks to complete
 
--   Calculate the estimated hosting cost of the existing architecture.
+-   Calculate the estimated hosting cost of the existing architecture
 
     -   Factor in the Virtual Machine instances and SQL Database of the
-        Existing Architecture.
+        Existing Architecture
 
 #### Exit criteria
 
 -   Have an estimate of the total estimated Azure cost to hosting the
-    sample application in the Existing Architecture.
+    sample application in the Existing Architecture
 
 ### Task 2: Calculate Estimated Hosting Cost of VMs with Reserved Instances
 
 #### Tasks to complete
 
 -   Calculate the estimated hosting cost of the existing architecture
-    using Reserved Instances.
+    using Reserved Instances
 
     -   Factor in the Virtual Machine instances and SQL Database of the
-        Existing Architecture using Reserved Instances.
+        Existing Architecture using Reserved Instances
 
 #### Exit criteria
 
 -   Have an estimate of the total estimated Azure cost to hosting the
     sample application in the Existing Architecture using Reserved
-    Instances.
+    Instances
 
 ### Task 3: Estimate Necessary App Service Tiers
 
 #### Tasks to complete
 
 -   Estimate the necessary Azure App Service Plan for hosting the sample
-    application in Azure PaaS services.
+    application in Azure PaaS services
 
-    -   Factor in the App Service Plans / instances and SQL Database.
+    -   Factor in the App Service Plans / instances and SQL Database
 
 #### Exit criteria
 
 -   Determine the appropriate App Service Plan pricing tier necessary to
     host the application while maintaining the ability to handle
-    existing application load.
+    existing application load
 
 ### Task 4: Calculate Estimated Hosting Cost of Azure App Service
 
 #### Tasks to complete
 
 -   Calculate the estimated hosting cost of the sample application using
-    Azure App Service.
+    Azure App Service
 
 #### Exit criteria
 
 -   Have an estimate of the total estimated Azure cost to hosting the
-    sample application using Azure App Service.
+    sample application using Azure App Service
 
 ### Task 5: Calculate Estimated Cost Savings
 
 #### Tasks to complete
 
 -   Calculate the total estimated cost savings between the existing IaaS
-    architecture and migrating to Azure App Service.
+    architecture and migrating to Azure App Service
 
 #### Exit criteria
 
 -   Determine both the Monthly and Annual cost savings comparing the
     cost of both the Existing Architecture and the new Azure App Service
-    architecture.
-
-
+    architecture
+    
 
 ## Exercise 2: Integrate Traffic Manager
 
@@ -327,26 +325,25 @@ Europe.
 #### Tasks to complete
 
 -   Setup Traffic Manager to point to the Front-end Web App tier of the
-    sample application.
+    sample application
 
 #### Exit criteria
 
 -   A Traffic Manager has been created in the Azure Subscription within
-    the North Central US region.
+    the North Central US region
 
 ### Task 2: Point Traffic Manager to External / Internet Load Balancer
 
 #### Tasks to complete
 
 -   Configure the Traffic Manager to integrate with the External Load
-    Balancer for the Front-end Web App tier.
+    Balancer for the Front-end Web App tier
 
 #### Exit criteria
 
 -   Have a Traffic Manager endpoint that can be used to access the
     Front-end Web App tier configured through the existing External Load
-    Balancer.
-
+    Balancer
 
 ## Exercise 3: Setup API Tier in Azure App Service
 
@@ -363,12 +360,12 @@ Europe.
 
 #### Tasks to complete
 
--   Setup an App Service instance to use for hosting the Web API tier.
+-   Setup an App Service instance to use for hosting the Web API tier
 
 #### Exit criteria
 
 -   An App Service instance has been created in the North Central US
-    region.
+    region
 
 ### Task 2: Setup App Settings
 
@@ -376,11 +373,11 @@ Europe.
 
 -   Setup the Application Settings to configure the Connection String
     named "TransactionDb" to contain the connection string for the
-    sample applications SQL Database.
+    sample applications SQL Database
 
 #### Exit criteria
 
--   The Application Settings Connection String has been configured.
+-   The Application Settings Connection String has been configured
 
 ### Task 3: Deploy API to App Service
 
@@ -388,11 +385,11 @@ Europe.
 
 -   Deploy the API tier of the sample application (located within the
     Contoso.Financial.Api project within the Contoso.Financial Visual
-    Studio solution in the HOL files) into the App Service Web App.
+    Studio solution in the HOL files) into the App Service Web App
 
 #### Exit criteria
 
--   The API tier has been deployed and is accessible.
+-   The API tier has been deployed and is accessible
 
 ![The Transaction API webpage
 displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.png "Transaction API webpage")
@@ -412,12 +409,12 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.
 
 #### Tasks to complete
 
--   Setup an App Service instance to use for hosting the Web App tier.
+-   Setup an App Service instance to use for hosting the Web App tier
 
 #### Exit criteria
 
 -   An App Service instance has been created in the North Central US
-    region.
+    region
 
 ### Task 2: Setup App Settings
 
@@ -425,11 +422,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.
 
 -   Setup the Application Settings to configure the App Setting named
     "transactionAPIUrl" to contain the URL to the API tier hosted in App
-    Service.
+    Service
 
 #### Exit criteria
 
--   The Application Settings App Setting has been configured.
+-   The Application Settings App Setting has been configured
 
 ### Task 3: Deploy App to Web App
 
@@ -438,29 +435,29 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.
 -   Deploy the Web App tier of the sample application (located within
     the Contoso.Financial.Web project within the Contoso.Financial
     Visual Studio solution in the HOL files) into the App Service Web
-    App.
+    App
 
 #### Exit criteria
 
 -   The Web App Tier has been deployed and is accessible in a web
-    browser.
+    browser
 
 ### Task 4: Add Web App to Traffic Manager
 
 #### Tasks to complete
 
 -   Configure a Traffic Manager Endpoint for the new App Service hosted
-    Web App Tier of the application.
+    Web App Tier of the application
 
--   Remove the External Load Balancer Endpoint from the Traffic Manager.
+-   Remove the External Load Balancer Endpoint from the Traffic Manager
 
 #### Exit criteria
 
 -   The Traffic Manager Endpoint has been configured for the App Service
-    Web App Tier, and it is accessible in a web browser.
+    Web App Tier, and it is accessible in a web browser
 
 -   The External Load Balancer Endpoint has been removed from Traffic
-    Manager.
+    Manager
 
 ![The Contoso Financial login webpage
 displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.png "Contoso Financial login webpage")
@@ -469,14 +466,14 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 #### Tasks to complete
 
--   Stop the Web App Tier Virtual Machines.
+-   Stop the Web App Tier Virtual Machines
 
--   Stop the API tier Virtual Machines.
+-   Stop the API tier Virtual Machines
 
 #### Exit criteria
 
 -   The Virtual Machines hosting the Web App and API tiers of the sample
-    application are in a "Stopped (deallocated)" state.
+    application are in a "Stopped (deallocated)" state
 
 
 ## Exercise 5: Migrate Background Tier to App Service
@@ -499,7 +496,7 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 #### Exit criteria
 
 -   An App Service instance has been created in the North Central US
-    region.
+    region
 
 ### Task 2: Setup App Settings
 
@@ -507,11 +504,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 -   Setup the Application Settings to configure the Connection String
     named "TransactionDb" to contain the connection string to the SQL
-    Database.
+    Database
 
 #### Exit criteria
 
--   The Application Settings Connection String has been configured.
+-   The Application Settings Connection String has been configured
 
 ### Task 3: Deploy App to App Service
 
@@ -520,27 +517,27 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 -   Deploy the Background tier of the sample application (located within
     the Contoso.Financial.Background project within the
     Contoso.Financial Visual Studio solution in the HOL files) into the
-    App Service Web App as a Web Job.
+    App Service Web App as a Web Job
 
 -   Configure the Web Job to be recurring and scheduled to run every **1
-    Minutes**.
+    Minutes**
 
 #### Exit criteria
 
--   The Background tier has been deployed.
+-   The Background tier has been deployed
 
--   The Background tier is scheduled to run every 1 minute.
+-   The Background tier is scheduled to run every 1 minute
 
 ### Task 4: Take down Background Tier VM
 
 #### Tasks to complete
 
--   Stop the Background Tier Virtual Machine.
+-   Stop the Background Tier Virtual Machine
 
 #### Exit criteria
 
 -   The Virtual Machine hosting the Background tier of the sample
-    application is in a "Stopped (deallocated)" state.
+    application is in a "Stopped (deallocated)" state
 
 
 ## Exercise 6: Setup SQL Database Geo-Replication
@@ -557,11 +554,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 #### Tasks to complete
 
--   Configure the SQL Database with Active Geo-Replication.
+-   Configure the SQL Database with Active Geo-Replication
 
 #### Exit criteria
 
--   The SQL Database has been configured with Active Geo-Replication.
+-   The SQL Database has been configured with Active Geo-Replication
 
 ## Exercise 7: Take down old architecture / resources
 
@@ -570,14 +567,14 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 #### Tasks to complete
 
 -   Remove all the Existing Architecture resources that are no longer
-    being used after the migration to Azure PaaS services.
+    being used after the migration to Azure PaaS services
 
 #### Exit criteria
 
 -   The Azure resources for the Virtual Network and Virtual Machines of
-    the Existing Architecture have been removed.
+    the Existing Architecture have been removed
 
--   The SQL Database remains.
+-   The SQL Database remains
 
 
 ## Exercise 8: Setup European Web App Tier Instance
@@ -596,11 +593,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 #### Tasks to complete
 
 -   Setup an App Service instance to use for hosting the Web App tier in
-    the Azure North Europe region.
+    the Azure North Europe region
 
 #### Exit criteria
 
--   An App Service instance has been created in the North Europe region.
+-   An App Service instance has been created in the North Europe region
 
 ### Task 2: Set App Settings
 
@@ -608,11 +605,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 -   Setup the Application Settings to configure the App Setting named
     "transactionAPIUrl" to contain the URL to the API tier hosted in App
-    Service.
+    Service
 
 #### Exit criteria
 
--   The Application Settings App Setting has been configured.
+-   The Application Settings App Setting has been configured
 
 ### Task 3: Deploy Web App to European Region
 
@@ -621,30 +618,30 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 -   Deploy the Web App tier of the sample application (located within
     the Contoso.Financial.Web project within the Contoso.Financial
     Visual Studio solution in the HOL files) into the App Service Web
-    App.
+    App
 
 #### Exit criteria
 
 -   The Web App Tier has been deployed to the North Europe region and is
-    accessible in a web browser.
+    accessible in a web browser
 
 ### Task 4: Add European Region to Traffic Manager
 
 #### Tasks to complete
 
 -   Configure a Traffic Manager Endpoint for the new App Service hosted
-    Web App Tier of the application in the North Europe region.
+    Web App Tier of the application in the North Europe region
 
 ####  Exit criteria
 
 -   The Traffic Manager Endpoint has been configured for the App Service
-    Web App Tier, and is accessible in a web browser.
+    Web App Tier, and is accessible in a web browser
 
 -   The Traffic Manager Endpoint for the App Service Web App Tier in the
-    North Central US region remains.
+    North Central US region remains
 
 -   The App is accessible through the Traffic Manager
-    endpoint.
+    endpoint
 
 ## After the hands-on lab 
 

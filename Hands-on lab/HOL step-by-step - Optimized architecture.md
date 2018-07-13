@@ -41,7 +41,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
         - [Subtask 2: Calculate Web App Tier VM Utilization](#subtask-2-calculate-web-app-tier-vm-utilization)
         - [Subtask 3: Calculate API Tier VM Utilization](#subtask-3-calculate-api-tier-vm-utilization)
         - [Subtask 4: Calculate Background Tier VM Utilization](#subtask-4-calculate-background-tier-vm-utilization)
-     - [Subtask 5: Identify Appropriate App Service Tier](#subtask-5-identify-appropriate-app-service-tier)
+        - [Subtask 5: Identify Appropriate App Service Tier](#subtask-5-identify-appropriate-app-service-tier)
     - [Task 4: Calculate Estimated Hosting Cost of Azure App Service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
     - [Task 5: Calculate Estimated Cost Savings](#task-5-calculate-estimated-cost-savings)
 - [Exercise 2: Integrate Traffic Manager](#exercise-2-integrate-traffic-manager)
@@ -307,7 +307,7 @@ the exercises in this lab.
 
 ### Task 3: Estimate Necessary App Service Tiers
 
-## Subtask 1: Find Existing VM Instance Size Specifications (CPU Cores and RAM)
+#### Subtask 1: Find Existing VM Instance Size Specifications (CPU Cores and RAM)
 
 1.  From a new browser tab or instance, navigate to the **Windows**
     **Virtual Machines Pricing** page:
@@ -347,7 +347,7 @@ the exercises in this lab.
     following values: vCPU, 4; RAM, 14.00GiB; Temporary Storage,
     200GiB.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image35.png "D1-4 - v1 section")
 
-## Subtask 2: Calculate Web App Tier VM Utilization
+#### Subtask 2: Calculate Web App Tier VM Utilization
 
 1.  Calculate the **Average CPU Utilization** between the 2 Web App Tier
     VMs with individual CPU utilization of **36%** and **38%**
@@ -377,7 +377,7 @@ the exercises in this lab.
 
     -   **14 GB** (RAM) **\* 0.45** (45%) **= 6.3 GB RAM**
 
-## Subtask 3: Calculate API Tier VM Utilization
+#### Subtask 3: Calculate API Tier VM Utilization
 
 1.  Calculate the **Average CPU Utilization** between the 2 API Tier VMs
     with individual CPU utilization of **58%** and **56%**.
@@ -406,7 +406,7 @@ the exercises in this lab.
 
     -   **14 GB** (RAM) **\* 0.325** (32.5%) **= 4.55 GB RAM**
 
-### Subtask 4: Calculate Background Tier VM Utilization
+#### Subtask 4: Calculate Background Tier VM Utilization
 
 1.  The **Average CPU Utilization** of the single Background Tier VM is
     **49%**
@@ -427,7 +427,7 @@ the exercises in this lab.
 
     a.  **14 GB** (RAM) **\* 0.25** (25%) **= 3.5 GB RAM**
 
-## Subtask 5: Identify Appropriate App Service Tier
+#### Subtask 5: Identify Appropriate App Service Tier
 
 1.  From a new browser tab or instance, navigate to the **App Service Pricing** page:  
     <https://azure.microsoft.com/en-us/pricing/details/app-service>

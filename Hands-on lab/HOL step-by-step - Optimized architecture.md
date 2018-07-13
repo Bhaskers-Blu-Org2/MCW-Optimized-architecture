@@ -32,52 +32,52 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Overview](#overview)
     - [Solution architecture](#solution-architecture)
     - [Requirements](#requirements)
-    - [Exercise 1: Determine Appropriate App Service Tiers and Estimate Cost Savings](#exercise-1-determine-appropriate-app-service-tiers-and-estimate-cost-savings)
+    - [Exercise 1: Determine appropriate app service tiers and estimate cost savings](#exercise-1-determine-appropriate-app-service-tiers-and-estimate-cost-savings)
         - [Help references](#help-references)
         - [Scenario](#scenario)
-        - [Task 1: Calculate Estimated Hosting Cost of Existing Solution](#task-1-calculate-estimated-hosting-cost-of-existing-solution)
-        - [Task 2: Calculate Estimated Hosting Cost of VMs with Reserved instances](#task-2-calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
-        - [Task 3: Estimate Necessary App Service Tiers](#task-3-estimate-necessary-app-service-tiers)
-            - [Subtask 1: Find Existing VM Instance Size Specifications (CPU Cores and RAM)](#subtask-1-find-existing-vm-instance-size-specifications-cpu-cores-and-ram)
-            - [Subtask 2: Calculate Web App Tier VM Utilization](#subtask-2-calculate-web-app-tier-vm-utilization)
-            - [Subtask 3: Calculate API Tier VM Utilization](#subtask-3-calculate-api-tier-vm-utilization)
-            - [Subtask 4: Calculate Background Tier VM Utilization](#subtask-4-calculate-background-tier-vm-utilization)
-            - [Subtask 5: Identify Appropriate App Service Tier](#subtask-5-identify-appropriate-app-service-tier)
-        - [Task 4: Calculate Estimated Hosting Cost of Azure App Service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
-        - [Task 5: Calculate Estimated Cost Savings](#task-5-calculate-estimated-cost-savings)
-    - [Exercise 2: Integrate Traffic Manager](#exercise-2-integrate-traffic-manager)
+        - [Task 1: Calculate estimated hosting cost of existing solution](#task-1-calculate-estimated-hosting-cost-of-existing-solution)
+        - [Task 2: Calculate estimated hosting cost of VMs with reserved instances](#task-2-calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
+        - [Task 3: Estimate necessary app service tiers](#task-3-estimate-necessary-app-service-tiers)
+            - [Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)](#subtask-1-find-existing-vm-instance-size-specifications-cpu-cores-and-ram)
+            - [Subtask 2: Calculate web app tier VM utilization](#subtask-2-calculate-web-app-tier-vm-utilization)
+            - [Subtask 3: Calculate API tier VM utilization](#subtask-3-calculate-api-tier-vm-utilization)
+            - [Subtask 4: Calculate background tier VM utilization](#subtask-4-calculate-background-tier-vm-utilization)
+            - [Subtask 5: Identify appropriate app service tier](#subtask-5-identify-appropriate-app-service-tier)
+    - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
+        - [Task 5: Calculate estimated cost savings](#task-5-calculate-estimated-cost-savings)
+    - [Exercise 2: Integrate traffic manager](#exercise-2-integrate-traffic-manager)
         - [Help references](#help-references-1)
         - [Task 1: Create Traffic Manager](#task-1-create-traffic-manager)
-        - [Task 2: Point Traffic Manager to External / Internet Load Balancer](#task-2-point-traffic-manager-to-external--internet-load-balancer)
-    - [Exercise 3: Setup API Tier in Azure App Service](#exercise-3-setup-api-tier-in-azure-app-service)
+        - [Task 2: Point traffic manager to external / internet load balancer](#task-2-point-traffic-manager-to-external--internet-load-balancer)
+    - [Exercise 3: Setup API tier in Azure app service](#exercise-3-setup-api-tier-in-azure-app-service)
         - [Help references](#help-references-2)
-        - [Step 1: Create App Service for Web API Tier](#step-1-create-app-service-for-web-api-tier)
-        - [Step 2: Setup App Settings](#step-2-setup-app-settings)
-        - [Step 3: Deploy API to App Service](#step-3-deploy-api-to-app-service)
-    - [Exercise 4: Migrate Web App Tier to App Service](#exercise-4-migrate-web-app-tier-to-app-service)
+        - [Step 1: Create app service for web API tier](#step-1-create-app-service-for-web-api-tier)
+        - [Step 2: Setup app settings](#step-2-setup-app-settings)
+        - [Step 3: Deploy API to app service](#step-3-deploy-api-to-app-service)
+    - [Exercise 4: Migrate web app tier to app service](#exercise-4-migrate-web-app-tier-to-app-service)
         - [Help references](#help-references-3)
-        - [Step 1: Create App Service for Web App Tier](#step-1-create-app-service-for-web-app-tier)
-        - [Step 2: Setup App Settings](#step-2-setup-app-settings-1)
-        - [Step 3: Deploy App to Web App](#step-3-deploy-app-to-web-app)
-        - [Step 4: Add Web App to Traffic Manager](#step-4-add-web-app-to-traffic-manager)
+        - [Step 1: Create app service for web app tier](#step-1-create-app-service-for-web-app-tier)
+        - [Step 2: Setup app settings](#step-2-setup-app-settings-1)
+        - [Step 3: Deploy app to web app](#step-3-deploy-app-to-web-app)
+        - [Step 4: Add web app to traffic manager](#step-4-add-web-app-to-traffic-manager)
         - [Step 5: Take down Web App and API VMs](#step-5-take-down-web-app-and-api-vms)
-    - [Exercise 5: Migrate Background Tier to App Service](#exercise-5-migrate-background-tier-to-app-service)
+    - [Exercise 5: Migrate background tier to app service](#exercise-5-migrate-background-tier-to-app-service)
         - [Help references](#help-references-4)
-        - [Step 1: Create App Service for Background Tier](#step-1-create-app-service-for-background-tier)
-        - [Step 2: Setup App Settings](#step-2-setup-app-settings-2)
-        - [Step 3: Deploy App to App Service](#step-3-deploy-app-to-app-service)
-        - [Step 4: Take down Background Tier VM](#step-4-take-down-background-tier-vm)
-    - [Exercise 6: Setup SQL Database Geo-Replication](#exercise-6-setup-sql-database-geo-replication)
+        - [Step 1: Create app service for background tier](#step-1-create-app-service-for-background-tier)
+        - [Step 2: Setup app settings](#step-2-setup-app-settings-2)
+        - [Step 3: Deploy app to app service](#step-3-deploy-app-to-app-service)
+        - [Step 4: Take down background tier VM](#step-4-take-down-background-tier-vm)
+    - [Exercise 6: Setup SQL database geo-replication](#exercise-6-setup-sql-database-geo-replication)
         - [Help references](#help-references-5)
-        - [Step 1: Setup SQL Database Geo-Replication](#step-1-setup-sql-database-geo-replication)
+        - [Step 1: Setup SQL database geo-replication](#step-1-setup-sql-database-geo-replication)
     - [Exercise 7: Take down old architecture / resources](#exercise-7-take-down-old-architecture--resources)
         - [Step 1: Remove Old VM-based tiers](#step-1-remove-old-vm-based-tiers)
-    - [Exercise 8: Setup European Web App Tier Instance](#exercise-8-setup-european-web-app-tier-instance)
+    - [Exercise 8: Setup European web app tier Instance](#exercise-8-setup-european-web-app-tier-instance)
         - [Help references](#help-references-6)
-        - [Step 1: Create European App Service](#step-1-create-european-app-service)
-        - [Step 2: Set App Settings](#step-2-set-app-settings)
-        - [Step 3: Deploy Web App to European Region](#step-3-deploy-web-app-to-european-region)
-        - [Step 4: Add European Region to Traffic Manager](#step-4-add-european-region-to-traffic-manager)
+        - [Step 1: Create European app service](#step-1-create-european-app-service)
+        - [Step 2: Set app settings](#step-2-set-app-settings)
+        - [Step 3: Deploy web app to European region](#step-3-deploy-web-app-to-european-region)
+        - [Step 4: Add European region to traffic manager](#step-4-add-european-region-to-traffic-manager)
     - [After the hands-on lab](#after-the-hands-on-lab)
         - [Task 1: Delete Resources](#task-1-delete-resources)
 
@@ -127,7 +127,7 @@ overall solutions.
 2.  Local machine or a virtual machine configured with Visual Studio
     2017 Community Edition or better
 
-## Exercise 1: Determine Appropriate App Service Tiers and Estimate Cost Savings
+## Exercise 1: Determine appropriate app service tiers and estimate cost savings
 
 Contoso Financial has asked you to optimize their Azure spending by
 migrating their existing Azure IaaS based architecture over to Azure
@@ -186,7 +186,7 @@ scenario. The reason for this was to make the ARM Template deployment
 quicker and cheaper while still deploying enough to allow you to perform
 the exercises in this lab.
 
-### Task 1: Calculate Estimated Hosting Cost of Existing Solution
+### Task 1: Calculate estimated hosting cost of existing solution
 
 1.  From a new browser tab or instance, navigate to the **Azure Pricing
     Calculator** <https://azure.microsoft.com/en-us/pricing/calculator>
@@ -245,7 +245,7 @@ the exercises in this lab.
     
     ![On the Your Estimate page, the estimate of $3,879.60 in US Dollars is boxed in red, as is the collapse all button (two arrows in a circle pointing in toward each other).](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image28.png "Your Estimate page")
 
-### Task 2: Calculate Estimated Hosting Cost of VMs with Reserved instances
+### Task 2: Calculate estimated hosting cost of VMs with reserved instances
 
 1.  From a new browser tab or instance, navigate to the **Azure Pricing Calculator** <https://azure.microsoft.com/en-us/pricing/calculator>
 
@@ -308,9 +308,9 @@ the exercises in this lab.
     Machines are \$1,054.83, and the estimated monthly cost is
     \$2,884.83.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image30.png "Your Estimate page")
 
-### Task 3: Estimate Necessary App Service Tiers
+### Task 3: Estimate necessary app service tiers
 
-#### Subtask 1: Find Existing VM Instance Size Specifications (CPU Cores and RAM)
+#### Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)
 
 1.  From a new browser tab or instance, navigate to the **Windows**
     **Virtual Machines Pricing** page:
@@ -350,7 +350,7 @@ the exercises in this lab.
     following values: vCPU, 4; RAM, 14.00GiB; Temporary Storage,
     200GiB.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image35.png "D1-4 - v1 section")
 
-#### Subtask 2: Calculate Web App Tier VM Utilization
+#### Subtask 2: Calculate web app tier VM utilization
 
 1.  Calculate the **Average CPU Utilization** between the 2 Web App Tier
     VMs with individual CPU utilization of **36%** and **38%**
@@ -380,7 +380,7 @@ the exercises in this lab.
 
     -   **14 GB** (RAM) **\* 0.45** (45%) **= 6.3 GB RAM**
 
-#### Subtask 3: Calculate API Tier VM Utilization
+#### Subtask 3: Calculate API tier VM utilization
 
 1.  Calculate the **Average CPU Utilization** between the 2 API Tier VMs
     with individual CPU utilization of **58%** and **56%**.
@@ -409,7 +409,7 @@ the exercises in this lab.
 
     -   **14 GB** (RAM) **\* 0.325** (32.5%) **= 4.55 GB RAM**
 
-#### Subtask 4: Calculate Background Tier VM Utilization
+#### Subtask 4: Calculate background tier VM utilization
 
 1.  The **Average CPU Utilization** of the single Background Tier VM is
     **49%**
@@ -430,7 +430,7 @@ the exercises in this lab.
 
     a.  **14 GB** (RAM) **\* 0.25** (25%) **= 3.5 GB RAM**
 
-#### Subtask 5: Identify Appropriate App Service Tier
+#### Subtask 5: Identify appropriate app service tier
 
 1.  From a new browser tab or instance, navigate to the **App Service Pricing** page:  
     <https://azure.microsoft.com/en-us/pricing/details/app-service>
@@ -474,7 +474,7 @@ the exercises in this lab.
     appropriate **App Service Plan** pricing tier to use for the Web
     App, API, and Background tiers
 
-## Task 4: Calculate Estimated Hosting Cost of Azure App Service
+## Task 4: Calculate estimated hosting cost of Azure app service
 
 1.  From a new browser tab or instance, navigate to the **Azure Pricing Calculator:** <https://azure.microsoft.com/en-us/pricing/calculator>
 
@@ -514,7 +514,7 @@ the exercises in this lab.
     
     ![On the Your Estimate page, the the App Service cost is $1,464.00, the SQL Database cost is \$1,830.00, and the estimated monthly cost is \$3,294.00.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image46.png "Your Estimate page")
 
-### Task 5: Calculate Estimated Cost Savings
+### Task 5: Calculate estimated cost savings
 
 1.  Copy the **Estimated Cost** of the **Existing Architecture** (VMs
     and SQL Database)
@@ -551,7 +551,7 @@ the exercises in this lab.
     > - Estimated Monthly Cost Savings: \$3,320
     > - Estimated Annual Cost Savings: \$39,840
 
-## Exercise 2: Integrate Traffic Manager
+## Exercise 2: Integrate traffic manager
 
 Contoso Financial needs new load balancing solutions implemented using
 Azure Traffic Manager. The existing architecture uses a Load Balancer,
@@ -597,7 +597,7 @@ Europe.
 
 5.  Click **Create**
 
-### Task 2: Point Traffic Manager to External / Internet Load Balancer
+### Task 2: Point traffic manager to external / internet load balancer
 
 1.  Click on **Resource groups**, select the **OptimizedTFRG** resource
     group, and click on the **Traffic Manager** that was just created
@@ -647,7 +647,7 @@ Europe.
     
     ![The Contoso Financial login webpage displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image58.png "Contoso Financial login webpage")
 
-## Exercise 3: Setup API Tier in Azure App Service
+## Exercise 3: Setup API tier in Azure app service
 
 In the migration of IaaS to PaaS, the API Tier of Contoso Financials
 application needs to be migrated to run in an Azure App Service Web App
@@ -662,7 +662,7 @@ without requiring any code changes to the application.
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-configure/>  |
 
 
-### Step 1: Create App Service for Web API Tier
+### Step 1: Create app service for web API tier
 
 1.  From the Azure Management portal <http://portal.azure.com>, using a
     new tab or instance, click on **+ Create a resource** -\> **Web** -\> **API App**
@@ -693,7 +693,7 @@ without requiring any code changes to the application.
 
 5.  Click **Create**
 
-### Step 2: Setup App Settings
+### Step 2: Setup app settings
 
 1.  In the navigation menu to the left in the Azure Portal, click on **Resource groups**, select the **ContosoExistingRG**
     resource group, and click on the **contosofinancialdb** SQL
@@ -738,7 +738,7 @@ without requiring any code changes to the application.
 
 9.  Click **Save**
 
-### Step 3: Deploy API to App Service
+### Step 3: Deploy API to app service
 
 1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**
 
@@ -765,7 +765,7 @@ without requiring any code changes to the application.
 
 
 
-## Exercise 4: Migrate Web App Tier to App Service
+## Exercise 4: Migrate web app tier to app service
 
 In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso
 Financials application needs to be migrated to run in an Azure App
@@ -781,7 +781,7 @@ Service Web App without requiring any code changes to the application.
 
 
 
-### Step 1: Create App Service for Web App Tier
+### Step 1: Create app service for web app tier
 
 1.  From the Azure Management portal <http://portal.azure.com>, using a
     new tab or instance, click on **+ Create a resource**, then **Web**, and then click on **Web App**
@@ -815,7 +815,7 @@ Service Web App without requiring any code changes to the application.
 
 5.  Click **Create**
 
-### Step 2: Setup App Settings
+### Step 2: Setup app settings
 
 1.  Click on **Resource groups**, click on the **OptimizedWebAppRG**
     resource group, then click on the **Web App**
@@ -837,7 +837,7 @@ Service Web App without requiring any code changes to the application.
 
 4.  Click **Save**
 
-### Step 3: Deploy App to Web App
+### Step 3: Deploy app to web app
 
 1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio
     Solution: **Contoso.Financial.sln**
@@ -862,7 +862,7 @@ Service Web App without requiring any code changes to the application.
 6.  Once the deployment has completed, Visual Studio will automatically
     open a new browser window navigating to the **Web App**
 
-### Step 4: Add Web App to Traffic Manager
+### Step 4: Add web app to traffic manager
 
 1.  From the Azure Management portal <http://portal.azure.com>, using a
     new tab or instance, click on **Resource groups** followed by the
@@ -995,7 +995,7 @@ Service Web App without requiring any code changes to the application.
 
 8.  After validating the app, close the browser window
 
-## Exercise 5: Migrate Background Tier to App Service
+## Exercise 5: Migrate background tier to app service
 
 In the migration of IaaS to PaaS, the Background Tier (written as a console app) of Contoso Financial's application needs to be migrated to run in an Azure App Service Web Job without requiring any code changes to the application.
 
@@ -1008,7 +1008,7 @@ In the migration of IaaS to PaaS, the Background Tier (written as a console app)
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-configure/>  |
 
 
-### Step 1: Create App Service for Background Tier
+### Step 1: Create app service for background tier
 
 1.  From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** followed by **Web**,
 and then, click on **Web App**
@@ -1040,7 +1040,7 @@ and then, click on **Web App**
 
 5.  Click **Create**
 
-### Step 2: Setup App Settings
+### Step 2: Setup app settings
 
 1.  Click on **Resource groups**, select the **OptimizedBackgroundRG** resource group, and select the **App Service**
     
@@ -1067,7 +1067,7 @@ and then, click on **Web App**
 
 6.  Click **Save**
 
-### Step 3: Deploy App to App Service
+### Step 3: Deploy app to app service
 
 1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio
     Solution: **Contoso.Financial.sln**
@@ -1215,7 +1215,7 @@ and then, click on **Web App**
     and a list of account
     transactions.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image125.png "Account Overview webpage")
 
-### Step 4: Take down Background Tier VM
+### Step 4: Take down background tier VM
 
 1.  From the Azure Management Portal (<http://portal.azure.com>), click
     on **Resource groups**, and then, click on the **ContosoExistingRG**
@@ -1236,7 +1236,7 @@ and then, click on **Web App**
     is
     selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image128.png "Stop this virtual machine prompt")
 
-## Exercise 6: Setup SQL Database Geo-Replication
+## Exercise 6: Setup SQL database geo-replication
 
 Due to the rush into Production, the Staging SQL Database currently
 remains as the Production database for the application. You have been
@@ -1254,7 +1254,7 @@ failure.
 | SQL Database Active Geo-Replication  | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/>  |
 
 
-### Step 1: Setup SQL Database Geo-Replication
+### Step 1: Setup SQL database geo-replication
 
 1.  Click on **Resource groups**, click on the **ContosoExistingRG**
     resource group followed by clicking on the **contosofinancialdb**
@@ -1376,7 +1376,7 @@ to delete the Azure IaaS components hosting the VM infrastructure.
     
     ![In the left pane of the ContosoExistingRG blade, Overview is selected. In the top menu, the Refresh button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image137.png "ContosoExistingRG blade")
 
-## Exercise 8: Setup European Web App Tier Instance
+## Exercise 8: Setup European web app tier Instance
 
 As Contoso Financial expands into Europe, they need to handle the additional growth while maintaining the same application performance. While to fully support global scale, there are pieces of the application that will need to be refactored, as you have been asked to setup a
 secondary region for the Front-end Web App Tier in the Azure North Europe region.
@@ -1390,7 +1390,7 @@ secondary region for the Front-end Web App Tier in the Azure North Europe region
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-configure/>  |
 
 
-### Step 1: Create European App Service
+### Step 1: Create European app service
 
 1.  From the Azure Management portal: <http://portal.azure.com>, using a
     new tab or instance, click on **+ Create a resource**, then **Web**, and
@@ -1428,7 +1428,7 @@ secondary region for the Front-end Web App Tier in the Azure North Europe region
 
 5.  Click **Create**
 
-### Step 2: Set App Settings
+### Step 2: Set app settings
 
 1.  Click on **Resource groups**, and select the
     **OptimizedWebAppEuropeRG** resource group. Then, click on the **Web App**
@@ -1450,7 +1450,7 @@ secondary region for the Front-end Web App Tier in the Azure North Europe region
 
 4.  Click **Save**
 
-### Step 3: Deploy Web App to European Region
+### Step 3: Deploy web app to European region
 
 1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio
     Solution: **Contoso.Financial.sln**
@@ -1479,7 +1479,7 @@ secondary region for the Front-end Web App Tier in the Azure North Europe region
     
     ![The Contoso Financial login page displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image148.png "Contoso Financial login page")
 
-### Step 4: Add European Region to Traffic Manager
+### Step 4: Add European region to traffic manager
 
 1.  From the Azure Management Portal <http://portal.azure.com>, using a
     new tab or instance, click on **Resource groups**, click on the

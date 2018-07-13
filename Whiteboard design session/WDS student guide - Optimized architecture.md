@@ -1,5 +1,5 @@
 
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Optimized architecture
@@ -40,12 +40,13 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
+# Optimized architecture whiteboard design session student guide
+
 ## Abstract and learning objectives 
 
 In this whiteboard design session, you will review how to size and optimize a migrated workload to Azure infrastructure as a service. From there, you will consider the cost and benefit of optimizing the solution using Azure Platform as a Service (PaaS) services and then design and price the optimized solution.
 
 At the end of this whiteboard design session, you will be better able to design and plan for optimizing Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
-
 
 ## Step 1: Review the customer case study 
 
@@ -57,14 +58,11 @@ Timeframe: 15 minutes
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
 
-1.  Meet your table participants and trainer.
+1.  Meet your table participants and trainer
 
-2.  Read all the directions for Steps 1--3 in the student guide.
+2.  Read all the directions for Steps 1-3 in the student guide
 
-3.  As a table team, review the following customer case study.
-
-
-
+3.  As a table team, review the following customer case study
 
 ### Customer situation
 
@@ -213,37 +211,34 @@ SQL Server VM. According to Naina, "It gave me the result that our
 database requires about 400 DTUs. I am really not sure what a DTU is,
 but I know Azure SQL Databases use that for billing."
 
-
 ### Customer needs 
 
 1.  Design a two-phase approach to the process of migrating Azure
-    resources towards the goal of optimized spending.
+    resources towards the goal of optimized spending
 
 2.  Fix the SQL Server database hosting to be more robust, reliable, and
-    enterprise-grade.
+    enterprise-grade
 
 3.  Automatic scaling needs to be implemented to reduce the manual
-    process involved.
+    process involved
 
 4.  Identify the appropriate method to use for scaling out the different
-    application tiers to meet increases in load.
+    application tiers to meet increases in load
 
-5.  Identify the appropriate VM sizes for each application tier.
+5.  Identify the appropriate VM sizes for each application tier
 
 6.  Validate the appropriate Azure Regions are used for hosting and
     create a plan to migrate any necessary resources to a different
-    region.
+    region
 
 7.  Identify the PaaS services to use, and the App Service Plans, and
-    create a migration plan.
+    create a migration plan
 
 8.  Identify a strategy to reduce server maintenance as the system is
-    scaled out to meet increased load.
+    scaled out to meet increased load
 
 9.  The migration steps should not require any changes to application
-    code.
-
- 
+    code
 
 ### Customer objections 
 
@@ -296,7 +291,7 @@ Instances.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimag
 Design a solution and prepare to present the solution to the target
 customer audience in a 15-minute chalk-talk format.
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
@@ -395,13 +390,13 @@ design.
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution.
+1.  Identify any customer needs that are not addressed with the proposed solution
 
-2.  Identify the benefits of your solution.
+2.  Identify the benefits of your solution
 
-3.  Determine how you will respond to the customer's objections.
+3.  Determine how you will respond to the customer's objections
 
-Prepare a 15-minute chalk-talk style presentation to the customer.
+Prepare a 15-minute chalk-talk style presentation to the customer
 
 ## Step 3: Present the solution
 
@@ -411,31 +406,30 @@ Present a solution to the target customer audience in a 15-minute chalk-talk for
 
 **Presentation**
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Directions**
 
-1.  Pair with another table.
+1.  Pair with another table
 
-2.  One table is the Microsoft team and the other table is the customer.
+2.  One table is the Microsoft team and the other table is the customer
 
-3.  The Microsoft team presents their proposed solution to the customer.
+3.  The Microsoft team presents their proposed solution to the customer
 
 4.  The customer makes one of the objections from the list of
-    objections.
+    objections
 
-5.  The Microsoft team responds to the objection.
+5.  The Microsoft team responds to the objection
 
-6.  The customer team gives feedback to the Microsoft team.
+6.  The customer team gives feedback to the Microsoft team
 
-7.  Tables switch roles and repeat Steps 2--6.
+7.  Tables switch roles and repeat Steps 2-6
 
 ##  Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
--   Tables reconvene with the larger group to hear a SME share the
-    > preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Additional references
 

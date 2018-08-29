@@ -44,9 +44,9 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 ## Abstract and learning objectives 
 
-In this whiteboard design session, you will review how to size and optimize a migrated workload to Azure infrastructure as a service. From there, you will consider the cost and benefit of optimizing the solution using Azure Platform as a Service (PaaS) services and then design and price the optimized solution.
+In this whiteboard design session, you will review how to size and optimize a migrated workload to Azure Infrastructure as a service (IaaS). From there, you will consider the cost and benefit of optimizing the solution using Azure Platform as a service (PaaS) services and then design and price the optimized solution.
 
-At the end of this whiteboard design session, you will be better able to design and plan for optimizing Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
+At the end of this whiteboard design session, you will be better able to design and plan for optimizing Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions.
 
 ## Step 1: Review the customer case study 
 

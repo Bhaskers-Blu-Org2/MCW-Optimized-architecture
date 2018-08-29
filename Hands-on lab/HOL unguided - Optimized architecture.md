@@ -132,33 +132,15 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 ## Abstract and learning objectives 
 
-In this hands-on lab, you will determine the appropriate hosting tiers for the Contoso Financial application
-and estimate the total cost savings on a monthly and annual basis. Then, you will implement
-and integrate Azure Traffic Manager. You will then migrate the Web, API and Background App Tiers of the application to the Azure App Service. You will then de-commission the old application infrastructure. Then, you will setup geo-replication for the Azure SQL Database in preparation for the next step, which is deploying an European instance of the Web App Tier. Finally, you will add an endpoint for this new Web App Tier to the Azure Traffic Manager.  
+In this hands-on lab, you will determine the appropriate hosting tiers for the Contoso Financial application and estimate the total cost savings on a monthly and annual basis. You will implement and integrate Azure Traffic Manager, then migrate the Web, API and Background App Tiers of the application to the Azure App Service. Next, you will then de-commission the old application infrastructure, and setup geo-replication for the Azure SQL Database in preparation for the next step, which is deploying a European instance of the Web App Tier. Finally, you will add an endpoint for this new Web App Tier to the Azure Traffic Manager.
 
-At the end of this hands-on lab, you will be better able to implement optimization of Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions. 
-
+At the end of this hands-on lab, you will be better able to implement optimization of Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions.
 
 ## Overview
 
-The Optimized Architecture hands-on lab (HOL) is a hands-on exercise
-that will challenge you to calculate Azure spending optimizations by
-comparing IaaS and PaaS services using a supplied sample application (a
-3-tier application written in C\# and ASP.NET MVC) that is based on
-Microsoft Azure IaaS services such as Virtual Machines, Virtual Network,
-Load Balancers, Storage and SQL Database. In addition to calculating
-estimated Azure cost of the existing architecture, you will need to
-calculate the estimated cost of hosting the sample application using
-Azure PaaS services. The scenario will include migrating the full sample
-application to be hosted on Azure PaaS services such as Azure App
-Service Web Apps, Web Jobs, and Traffic Manager as well as implementing
-a secondary hosting region for the Web App tier and database
-replication.
+The Optimized Architecture hands-on lab (HOL) is a hands-on exercise that will challenge you to calculate Azure spending optimizations by comparing IaaS and PaaS services using a supplied sample application (a 3-tier application written in C\# and ASP.NET MVC) that is based on Microsoft Azure IaaS services such as Virtual Machines, Virtual Network, Load Balancers, Storage and SQL Database. In addition to calculating estimated Azure cost of the existing architecture, you will need to calculate the estimated cost of hosting the sample application using Azure PaaS services. The scenario will include migrating the full sample application to be hosted on Azure PaaS services such as Azure App Service Web Apps, Web Jobs, and Traffic Manager as well as implementing a secondary hosting region for the Web App tier and database replication.
 
-The HOL can be implemented on your own, but it is highly recommended to
-pair up with other members at the HOL to model a real-world experience
-much closer and to allow each member to share their expertise for the
-overall solutions.
+The HOL can be implemented on your own, but it is highly recommended to pair up with other members at the HOL to model a real-world experience much closer and to allow each member to share their expertise for the overall solutions.
 
 ## Solution architecture
 

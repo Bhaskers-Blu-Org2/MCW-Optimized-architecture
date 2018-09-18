@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-June 2018 
+September 2018 
 </div>
 
 
@@ -30,25 +30,24 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 - [Trainer information](#trainer-information)
     - [Role of the trainer](#role-of-the-trainer)
     - [Whiteboard design session flow](#whiteboard-design-session-flow)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-    - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
-    - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
+    - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session--how-to-prepare)
+    - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session--tips-for-an-effective-whiteboard-design-session)
 - [Optimized architecture whiteboard design session student guide](#optimized-architecture-whiteboard-design-session-student-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
+    - [Step 1: Review the customer case study](#step-1--review-the-customer-case-study)
         - [Customer situation](#customer-situation)
         - [Customer needs](#customer-needs)
         - [Customer objections](#customer-objections)
         - [Infographic for common scenarios](#infographic-for-common-scenarios)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Step 3: Present the solution](#step-3-present-the-solution)
+    - [Step 2: Design a proof of concept solution](#step-2--design-a-proof-of-concept-solution)
+    - [Step 3: Present the solution](#step-3--present-the-solution)
     - [Wrap-up](#wrap-up)
     - [Additional references](#additional-references)
 - [Optimized architecture whiteboard design session trainer guide](#optimized-architecture-whiteboard-design-session-trainer-guide)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-2)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
-    - [Step 3: Present the solution](#step-3-present-the-solution-1)
-    - [Wrap-up](#wrap-up-1)
+    - [Step 1: Review the customer case study](#step-1--review-the-customer-case-study)
+    - [Step 2: Design a proof of concept solution](#step-2--design-a-proof-of-concept-solution)
+    - [Step 3: Present the solution](#step-3--present-the-solution)
+    - [Wrap-up](#wrap-up)
     - [Preferred target audience](#preferred-target-audience)
     - [Preferred solution](#preferred-solution)
         - [Phase 1](#phase-1)

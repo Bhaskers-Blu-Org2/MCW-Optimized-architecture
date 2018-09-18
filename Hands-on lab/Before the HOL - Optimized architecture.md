@@ -9,7 +9,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 
@@ -30,10 +30,10 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 - [Optimized architecture before the hands-on lab setup guide](#optimized-architecture-before-the-hands-on-lab-setup-guide)
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
-        - [Task 1: Create a virtual machine for your lab environment](#task-1-create-a-virtual-machine-for-your-lab-environment)
-        - [Task 2: Disable IE Enhanced Security](#task-2-disable-ie-enhanced-security)
-        - [Task 3: Download the Sample App Files](#task-3-download-the-sample-app-files)
-        - [Task 4: Deploy Sample App and "Existing" environment](#task-4-deploy-sample-app-and-existing-environment)
+        - [Task 1: Create a virtual machine for your lab environment](#task-1--create-a-virtual-machine-for-your-lab-environment)
+        - [Task 2: Disable IE Enhanced Security](#task-2--disable-ie-enhanced-security)
+        - [Task 3: Download the Sample App Files](#task-3--download-the-sample-app-files)
+        - [Task 4: Deploy Sample App and "Existing" environment](#task-4--deploy-sample-app-and-existing-environment)
 
 <!-- /TOC -->
 

@@ -78,7 +78,7 @@ the exercises.
 
     -   Name: **LABVM**
 
-    -   VM disk type: **SSD**
+    -   VM disk type: **Premium SSD**
 
     -   User name: **demouser**
 
@@ -223,7 +223,7 @@ by the ARM Template are:
     application, simply enter **any email address and password**
     followed by clicking on **Sign in**. If you can't immediately sign
     in, give the site a few minutes to run the background process and
-    then attempt to sign in again.
+    then attempt to sign in again. If any email address does not work then leave the default email address which is bill@contoso.com and put any password.
 
 12.  Once logged in, the sample application will display a simple
     **Account Transaction** ledger

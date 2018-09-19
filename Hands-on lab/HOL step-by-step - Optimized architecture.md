@@ -855,7 +855,7 @@ Service Web App without requiring any code changes to the application.
     under Essentials, the contosotrafficmgr Traffic Manager is
     selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image83.png "Azure Portal")
 
-2.  On the **Traffic Manager profile** blade, click on **Endpoints**
+2.  On the **Traffic Manager profile** blade, click on **Endpoints** in settings area
     
     ![Screenshot of the Endpoints option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image84.png "Endpoints option")
 
@@ -1085,7 +1085,7 @@ and then, click on **Web App**
     ![In the Publish window, the Publish button is
     selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image110.png "Publish window")
 
-    > If the WebJob deployment fails due to a code signing error message,
+    Note: If the WebJob deployment fails due to a code signing error message,
     simply open up the **Project Properties** for the
     Contoso.Financial.Background project by right-clicking it in **Solution
     Explorer**. Then, go to the **Signing** tab, and **uncheck** the **Sign
@@ -1471,7 +1471,7 @@ secondary region for the Front-end Web App Tier in the Azure North Europe region
     contosotrafficmgr Traffic Manager are
     selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image83.png "Azure Portal")
 
-2.  On the **Traffic Manager profile** blade, click on **Endpoints**
+2.  On the **Traffic Manager profile** blade, in the settings area click on **Endpoints**
   
     ![Screenshot of the Endpoints option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image149.png "Endpoints option")
 
@@ -1510,13 +1510,13 @@ secondary region for the Front-end Web App Tier in the Azure North Europe region
     ![Overview is selected in the contosowebapp - Endpoints
     blade.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image154.png "contosowebapp - Endpoints blade")
 
-10. On the **Traffic Manager profile** blade, click on the **DNS name** to open a new browser window navigating to the **Traffic Manager** endpoint
+10. On the **Traffic Manager profile** overview blade, click on the **DNS name** to open a new browser window navigating to the **Traffic Manager** endpoint
     
     ![In the Traffic Manager profile blade, Overview, and the DNS name
     contosowebapp.trafficmanager.net link are
     selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image155.png "Traffic Manager profile blade")
 
-11. Login to the Web App and ensure it loads all data as expected to test out the App Service hosted Web App and API App tiers are functioning properly
+11. Login to the Web App and ensure it loads all data as expected to test out the App Service hosted Web App and API App tiers are functioning properly. Please make sure your browser security settings are set properly to allow browsing the site.
     
     ![The Contoso Financial Account Overview webpage displays with
     Transaction details in an account transaction

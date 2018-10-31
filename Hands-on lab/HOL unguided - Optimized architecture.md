@@ -32,99 +32,99 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 - [Overview](#overview)
 - [Solution architecture](#solution-architecture)
 - [Requirements](#requirements)
-- [Exercise 1: Determine appropriate app service tiers and estimate cost savings](#exercise-1--determine-appropriate-app-service-tiers-and-estimate-cost-savings)
+- [Exercise 1: Determine appropriate app service tiers and estimate cost savings](#exercise-1-determine-appropriate-app-service-tiers-and-estimate-cost-savings)
     - [Help references](#help-references)
     - [Scenario](#scenario)
-    - [Task 1: Calculate estimated hosting cost of existing solution](#task-1--calculate-estimated-hosting-cost-of-existing-solution)
+    - [Task 1: Calculate estimated hosting cost of existing solution](#task-1-calculate-estimated-hosting-cost-of-existing-solution)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 2: Calculate estimated hosting cost of VMs with reserved instances](#task-2--calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
+    - [Task 2: Calculate estimated hosting cost of VMs with reserved instances](#task-2-calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 3: Estimate necessary app service tiers](#task-3--estimate-necessary-app-service-tiers)
+    - [Task 3: Estimate necessary app service tiers](#task-3-estimate-necessary-app-service-tiers)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4--calculate-estimated-hosting-cost-of-azure-app-service)
+    - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 5: Calculate estimated cost savings](#task-5--calculate-estimated-cost-savings)
+    - [Task 5: Calculate estimated cost savings](#task-5-calculate-estimated-cost-savings)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-- [Exercise 2: Integrate traffic manager](#exercise-2--integrate-traffic-manager)
+- [Exercise 2: Integrate traffic manager](#exercise-2-integrate-traffic-manager)
     - [Help references](#help-references)
-    - [Task 1: Create traffic manager](#task-1--create-traffic-manager)
+    - [Task 1: Create traffic manager](#task-1-create-traffic-manager)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 2: Point traffic manager to external / internet load balancer](#task-2--point-traffic-manager-to-external---internet-load-balancer)
+    - [Task 2: Point traffic manager to external / internet load balancer](#task-2-point-traffic-manager-to-external---internet-load-balancer)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-- [Exercise 3: Setup API tier in Azure app service](#exercise-3--setup-api-tier-in-azure-app-service)
+- [Exercise 3: Setup API tier in Azure app service](#exercise-3-setup-api-tier-in-azure-app-service)
     - [Help references](#help-references)
-    - [Task 1: Create app service for web API tier](#task-1--create-app-service-for-web-api-tier)
+    - [Task 1: Create app service for web API tier](#task-1-create-app-service-for-web-api-tier)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 2: Setup app settings](#task-2--setup-app-settings)
+    - [Task 2: Setup app settings](#task-2-setup-app-settings)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 3: Deploy API to app service](#task-3--deploy-api-to-app-service)
+    - [Task 3: Deploy API to app service](#task-3-deploy-api-to-app-service)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-- [Exercise 4: Migrate web app tier to app service](#exercise-4--migrate-web-app-tier-to-app-service)
+- [Exercise 4: Migrate web app tier to app service](#exercise-4-migrate-web-app-tier-to-app-service)
     - [Help references](#help-references)
-    - [Task 1: Create app service for web app tier](#task-1--create-app-service-for-web-app-tier)
+    - [Task 1: Create app service for web app tier](#task-1-create-app-service-for-web-app-tier)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 2: Setup app settings](#task-2--setup-app-settings)
+    - [Task 2: Setup app settings](#task-2-setup-app-settings)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 3: Deploy app to web app](#task-3--deploy-app-to-web-app)
+    - [Task 3: Deploy app to web app](#task-3-deploy-app-to-web-app)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 4: Add web app to traffic manager](#task-4--add-web-app-to-traffic-manager)
+    - [Task 4: Add web app to traffic manager](#task-4-add-web-app-to-traffic-manager)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 5: Take down web app and API VMs](#task-5--take-down-web-app-and-api-vms)
+    - [Task 5: Take down web app and API VMs](#task-5-take-down-web-app-and-api-vms)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-- [Exercise 5: Migrate background tier to app service](#exercise-5--migrate-background-tier-to-app-service)
+- [Exercise 5: Migrate background tier to app service](#exercise-5-migrate-background-tier-to-app-service)
     - [Help references](#help-references)
-    - [Task 1: Create app service for background tier](#task-1--create-app-service-for-background-tier)
+    - [Task 1: Create app service for background tier](#task-1-create-app-service-for-background-tier)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 2: Setup app settings](#task-2--setup-app-settings)
+    - [Task 2: Setup app settings](#task-2-setup-app-settings)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 3: Deploy app to app service](#task-3--deploy-app-to-app-service)
+    - [Task 3: Deploy app to app service](#task-3-deploy-app-to-app-service)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 4: Take down background tier VM](#task-4--take-down-background-tier-vm)
+    - [Task 4: Take down background tier VM](#task-4-take-down-background-tier-vm)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-- [Exercise 6: Setup SQL database geo-replication](#exercise-6--setup-sql-database-geo-replication)
+- [Exercise 6: Setup SQL database geo-replication](#exercise-6-setup-sql-database-geo-replication)
     - [Help references](#help-references)
     - [Task 1: Setup SQL database geo-replication](#task-1--setup-sql-database-geo-replication)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-- [Exercise 7: Take down old architecture / resources](#exercise-7--take-down-old-architecture---resources)
-    - [Task 1: Remove old VM-based tiers](#task-1--remove-old-vm-based-tiers)
+- [Exercise 7: Take down old architecture / resources](#exercise-7-take-down-old-architecture---resources)
+    - [Task 1: Remove old VM-based tiers](#task-1-remove-old-vm-based-tiers)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-- [Exercise 8: Setup European web app tier instance](#exercise-8--setup-european-web-app-tier-instance)
+- [Exercise 8: Setup European web app tier instance](#exercise-8-setup-european-web-app-tier-instance)
     - [Help references](#help-references)
-    - [Task 1: Create European App Service](#task-1--create-european-app-service)
+    - [Task 1: Create European App Service](#task-1-create-european-app-service)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 2: Set app settings](#task-2--set-app-settings)
+    - [Task 2: Set app settings](#task-2-set-app-settings)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 3: Deploy web app to European region](#task-3--deploy-web-app-to-european-region)
+    - [Task 3: Deploy web app to European region](#task-3-deploy-web-app-to-european-region)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 4: Add European region to traffic manager](#task-4--add-european-region-to-traffic-manager)
+    - [Task 4: Add European region to traffic manager](#task-4-add-european-region-to-traffic-manager)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
 - [After the hands-on lab](#after-the-hands-on-lab)
-    - [Task 1: Delete resources](#task-1--delete-resources)
+    - [Task 1: Delete resources](#task-1-delete-resources)
 
 <!-- /TOC -->
 
@@ -151,7 +151,7 @@ The HOL can be implemented on your own, but it is highly recommended to pair up 
 1.  Microsoft Azure subscription
 
 2.  Local machine or a virtual machine configured with Visual Studio
-    2017 Community Edition or better
+    2017 Community Edition or better.
 
 
 ## Exercise 1: Determine appropriate app service tiers and estimate cost savings
@@ -219,71 +219,71 @@ the exercises in this lab.
 
 #### Tasks to complete
 
--   Calculate the estimated hosting cost of the existing architecture
+-   Calculate the estimated hosting cost of the existing architecture.
 
     -   Factor in the Virtual Machine instances and SQL Database of the
-        Existing Architecture
+        Existing Architecture.
 
 #### Exit criteria
 
 -   Have an estimate of the total estimated Azure cost to hosting the
-    sample application in the Existing Architecture
+    sample application in the Existing Architecture.
 
 ### Task 2: Calculate estimated hosting cost of VMs with reserved instances
 
 #### Tasks to complete
 
 -   Calculate the estimated hosting cost of the existing architecture
-    using Reserved Instances
+    using Reserved Instances.
 
     -   Factor in the Virtual Machine instances and SQL Database of the
-        Existing Architecture using Reserved Instances
+        Existing Architecture using Reserved Instances.
 
 #### Exit criteria
 
 -   Have an estimate of the total estimated Azure cost to hosting the
     sample application in the Existing Architecture using Reserved
-    Instances
+    Instances.
 
 ### Task 3: Estimate necessary app service tiers
 
 #### Tasks to complete
 
 -   Estimate the necessary Azure App Service Plan for hosting the sample
-    application in Azure PaaS services
+    application in Azure PaaS services.
 
-    -   Factor in the App Service Plans / instances and SQL Database
+    -   Factor in the App Service Plans / instances and SQL Database.
 
 #### Exit criteria
 
 -   Determine the appropriate App Service Plan pricing tier necessary to
     host the application while maintaining the ability to handle
-    existing application load
+    existing application load.
 
 ### Task 4: Calculate estimated hosting cost of Azure app service
 
 #### Tasks to complete
 
 -   Calculate the estimated hosting cost of the sample application using
-    Azure App Service
+    Azure App Service.
 
 #### Exit criteria
 
 -   Have an estimate of the total estimated Azure cost to hosting the
-    sample application using Azure App Service
+    sample application using Azure App Service.
 
 ### Task 5: Calculate estimated cost savings
 
 #### Tasks to complete
 
 -   Calculate the total estimated cost savings between the existing IaaS
-    architecture and migrating to Azure App Service
+    architecture and migrating to Azure App Service.
 
 #### Exit criteria
 
 -   Determine both the Monthly and Annual cost savings comparing the
     cost of both the Existing Architecture and the new Azure App Service
-    architecture
+    architecture.
     
 
 ## Exercise 2: Integrate traffic manager
@@ -307,25 +307,25 @@ Europe.
 #### Tasks to complete
 
 -   Setup Traffic Manager to point to the Front-end Web App tier of the
-    sample application
+    sample application.
 
 #### Exit criteria
 
 -   A Traffic Manager has been created in the Azure Subscription within
-    the North Central US region
+    the North Central US region.
 
 ### Task 2: Point traffic manager to external / internet load balancer
 
 #### Tasks to complete
 
 -   Configure the Traffic Manager to integrate with the External Load
-    Balancer for the Front-end Web App tier
+    Balancer for the Front-end Web App tier.
 
 #### Exit criteria
 
 -   Have a Traffic Manager endpoint that can be used to access the
     Front-end Web App tier configured through the existing External Load
-    Balancer
+    Balancer.
 
 ## Exercise 3: Setup API tier in Azure app service
 
@@ -342,12 +342,12 @@ Europe.
 
 #### Tasks to complete
 
--   Setup an App Service instance to use for hosting the Web API tier
+-   Setup an App Service instance to use for hosting the Web API tier.
 
 #### Exit criteria
 
 -   An App Service instance has been created in the North Central US
-    region
+    region.
 
 ### Task 2: Setup app settings
 
@@ -355,11 +355,11 @@ Europe.
 
 -   Setup the Application Settings to configure the Connection String
     named "TransactionDb" to contain the connection string for the
-    sample applications SQL Database
+    sample applications SQL Database.
 
 #### Exit criteria
 
--   The Application Settings Connection String has been configured
+-   The Application Settings Connection String has been configured.
 
 ### Task 3: Deploy API to app service
 
@@ -367,11 +367,11 @@ Europe.
 
 -   Deploy the API tier of the sample application (located within the
     Contoso.Financial.Api project within the Contoso.Financial Visual
-    Studio solution in the HOL files) into the App Service Web App
+    Studio solution in the HOL files) into the App Service Web App.
 
 #### Exit criteria
 
--   The API tier has been deployed and is accessible
+-   The API tier has been deployed and is accessible.
 
 ![The Transaction API webpage
 displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.png "Transaction API webpage")
@@ -391,12 +391,12 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.
 
 #### Tasks to complete
 
--   Setup an App Service instance to use for hosting the Web App tier
+-   Setup an App Service instance to use for hosting the Web App tier.
 
 #### Exit criteria
 
 -   An App Service instance has been created in the North Central US
-    region
+    region.
 
 ### Task 2: Setup app settings
 
@@ -404,11 +404,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.
 
 -   Setup the Application Settings to configure the App Setting named
     "transactionAPIUrl" to contain the URL to the API tier hosted in App
-    Service
+    Service.
 
 #### Exit criteria
 
--   The Application Settings App Setting has been configured
+-   The Application Settings App Setting has been configured.
 
 ### Task 3: Deploy app to web app
 
@@ -417,29 +417,29 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image20.
 -   Deploy the Web App tier of the sample application (located within
     the Contoso.Financial.Web project within the Contoso.Financial
     Visual Studio solution in the HOL files) into the App Service Web
-    App
+    App.
 
 #### Exit criteria
 
 -   The Web App Tier has been deployed and is accessible in a web
-    browser
+    browser.
 
 ### Task 4: Add web app to traffic manager
 
 #### Tasks to complete
 
 -   Configure a Traffic Manager Endpoint for the new App Service hosted
-    Web App Tier of the application
+    Web App Tier of the application.
 
--   Remove the External Load Balancer Endpoint from the Traffic Manager
+-   Remove the External Load Balancer Endpoint from the Traffic Manager.
 
 #### Exit criteria
 
 -   The Traffic Manager Endpoint has been configured for the App Service
-    Web App Tier, and it is accessible in a web browser
+    Web App Tier, and it is accessible in a web browser.
 
 -   The External Load Balancer Endpoint has been removed from Traffic
-    Manager
+    Manager.
 
 ![The Contoso Financial login webpage
 displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.png "Contoso Financial login webpage")
@@ -448,14 +448,14 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 #### Tasks to complete
 
--   Stop the Web App Tier Virtual Machines
+-   Stop the Web App Tier Virtual Machines.
 
--   Stop the API tier Virtual Machines
+-   Stop the API tier Virtual Machines.
 
 #### Exit criteria
 
 -   The Virtual Machines hosting the Web App and API tiers of the sample
-    application are in a "Stopped (deallocated)" state
+    application are in a "Stopped (deallocated)" state.
 
 
 ## Exercise 5: Migrate background tier to app service
@@ -473,12 +473,12 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 #### Tasks to complete
 
--   Setup an App Service instance to use for hosting the Background tier
+-   Setup an App Service instance to use for hosting the Background tier.
 
 #### Exit criteria
 
 -   An App Service instance has been created in the North Central US
-    region
+    region.
 
 ### Task 2: Setup app settings
 
@@ -486,11 +486,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 -   Setup the Application Settings to configure the Connection String
     named "TransactionDb" to contain the connection string to the SQL
-    Database
+    Database.
 
 #### Exit criteria
 
--   The Application Settings Connection String has been configured
+-   The Application Settings Connection String has been configured.
 
 ### Task 3: Deploy app to app service
 
@@ -499,27 +499,27 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 -   Deploy the Background tier of the sample application (located within
     the Contoso.Financial.Background project within the
     Contoso.Financial Visual Studio solution in the HOL files) into the
-    App Service Web App as a Web Job
+    App Service Web App as a Web Job.
 
 -   Configure the Web Job to be recurring and scheduled to run every **1
-    Minutes**
+    Minutes**.
 
 #### Exit criteria
 
--   The Background tier has been deployed
+-   The Background tier has been deployed.
 
--   The Background tier is scheduled to run every 1 minute
+-   The Background tier is scheduled to run every 1 minute.
 
 ### Task 4: Take down background tier VM
 
 #### Tasks to complete
 
--   Stop the Background Tier Virtual Machine
+-   Stop the Background Tier Virtual Machine.
 
 #### Exit criteria
 
 -   The Virtual Machine hosting the Background tier of the sample
-    application is in a "Stopped (deallocated)" state
+    application is in a "Stopped (deallocated)" state.
 
 
 ## Exercise 6: Setup SQL database geo-replication
@@ -536,11 +536,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 #### Tasks to complete
 
--   Configure the SQL Database with Active Geo-Replication
+-   Configure the SQL Database with Active Geo-Replication.
 
 #### Exit criteria
 
--   The SQL Database has been configured with Active Geo-Replication
+-   The SQL Database has been configured with Active Geo-Replication.
 
 ## Exercise 7: Take down old architecture / resources
 
@@ -549,14 +549,14 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 #### Tasks to complete
 
 -   Remove all the Existing Architecture resources that are no longer
-    being used after the migration to Azure PaaS services
+    being used after the migration to Azure PaaS services.
 
 #### Exit criteria
 
 -   The Azure resources for the Virtual Network and Virtual Machines of
-    the Existing Architecture have been removed
+    the Existing Architecture have been removed.
 
--   The SQL Database remains
+-   The SQL Database remains.
 
 
 ## Exercise 8: Setup European web app tier instance
@@ -575,11 +575,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 #### Tasks to complete
 
 -   Setup an App Service instance to use for hosting the Web App tier in
-    the Azure North Europe region
+    the Azure North Europe region.
 
 #### Exit criteria
 
--   An App Service instance has been created in the North Europe region
+-   An App Service instance has been created in the North Europe region.
 
 ### Task 2: Set app settings
 
@@ -587,11 +587,11 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 -   Setup the Application Settings to configure the App Setting named
     "transactionAPIUrl" to contain the URL to the API tier hosted in App
-    Service
+    Service.
 
 #### Exit criteria
 
--   The Application Settings App Setting has been configured
+-   The Application Settings App Setting has been configured.
 
 ### Task 3: Deploy web app to European region
 
@@ -600,30 +600,30 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 -   Deploy the Web App tier of the sample application (located within
     the Contoso.Financial.Web project within the Contoso.Financial
     Visual Studio solution in the HOL files) into the App Service Web
-    App
+    App.
 
 #### Exit criteria
 
 -   The Web App Tier has been deployed to the North Europe region and is
-    accessible in a web browser
+    accessible in a web browser.
 
 ### Task 4: Add European region to traffic manager
 
 #### Tasks to complete
 
 -   Configure a Traffic Manager Endpoint for the new App Service hosted
-    Web App Tier of the application in the North Europe region
+    Web App Tier of the application in the North Europe region.
 
 ####  Exit criteria
 
 -   The Traffic Manager Endpoint has been configured for the App Service
-    Web App Tier, and is accessible in a web browser
+    Web App Tier, and is accessible in a web browser.
 
 -   The Traffic Manager Endpoint for the App Service Web App Tier in the
-    North Central US region remains
+    North Central US region remains.
 
 -   The App is accessible through the Traffic Manager
-    endpoint
+    endpoint.
 
 ## After the hands-on lab 
 

@@ -953,7 +953,7 @@ Service Web App without requiring any code changes to the application.
 
     ![In the left pane of the WebAPI1 blade, Overview is selected. In
     the right pane, on the top menu, the Stop button is
-    boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image98.png")
+    boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image98.png)
 
 4.  On the **Stop this virtual machine** prompt, click **Yes**.
 
@@ -1009,7 +1009,7 @@ and then, click on **Web App**.
     -   Location: **North Central US (or the location you have been using)**.
 
     -   Pricing tier: **S1 Standard**
-    -   
+    
         ![In the Web App blade, App Service plan OptimizedBackgroundPlan is selected. In the App Service plan blade, Create New is selected, and fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image102.png)
 
 4.  Click **OK**.

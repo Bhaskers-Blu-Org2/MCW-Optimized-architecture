@@ -709,7 +709,7 @@ architecture and what needs to be demonstrated to stakeholders.
 
 **Database server**
 
-Which Azure SQL Database hosting solution would you recommend?
+1. Which Azure SQL Database hosting solution would you recommend?
 
 **Answer:**
 
@@ -722,7 +722,7 @@ protection---all with near-zero administration.
 >**Note**: The *Standard GS4* VM size the existing architecture is using in
 the West US region is not available in the *North Central US* region.
 
-What is the recommended Azure Region to use for the SQL
+2. What is the recommended Azure Region to use for the SQL
 Database?
 
 **Answer:** 
@@ -732,7 +732,7 @@ regions incurs Egress/Outbound data transfer charges. Placing the
 database in the same Azure region as the rest of the application will
 eliminate these charges.
 
-What is the recommended Azure SQL Database pricing tier?
+3. What is the recommended Azure SQL Database pricing tier?
 
 **Answer:**
 
@@ -741,14 +741,14 @@ the SQL Server database server it is the appropriate pricing tier.
 
 **Cost Optimization**
 
-What VM scaling solution is recommended?
+1. What VM scaling solution is recommended?
 
 **Answer:**
 
 VM Scale Sets: Implementing VM Scale Sets allows for the VMs
 supporting the workloads to be scaled in/out automatically.
 
-How do you determine the appropriate VM size for each tier?
+2. How do you determine the appropriate VM size for each tier?
 
 **Answer:**
 
@@ -757,7 +757,7 @@ architecture VM sizes to the list of available VM sizes within the Azure
 North Central US region and determine which VM sizes better fit the VM
 CPU/RAM utilization.
 
-What are the recommended VM size and count to use for each
+3. What are the recommended VM size and count to use for each
 application tier?
 
 **Answer:**
@@ -767,7 +767,7 @@ application tier?
 -   Back-end Processing VMs: Standard F2 -- two instances
 -   SQL Server VM: None -- it is migrated to Azure SQL Database service
 
-What is the calculated cost and overall savings gained from
+4. What is the calculated cost and overall savings gained from
 this design?
 
 **Answer:**
@@ -792,7 +792,7 @@ tiers:
 
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
-How do these optimizations reduce the total cost of server
+5. How do these optimizations reduce the total cost of server
 maintenance and operation?
 
 **Answer:**
@@ -806,7 +806,7 @@ maintenance and operation?
 
 **Migration**
 
-What order or steps would you recommend taking when changing
+1. What order or steps would you recommend taking when changing
 the architecture?
 
 **Answer:**
@@ -850,18 +850,20 @@ recommended steps:
 
     d.  Remove old VMs.
 
-### Phase 2
+_Phase 2_
+
+Outline the changes necessary to transform the Phase 1 architecture design over to further optimizing Azure spend by using the Azure PaaS (Platform as a Service) services that fit the solution. Identify the steps necessary and what needs to be demonstrated to stakeholders to convince them of the viability of the final solution architecture design.
 
 **Cost optimization**
 
-What services would you recommend to further optimize the
+1. What services would you recommend to further optimize the
 solution for lower total cost?
 
 **Answer:**
 
 Traffic Manager and App Service (Web Apps and Web Jobs).
 
-How do you determine the appropriate App Service Plan to use?
+2. How do you determine the appropriate App Service Plan to use?
 
 **Answer:** 
 
@@ -872,7 +874,7 @@ better fits the specific Application Tier workload. It also needs to
 consider the Instance Count to factor in the setup of Multiple VMs
 appropriately.
 
-What are the recommended App Service Plans to use for each
+3. What are the recommended App Service Plans to use for each
 application tier?
 
 **Answer:**
@@ -882,7 +884,7 @@ application tier?
 -   Back-end Processing Tier: Standard S3 w/ one instance
 -   SQL Database: No change from Phase 1 using Azure SQL Database service
 
-What is the calculated cost and overall savings gained from
+4. What is the calculated cost and overall savings gained from
 this design?
 
 **Answer:** 
@@ -904,7 +906,7 @@ tiers:
 
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
-How do these optimizations reduce the total cost of server
+5. How do these optimizations reduce the total cost of server
 maintenance and operation?
 
 **Answer:** 
@@ -921,7 +923,7 @@ total cost:
 
 **Scalability**
 
-What service should be used to ensure expected application
+1. What service should be used to ensure expected application
 performance is maintained when onboarding Lucerne employees?
 
 **Answer:** 
@@ -934,7 +936,7 @@ US and European user workload to different servers.
 
 **Migration**
 
-What order or steps would you recommend taking when changing
+1. What order or steps would you recommend taking when changing
 the architecture?
 
 **Answer:**

@@ -10,7 +10,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-June 2018 
+September 2018 
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -27,16 +27,17 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- TOC -->
 
-- [Abstract and learning objectives](#abstract-and-learning-objectives)
-- [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-    - [Customer situation](#customer-situation)
-    - [Customer needs](#customer-needs)
-    - [Customer objections](#customer-objections)
-    - [Infographic for common scenarios](#infographic-for-common-scenarios)
-- [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-- [Step 3: Present the solution](#step-3-present-the-solution)
-- [Wrap-up](#wrap-up)
-- [Additional references](#additional-references)
+- [Optimized architecture whiteboard design session student guide](#optimized-architecture-whiteboard-design-session-student-guide)
+    - [Abstract and learning objectives](#abstract-and-learning-objectives)
+    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+        - [Customer situation](#customer-situation)
+        - [Customer needs](#customer-needs)
+        - [Customer objections](#customer-objections)
+        - [Infographic for common scenarios](#infographic-for-common-scenarios)
+    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+    - [Step 3: Present the solution](#step-3--present-the-solution)
+    - [Wrap-up](#wrap-up)
+    - [Additional references](#additional-references)
 
 <!-- /TOC -->
 
@@ -52,17 +53,17 @@ At the end of this whiteboard design session, you will be better able to design 
 
 **Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer
+1.  Meet your table participants and trainer.
 
-2.  Read all the directions for Steps 1-3 in the student guide
+2.  Read all of the directions for steps 1-3 in the student guide.
 
-3.  As a table team, review the following customer case study
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -168,7 +169,7 @@ but we know this setup is less than ideal. Although, we do keep backups
 in the event of a failure."
 
 ![Diagram of the previously described Existing
-architecture.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image2.png "Existing architecture diagram")
+architecture.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image2.png)
 
 **Existing virtual machine utilization**
 
@@ -198,7 +199,7 @@ Tier, which has CPU of 58 percent and RAM of 34 percent, or CPU of 56
 percent or RAM of 31 percent. The third row is Back-end processing tier,
 which is CPU of 49 percent, and RAM of 25 percent. The bottom row,
 Database Server SQL Database: Preium P4, has no CPU or RAM
-information.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image3.png "Standard D3 pricing tier")
+information.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image3.png)
 
 **Database usage analysis**
 
@@ -214,31 +215,31 @@ but I know Azure SQL Databases use that for billing."
 ### Customer needs 
 
 1.  Design a two-phase approach to the process of migrating Azure
-    resources towards the goal of optimized spending
+    resources towards the goal of optimized spending.
 
 2.  Fix the SQL Server database hosting to be more robust, reliable, and
-    enterprise-grade
+    enterprise-grade.
 
 3.  Automatic scaling needs to be implemented to reduce the manual
-    process involved
+    process involved.
 
 4.  Identify the appropriate method to use for scaling out the different
-    application tiers to meet increases in load
+    application tiers to meet increases in load.
 
-5.  Identify the appropriate VM sizes for each application tier
+5.  Identify the appropriate VM sizes for each application tier.
 
 6.  Validate the appropriate Azure Regions are used for hosting and
     create a plan to migrate any necessary resources to a different
-    region
+    region.
 
 7.  Identify the PaaS services to use, and the App Service Plans, and
-    create a migration plan
+    create a migration plan.
 
 8.  Identify a strategy to reduce server maintenance as the system is
-    scaled out to meet increased load
+    scaled out to meet increased load.
 
 9.  The migration steps should not require any changes to application
-    code
+    code.
 
 ### Customer objections 
 
@@ -269,7 +270,7 @@ but I know Azure SQL Databases use that for billing."
 Azure virtual network with VMs and load balancers
 
 ![Azure infrastructure showing front end subnet and back end
-subnet.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image4.png "Azure infrastructure")
+subnet.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image4.png)
 
 3-tier Azure Web App architecture with message queue
 
@@ -282,31 +283,27 @@ Instances and Autoscale. This points to Azure SQL Databases, and also
 shares a bi-directional arrow with Message Queue (Storage Queue or
 Service Bus Queue.) The Message Queue points to Web Job Instances with
 AutoScale, which completes the circle by pointing back to Web API
-Instances.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image5.png "3-tier Azure Web App architecture with message queue")
+Instances.](images/Whiteboarddesignsessionstudentguide-Optimizedarchitectureimages/media/image5.png)
 
 ## Step 2: Design a proof of concept solution
 
 **Outcome**
 
-Design a solution and prepare to present the solution to the target
-customer audience in a 15-minute chalk-talk format.
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following
-questions, and list the answers on a flip chart.
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
-1.  Who should you present this solution to? Who is your target customer
-    audience? Who are the decision makers?
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
-2.  What customer business needs do you need to address with your
-    solution?
+2.  What customer business needs do you need to address with your solution?
 
 **Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 **Two-phase solution**
 
@@ -347,7 +344,7 @@ architecture and what needs to be demonstrated to stakeholders.
     -   What order or steps would you recommend taking when changing the
         architecture?
 
--   Diagram the solution
+-   Diagram the solution.
 
 _Phase 2_
 
@@ -384,19 +381,19 @@ design.
     -   What order or steps would you recommend taking when changing the
         architecture?
 
--   Diagram the solution
+-   Diagram the solution.
 
 **Prepare**
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
+1.  Identify any customer needs that are not addressed with the proposed solution.
 
-2.  Identify the benefits of your solution
+2.  Identify the benefits of your solution.
 
-3.  Determine how you will respond to the customer's objections
+3.  Determine how you will respond to the customer's objections.
 
-Prepare a 15-minute chalk-talk style presentation to the customer
+Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
@@ -404,26 +401,25 @@ Prepare a 15-minute chalk-talk style presentation to the customer
 
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-**Presentation**
-
 Timeframe: 30 minutes
 
-**Directions**
+**Presentation**
 
-1.  Pair with another table
+Directions:
 
-2.  One table is the Microsoft team and the other table is the customer
+1.  Pair with another table.
 
-3.  The Microsoft team presents their proposed solution to the customer
+2.  One table is the Microsoft team and the other table is the customer.
 
-4.  The customer makes one of the objections from the list of
-    objections
+3.  The Microsoft team presents their proposed solution to the customer.
 
-5.  The Microsoft team responds to the objection
+4.  The customer makes one of the objections from the list of objections.
 
-6.  The customer team gives feedback to the Microsoft team
+5.  The Microsoft team responds to the objection.
 
-7.  Tables switch roles and repeat Steps 2-6
+6.  The customer team gives feedback to the Microsoft team.
+
+7.  Tables switch roles and repeat Steps 2-6.
 
 ##  Wrap-up 
 

@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-June 2018 
+September 2018 
 </div>
 
 
@@ -30,12 +30,11 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 - [Trainer information](#trainer-information)
     - [Role of the trainer](#role-of-the-trainer)
     - [Whiteboard design session flow](#whiteboard-design-session-flow)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
     - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
     - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
 - [Optimized architecture whiteboard design session student guide](#optimized-architecture-whiteboard-design-session-student-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
+    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
         - [Customer needs](#customer-needs)
         - [Customer objections](#customer-objections)
@@ -45,10 +44,10 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Wrap-up](#wrap-up)
     - [Additional references](#additional-references)
 - [Optimized architecture whiteboard design session trainer guide](#optimized-architecture-whiteboard-design-session-trainer-guide)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-2)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
-    - [Step 3: Present the solution](#step-3-present-the-solution-1)
-    - [Wrap-up](#wrap-up-1)
+    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+    - [Step 3: Present the solution](#step-3-present-the-solution)
+    - [Wrap-up](#wrap-up)
     - [Preferred target audience](#preferred-target-audience)
     - [Preferred solution](#preferred-solution)
         - [Phase 1](#phase-1)
@@ -66,34 +65,35 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place
+-   Creates a safe environment in which learning can take place.
 
--   Stimulates the participant's thinking
+-   Stimulates the participant's thinking.
 
--   Involves the participant in the learning process
+-   Involves the participant in the learning process.
 
--   Manages the learning process (on time, on topic, and adjusting to
-    benefit participants)
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants).
 
--   Ensures individual participant accountability
+-   Ensures individual participant accountability.
 
--   Ties it all together for the participant
+-   Ties it all together for the participant.
 
--   Provides insight and experience to the learning process
+-   Provides insight and experience to the learning process.
 
--   Effectively leads the whiteboard design session discussion
+-   Effectively leads the whiteboard design session discussion.
 
--   Monitors quality and appropriateness of participant deliverables
+-   Monitors quality and appropriateness of participant deliverables.
 
--   Effectively leads the feedback process
+-   Effectively leads the feedback process.
 
 ## Whiteboard design session flow 
 
 Each whiteboard design session uses the following flow:
 
-**Step 1: Review the customer case study (15 minutes)** 
+**Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs
+**Outcome**
+
+Analyze your customer's needs.
 
 -   Customer's background, situation, needs and technical requirements
 
@@ -103,19 +103,23 @@ Outcome: Analyze your customer's needs
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+**Outcome**
 
--   Determine your target customer audience
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
--   Determine customer's business needs to address your solution
+-   Determine your target customer audience.
 
--   Design and diagram your solution
+-   Determine customer's business needs to address your solution.
 
--   Prepare to present your solution
+-   Design and diagram your solution.
+
+-   Prepare to present your solution.
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer.
+**Outcome**
+
+Present solution to your customer:
 
 -   Present solution
 
@@ -131,59 +135,39 @@ Outcome: Present solution to your customer.
 
 Before conducting your first whiteboard design session:
 
--   Read the Student guide (including the case study) and Trainer guide
+-   Read the Student guide (including the case study) and Trainer guide.
 
--   Become familiar with all key points and activities
+-   Become familiar with all key points and activities.
 
--   Plan the point you want to stress, which questions you want to
-    drive, transitions, and be ready to answer questions
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
--   Prior to the whiteboard design session, discuss the case study to
-    pick up more ideas
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
 
--   Make notes for later
+-   Make notes for later.
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
 **Refer to the Trainer guide** to stay on track and observe the timings.
 
-**Do not expect to memorize every detail** of the whiteboard design
-session.
+**Do not expect to memorize every detail** of the whiteboard design session.
 
-When participants are doing activities, you can **look ahead to refresh
-your memory**.
+When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to
-    allow time for presenting, feedback, and sharing
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
 
--   **Add examples, points, and stories** from your own experience.
-    Think about stories you can share that help you make your points
-    clearly and effectively.
+-   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
--   **Consider creating a "parking lot"** to record issues or questions
-    raised that are outside the scope of the whiteboard design session
-    or can be answered later. Decide how you will address these issues,
-    so you can acknowledge them without being derailed by them.
+-   **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
 
 ***Have fun**! Encourage participants to have fun and share!*
 
-**Involve your participants.** Talk and share your knowledge but always
-involve your participants, even while you are the one speaking.
+**Involve your participants.** Talk and share your knowledge but always involve your participants, even while you are the one speaking.
 
-**Ask questions** and get them to share to fully involve your group in
-the learning process.
+**Ask questions** and get them to share to fully involve your group in the learning process.
 
-**Ask first**, whenever possible. Before launching into a topic, learn
-your audience's opinions about it and experiences with it. Asking first
-enables you to assess their level of knowledge and experience, and
-leaves them more open to what you are presenting.
+**Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
 
-**Wait for responses**. If you ask a question such as, "What is your
-experience with (fill in the blank)?" then wait. Do not be afraid of a
-little silence. If you leap into the silence, your participants will
-feel you are not serious about involving them and will become passive.
-Give participants a chance to think, and if no one answers, patiently
-ask again. You will usually get a response.
+**Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
 #  Optimized architecture whiteboard design session student guide
 
@@ -195,16 +179,19 @@ At the end of this whiteboard design session, you will be better able to design 
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
+
+1.  Meet your table participants and trainer.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -310,7 +297,7 @@ but we know this setup is less than ideal. Although, we do keep backups
 in the event of a failure."
 
 ![Diagram of the previously described Existing
-architecture.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image2.png "Existing architecture diagram")
+architecture.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image2.png)
 
 **Existing virtual machine utilization**
 
@@ -340,7 +327,7 @@ Tier, which has CPU of 58 percent and RAM of 34 percent, or CPU of 56
 percent or RAM of 31 percent. The third row is Back-end processing tier,
 which is CPU of 49 percent, and RAM of 25 percent. The bottom row,
 Database Server SQL Database: Preium P4, has no CPU or RAM
-information.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image3.png "Standard D3 pricing tier")
+information.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image3.png)
 
 **Database usage analysis**
 
@@ -356,31 +343,31 @@ but I know Azure SQL Databases use that for billing."
 ### Customer needs 
 
 1.  Design a two-phase approach to the process of migrating Azure
-    resources towards the goal of optimized spending
+    resources towards the goal of optimized spending.
 
 2.  Fix the SQL Server database hosting to be more robust, reliable, and
-    enterprise-grade
+    enterprise-grade.
 
 3.  Automatic scaling needs to be implemented to reduce the manual
-    process involved
+    process involved.
 
 4.  Identify the appropriate method to use for scaling out the different
-    application tiers to meet increases in load
+    application tiers to meet increases in load.
 
-5.  Identify the appropriate VM sizes for each application tier
+5.  Identify the appropriate VM sizes for each application tier.
 
 6.  Validate the appropriate Azure Regions are used for hosting and
     create a plan to migrate any necessary resources to a different
-    region
+    region.
 
 7.  Identify the PaaS services to use, and the App Service Plans, and
-    create a migration plan
+    create a migration plan.
 
 8.  Identify a strategy to reduce server maintenance as the system is
-    scaled out to meet increased load
+    scaled out to meet increased load.
 
 9.  The migration steps should not require any changes to application
-    code
+    code.
 
 ### Customer objections 
 
@@ -411,7 +398,7 @@ but I know Azure SQL Databases use that for billing."
 Azure virtual network with VMs and load balancers
 
 ![Azure infrastructure showing front end subnet and back end
-subnet.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image4.png "Azure infrastructure")
+subnet.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image4.png)
 
 3-tier Azure Web App architecture with message queue
 
@@ -424,25 +411,27 @@ Instances and Autoscale. This points to Azure SQL Databases, and also
 shares a bi-directional arrow with Message Queue (Storage Queue or
 Service Bus Queue.) The Message Queue points to Web Job Instances with
 AutoScale, which completes the circle by pointing back to Web API
-Instances.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image5.png "3-tier Azure Web App architecture with message queue")
+Instances.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image5.png)
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
+**Outcome**
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
+
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
-**Design** 
+**Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 **Two-phase solution**
 
@@ -483,7 +472,7 @@ architecture and what needs to be demonstrated to stakeholders.
     -   What order or steps would you recommend taking when changing the
         architecture?
 
--   Diagram the solution
+-   Diagram the solution.
 
 **Phase 2**
 
@@ -520,35 +509,45 @@ design.
     -   What order or steps would you recommend taking when changing the
         architecture?
 
--   Diagram the solution
+-   Diagram the solution.
 
 **Prepare**
 
 Directions: With all participants at your table:
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+
+1.  Identify any customer needs that are not addressed with the proposed solution.
+
+2.  Identify the benefits of your solution.
+
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
+
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
 6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6
+
+7.  Tables switch roles and repeat Steps 2-6.
 
 ##  Wrap-up 
 
@@ -584,50 +583,42 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
--   Ready, set, go! Let the table participants begin
+-   Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure they are transitioning from step
-    to step on time
+-   Check in with your tables to ensure that they are transitioning from step to step on time.
 
--   Provide some feedback on their responses to the business needs and
-    design
+-   Provide some feedback on their responses to the business needs and design.
 
-    -   Try asking questions first that will lead the participants to
-        discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
--   Provide feedback for their responses to the customer's objections
+-   Provide feedback for their responses to the customer's objections.
 
-    -   Try asking questions first that will lead the participants to
-        discover the answers on their own
-
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3
-    begins
+-   Determine which table will be paired with your table before Step 3 begins.
 
--   For the first round, assign one table as the Microsoft team and the
-    other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer.
 
--   Have the Microsoft team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team.
 
-    -   Have the customer team provide one objection for the Microsoft
-        team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
-    -   The presentation, objections, and feedback should take no longer than 15 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
-    -   If needed, the trainer may also provide feedback
+    -   If needed, the trainer may also provide feedback.
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ##  Preferred target audience
 
@@ -645,31 +636,31 @@ The Phase 1 design solution involves the following technologies and
 modifications:
 
 -   Implementing VM Scale Sets for the Font-end Web App and Back-end Web
-    API application tiers
+    API application tiers.
 
 -   Resizing the VM Sizes used for each of the application tiers should
     be done to eliminate any over provisioning. Over provisioning wastes
     money by paying for resources that are not necessary.
 
     -   Resize the Front-end Web App Tier VMs to the *Standard F4* VM
-        size
+        size.
 
     -   Resize the Back-end Web API Tier VMs to the *Standard F4* VM
-        size
+        size.
 
     -   Resize the Back-end Processing Tier VMs to the *Standard F2* VM
-        size
+        size.
 
 -   Migrating the SQL Database server to the *North Central US* region
-    (same region the rest of the application resides)
+    (same region the rest of the application resides).
 
 -   Migrating the SQL Database VM to Azure SQL Database using the
-    *Premium P4* pricing tier
+    *Premium P4* pricing tier.
 
--   Configure SQL Database Active Geo-Replication for added resiliency
+-   Configure SQL Database Active Geo-Replication for added resiliency.
 
 ![Diagram of the previously described Preferred solution Phase
-1.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image6.png "Preferred solution Phase 1 diagram")
+1.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image6.png)
 
 **Phase 2 design**
 
@@ -677,22 +668,22 @@ The Phase 2 design switches focus to using Azure Platform (PaaS)
 services as much as possible to further reduce overall spending.
 
 -   Migrating the Front-end Web App tier to use Azure Web Apps with the
-    *Standard S3* App Service Plan
+    *Standard S3* App Service Plan.
 
 -   Migrating the Back-end Web API tier to use Azure Web Apps with the
-    *Standard S3* App Service Plan
+    *Standard S3* App Service Plan.
 
 -   Migrating the Back-end Processing tier to use Azure Web Jobs with
-    the *Standard S3* App Service Plan
+    the *Standard S3* App Service Plan.
 
 -   Implementing Autoscale for all three application tiers (Front-end
-    Web App, Back-end Web API, and Back-end Processing)
+    Web App, Back-end Web API, and Back-end Processing).
 
 -   Implementing Traffic Manager in Geographic mode instead of the
-    External Load Balancer
+    External Load Balancer.
 
 ![Diagram of the previously described Preferred solution Phase
-2.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image7.png "Phase 2 preferred solution diagram")
+2.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image7.png)
 
 **Total cost savings**
 
@@ -708,60 +699,65 @@ App Service Plans, and SQL Database:
   Phase 1 Design w/ Reserved Instances   |\$2,980        |\$3,922                 |\$47,064
   Phase 2 Design                         |\$3,582        |\$3,320                 |\$39,840
 
-### Phase 1
+_Phase 1_
+
+Design the changes to the existing solution architecture using IaaS
+(Infrastructure as a Service) services to reduce and optimize the cost
+of Azure. Included in this phase should be a solution to make the SQL
+Server more robust. Identify the steps necessary to modify the
+architecture and what needs to be demonstrated to stakeholders.
 
 **Database server**
 
-**Task:**
-Which Azure SQL Database hosting solution would you recommend?
+1. Which Azure SQL Database hosting solution would you recommend?
 
 **Answer:**
+
 Azure SQL Database: The existing architecture is relying on
 a single VM to host the SQL Server database server. Implementing Azure
 SQL Database with Active Geo-Replication will deliver predictable
 performance, scalability with no downtime, business continuity, and data
 protection---all with near-zero administration.
 
-Note: The *Standard GS4* VM size the existing architecture is using in
+>**Note**: The *Standard GS4* VM size the existing architecture is using in
 the West US region is not available in the *North Central US* region.
 
-**Task:** 
-What is the recommended Azure Region to use for the SQL
+2. What is the recommended Azure Region to use for the SQL
 Database?
 
 **Answer:** 
+
 North Central US: Transferring data between non-paired Azure
 regions incurs Egress/Outbound data transfer charges. Placing the
 database in the same Azure region as the rest of the application will
 eliminate these charges.
 
-**Task:**
-What is the recommended Azure SQL Database pricing tier?
+3. What is the recommended Azure SQL Database pricing tier?
 
-**Answer:** 
+**Answer:**
+
 Premium P4: According to the estimated DTU requirements of
 the SQL Server database server it is the appropriate pricing tier.
 
 **Cost Optimization**
 
-**Task:**
-What VM scaling solution is recommended?
+1. What VM scaling solution is recommended?
 
 **Answer:**
+
 VM Scale Sets: Implementing VM Scale Sets allows for the VMs
 supporting the workloads to be scaled in/out automatically.
 
-**Task:** 
-How do you determine the appropriate VM size for each tier?
+2. How do you determine the appropriate VM size for each tier?
 
 **Answer:**
+
 Compare the VM CPU/RAM utilization of the existing
 architecture VM sizes to the list of available VM sizes within the Azure
 North Central US region and determine which VM sizes better fit the VM
 CPU/RAM utilization.
 
-**Task:** 
-What are the recommended VM size and count to use for each
+3. What are the recommended VM size and count to use for each
 application tier?
 
 **Answer:**
@@ -771,11 +767,11 @@ application tier?
 -   Back-end Processing VMs: Standard F2 -- two instances
 -   SQL Server VM: None -- it is migrated to Azure SQL Database service
 
-**Task:**
-What is the calculated cost and overall savings gained from
+4. What is the calculated cost and overall savings gained from
 this design?
 
 **Answer:**
+
 The total estimated cost of the VMs with Reserved Instances and Azure
 SQL pricing tier is \$2,980 (as opposed to \$3,510 without reserved
 instances). This number does not consider the implementation of VM Scale
@@ -785,7 +781,7 @@ Phase 1 design is \$47,064.
 
 ![Screenshot of the Application Tier pricing, with the total annual
 savings, as previously
-described.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image8.png "Pricing by Application Tier")
+described.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image8.png)
 
 Below are the prices for the different VM and SQL Database instance
 tiers:
@@ -796,11 +792,11 @@ tiers:
 
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
-**Task:**
-How do these optimizations reduce the total cost of server
+5. How do these optimizations reduce the total cost of server
 maintenance and operation?
 
 **Answer:**
+
 1.  Eliminate overprovisioning: It eliminates the cost of paying for
     extra resources that are not being used.
 
@@ -810,11 +806,11 @@ maintenance and operation?
 
 **Migration**
 
-**Task:**
-What order or steps would you recommend taking when changing
+1. What order or steps would you recommend taking when changing
 the architecture?
 
 **Answer:**
+
 It is recommended to modify the architecture for each of the
 Application Tiers individually to reduce the risk of application
 downtime during the migration process. Here is a sample outline of
@@ -823,52 +819,54 @@ recommended steps:
 1.  Migrate SQL Server database from VM into Azure SQL Database within
     Azure North Central US region:
 
-    a.  Determine appropriate Azure SQL Database pricing tier
+    a.  Determine appropriate Azure SQL Database pricing tier.
 
-    b.  Setup Azure SQL Database with cloned database
+    b.  Setup Azure SQL Database with cloned database.
 
-    c.  Switch application over to use new database
+    c.  Switch application over to use new database.
 
-    d.  Remove old SQL Server VM
+    d.  Remove old SQL Server VM.
 
 2.  Setup geo-replication of the Azure SQL database to another Azure
-    region
+    region.
 
 3.  Migrate Web API tier to use VM Scale Set instead of individual VMs:
 
-    a.  Determine appropriate VM size
+    a.  Determine appropriate VM size.
 
-    b.  Setup new VM Scale Set
+    b.  Setup new VM Scale Set.
 
-    c.  Switch over Load Balancer to new VMs
+    c.  Switch over Load Balancer to new VMs.
 
-    d.  Remove old VMs
+    d.  Remove old VMs.
 
 4.  Migrate Web App tier to use VM Scale Set instead of individual VMs:
 
-    a.  Determine appropriate VM size
+    a.  Determine appropriate VM size.
 
-    b.  Setup new VM Scale Set
+    b.  Setup new VM Scale Set.
 
-    c.  Switch over Load Balancer to new VMs
+    c.  Switch over Load Balancer to new VMs.
 
-    d.  Remove old VMs
+    d.  Remove old VMs.
 
-### Phase 2
+_Phase 2_
+
+Outline the changes necessary to transform the Phase 1 architecture design over to further optimizing Azure spend by using the Azure PaaS (Platform as a Service) services that fit the solution. Identify the steps necessary and what needs to be demonstrated to stakeholders to convince them of the viability of the final solution architecture design.
 
 **Cost optimization**
 
-**Task:** 
-What services would you recommend to further optimize the
+1. What services would you recommend to further optimize the
 solution for lower total cost?
 
 **Answer:**
+
 Traffic Manager and App Service (Web Apps and Web Jobs).
 
-**Task:** 
-How do you determine the appropriate App Service Plan to use?
+2. How do you determine the appropriate App Service Plan to use?
 
 **Answer:** 
+
 Compare the VM CPU/RAM utilization of the existing
 architecture VM sizes to the list of App Service Plan tiers within the
 Azure North Central US region and determine which App Service Plan
@@ -876,8 +874,7 @@ better fits the specific Application Tier workload. It also needs to
 consider the Instance Count to factor in the setup of Multiple VMs
 appropriately.
 
-**Task:** 
-What are the recommended App Service Plans to use for each
+3. What are the recommended App Service Plans to use for each
 application tier?
 
 **Answer:**
@@ -887,11 +884,11 @@ application tier?
 -   Back-end Processing Tier: Standard S3 w/ one instance
 -   SQL Database: No change from Phase 1 using Azure SQL Database service
 
-**Task:** 
-What is the calculated cost and overall savings gained from
+4. What is the calculated cost and overall savings gained from
 this design?
 
 **Answer:** 
+
 The total estimated cost of the App Service Plans and Azure
 SQL pricing tier is \$3,582. This number does not consider the
 implementation of Azure Autoscale, so it is possible the actual cost
@@ -900,7 +897,7 @@ existing architecture to the Phase 2 design is \$39,840.
 
 ![Screenshot of the Application Tier pricing, with the total annual
 savings, as previously
-described.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image9.png "Pricing by Application Tier")
+described.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image9.png)
 
 Below are the prices for the different VM and SQL database instance
 tiers:
@@ -909,11 +906,11 @@ tiers:
 
 -   SQL Database - Premium P4 = \$1,830 /mo.
 
-**Task:** 
-How do these optimizations reduce the total cost of server
+5. How do these optimizations reduce the total cost of server
 maintenance and operation?
 
 **Answer:** 
+
 These are the two factors with this design that reduce the
 total cost:
 
@@ -926,11 +923,11 @@ total cost:
 
 **Scalability**
 
-**Task:** 
-What service should be used to ensure expected application
+1. What service should be used to ensure expected application
 performance is maintained when onboarding Lucerne employees?
 
 **Answer:** 
+
 Traffic Manager in Geographic mode with additional Web App
 in a European Azure region: Traffic Manager will ensure that the
 application is served up from the Azure region closest to the user. The
@@ -939,69 +936,69 @@ US and European user workload to different servers.
 
 **Migration**
 
-**Task:** 
-What order or steps would you recommend taking when changing
+1. What order or steps would you recommend taking when changing
 the architecture?
 
-**Answer:** 
+**Answer:**
+
 It is recommended to modify the architecture for each of the
 application tiers individually to reduce the risk of application
 downtime during the migration process. Here is a sample outline of
 recommended steps:
 
 1.  Migrate Front-end Web App tier over to Azure Web Apps with Azure
-    Autoscale
+    Autoscale:
+    
+    a.  Determine the appropriate App Service Plan.
 
-    a.  Determine the appropriate App Service Plan
+    b.  Setup the Azure Web App.
 
-    b.  Setup the Azure Web App
-
-    c.  Configure Autoscale
+    c.  Configure Autoscale.
 
 2.  Replace the Internet Load Balancer with Traffic Manager in
-    Geographic mode pointed to the Web App
+    Geographic mode pointed to the Web App:
 
-    a.  Create Traffic Manager
+    a.  Create Traffic Manager.
 
-    b.  Set it up with Web App
+    b.  Set it up with Web App.
 
-    c.  Swap out Load Balancer endpoint to use Traffic Manager
+    c.  Swap out Load Balancer endpoint to use Traffic Manager.
 
-    d.  Remove old Internet Load Balancer
+    d.  Remove old Internet Load Balancer.
 
 3.  Migrate Back-end Processing over to Azure Web Jobs with Azure
-    Autoscale
+    Autoscale:
 
-    a.  Determine the appropriate App Service Plan
+    a.  Determine the appropriate App Service Plan.
 
-    b.  Setup the Azure Web Jobs
+    b.  Setup the Azure Web Jobs.
 
-    c.  Configure Autoscale
+    c.  Configure Autoscale.
 
-    d.  Remove old VM Scale Set
+    d.  Remove old VM Scale Set.
 
-4.  Migrate Back-end Web API over to Azure Web Apps with Azure Autoscale
+4.  Migrate Back-end Web API over to Azure Web Apps with Azure Autoscale:
 
-    a.  Determine the appropriate App Service Plan
+    a.  Determine the appropriate App Service Plan.
 
-    b.  Setup the Azure Web App
+    b.  Setup the Azure Web App.
 
-    c.  Configure Autoscale
+    c.  Configure Autoscale.
 
     d.  Point Front-end Web App and Back-end Processing application
-        tiers to new Azure Web App
+        tiers to new Azure Web App.
 
-    e.  Remove old VM Scale Set and Internal Load Balancer
+    e.  Remove old VM Scale Set and Internal Load Balancer.
 
-5.  Setup Front-end Web App duplicate in Azure North Europe Region
+5.  Setup Front-end Web App duplicate in Azure North Europe Region:
 
-    a.  Create App Service Plan in Azure North Europe Region
+    a.  Create App Service Plan in Azure North Europe Region.
 
-    b.  Setup the Azure Web App
+    b.  Setup the Azure Web App.
 
-    c.  Configure Autoscale
+    c.  Configure Autoscale.
 
-    d.  Add new region to Traffic Manager
+    d.  Add new region to Traffic Manager.
 
 ## Checklist of preferred objection handling
 

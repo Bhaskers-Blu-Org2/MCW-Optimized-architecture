@@ -1,0 +1,1323 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "defaultValue": "demouser",
+      "type": "String"
+    },
+    "adminPassword": {
+      "defaultValue": null,
+      "type": "SecureString"
+    },
+    "_artifactsLocation": {
+      "defaultValue":  "",
+      "type": "string",
+      "metadata": {
+        "description": "Auto-generated container in staging storage account to receive post-build staging folder upload"
+      }
+    },
+      "_artifactsLocationSasToken": {
+          "type": "securestring",
+          "metadata": {
+              "description": "Auto-generated token to access _artifactsLocation"
+          }
+      }
+  },
+  "variables": {
+    "location": "[resourceGroup().location]",
+
+    "availabilitySets_WebAppAVSet_name": "WebAppAVSet",
+    "availabilitySets_WebAPIAV_name": "WebAPIAV",
+    "availabilitySets_BackgroundAV_name": "BackgroundAV",
+
+    "storageAccount_diag_name": "[concat('diag', uniqueString(subscription().subscriptionId, resourceGroup().id))]",
+    "storageAccount_disks_name": "[concat('disks', uniqueString(subscription().subscriptionId, resourceGroup().id))]",
+
+    "virtualMachines_Background1_name": "Background1",
+    "virtualMachines_WebAPI1_name": "WebAPI1",
+    "virtualMachines_WebAPI2_name": "WebAPI2",
+    "virtualMachines_WebApp1_name": "WebApp1",
+    "virtualMachines_WebApp2_name": "WebApp2",
+
+    "virtualNetworks_OptimizedVNET_name": "AppVNET",
+
+    "loadBalancers_WebAPILB_name": "WebAPILB",
+    "loadBalancers_WebAppLB_name": "WebAppLB",
+
+    "networkInterfaces_Background1_name": "background1nic",
+    "networkInterfaces_WebAPI1_name": "webapi1nic",
+    "networkInterfaces_WebAPI2_name": "webapi2nic",
+    "networkInterfaces_WebApp1_name": "webapp1nic",
+    "networkInterfaces_WebApp2_name": "webapp2nic",
+
+    "networkSecurityGroups_Background1_nsg_name": "Background1-nsg",
+    "networkSecurityGroups_WebAPI1_nsg_name": "WebAPI1-nsg",
+    "networkSecurityGroups_WebApp1_nsg_name": "WebApp1-nsg",
+
+    "publicIPAddresses_Background1_ip_name": "Background1-ip",
+    "publicIPAddresses_WebAPI1_ip_name": "WebAPI1-ip",
+    "publicIPAddresses_WebAPI2_ip_name": "WebAPI2-ip",
+    "publicIPAddresses_WebApp1_ip_name": "WebApp1-ip",
+    "publicIPAddresses_WebApp2_ip_name": "WebApp2-ip",
+
+    "publicIPAddresses_WebAPPLBIP_name": "WebAPPLBIP",
+    "publicIPAddresses_WebAPPLBIP_domainNameLabel": "[concat('webapp', uniqueString(subscription().subscriptionId, resourceGroup().id))]",
+
+    "databaseServerName": "[concat('db', uniqueString(subscription().subscriptionId, resourceGroup().id))]",
+    "databaseName": "contosofinancialdb",
+
+    "databases_contosofinancialdb_name": "[concat(variables('databaseServerName'), '/', variables('databaseName'))]",
+    "databases_master_name": "[concat(variables('databaseServerName'), '/master')]",
+
+    "firewallRules_AllowAllWindowsAzureIps_name": "[concat(variables('databaseServerName'), '/AllowAllWindowsAzureIps')]",
+    "firewallRules_WebAPI1_name": "[concat(variables('databaseServerName'), '/WebAPI1')]",
+    "firewallRules_WebAPI2_name": "[concat(variables('databaseServerName'), '/WebAPI2')]",
+
+
+    "scriptExtension_ScriptFolder": "CustomScripts",
+
+    "scriptExtension_WebAppScriptFileName": "scriptExtension_DeployWebApp.ps1",
+    "scriptExtension_WebAppZipFileName": "WebAppFiles.zip",
+
+    "scriptExtension_WebAPIScriptFileName": "scriptExtension_DeployWebAPI.ps1",
+    "scriptExtension_WebAPIZipFileName": "APIFiles.zip",
+
+    "scriptExtension_BackgroundScriptFileName": "scriptExtension_ScheduleBackgroundTask.ps1",
+    "scriptExtension_BackgroundZipFileName": "BackgroundFiles.zip"
+  },
+  "resources": [
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/BackgroundAV'.",
+      "type": "Microsoft.Compute/availabilitySets",
+      "name": "[variables('availabilitySets_BackgroundAV_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "platformUpdateDomainCount": 5,
+        "platformFaultDomainCount": 3
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/WebAPIAV'.",
+      "type": "Microsoft.Compute/availabilitySets",
+      "name": "[variables('availabilitySets_WebAPIAV_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "platformUpdateDomainCount": 5,
+        "platformFaultDomainCount": 3
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/WebAppAVSet'.",
+      "type": "Microsoft.Compute/availabilitySets",
+      "name": "[variables('availabilitySets_WebAppAVSet_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "platformUpdateDomainCount": 5,
+        "platformFaultDomainCount": 3
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/Background1'.",
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "[variables('virtualMachines_Background1_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "availabilitySet": {
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_BackgroundAV_name'))]"
+        },
+        "hardwareProfile": {
+          "vmSize": "Standard_DS1_v2"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2012-R2-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "name": "[variables('virtualMachines_Background1_name')]",
+            "createOption": "FromImage",
+            "vhd": {
+              "uri": "[concat('https', '://', variables('storageAccount_disks_name'), '.blob.core.windows.net', concat('/vhds/', variables('virtualMachines_Background1_name'),'201682165653.vhd'))]"
+            },
+            "caching": "ReadWrite"
+          },
+          "dataDisks": []
+        },
+        "osProfile": {
+          "computerName": "[variables('virtualMachines_Background1_name')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true
+          },
+          "secrets": [],
+          "adminPassword": "[parameters('adminPassword')]"
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_Background1_name'))]"
+            }
+          ]
+        }
+      },
+      "resources": [
+        {
+          "name": "scriptExtension_Background1",
+          "type": "extensions",
+          "location": "[variables('location')]",
+          "apiVersion": "2015-06-15",
+          "dependsOn": [
+            "[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachines_Background1_name'))]"
+          ],
+          "tags": {
+            "displayName": "scriptExtension_Background1"
+          },
+          "properties": {
+            "publisher": "Microsoft.Compute",
+            "type": "CustomScriptExtension",
+            "typeHandlerVersion": "1.7",
+            "autoUpgradeMinorVersion": true,
+            "settings": {
+              "fileUris": [
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_BackgroundScriptFileName'), parameters('_artifactsLocationSasToken'))]",
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_BackgroundZipFileName'), parameters('_artifactsLocationSasToken'))]"
+              ],
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_BackgroundScriptFileName'), ' -artifactLocation ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_BackgroundZipFileName'), ' -dbservername ', variables('databaseServerName') , ' -dbname ', variables('databaseName') , ' -dbadmin ', parameters('adminUsername') , ' -dbpassword ', parameters('adminPassword') )]"
+            }
+          }
+        }
+      ],
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_BackgroundAV_name'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccount_disks_name'))]",
+        "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_Background1_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/WebAPI1'.",
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "[variables('virtualMachines_WebAPI1_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "availabilitySet": {
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAPIAV_name'))]"
+        },
+        "hardwareProfile": {
+          "vmSize": "Standard_DS1_v2"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2012-R2-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "name": "[variables('virtualMachines_WebAPI1_name')]",
+            "createOption": "FromImage",
+            "vhd": {
+              "uri": "[concat('https', '://', variables('storageAccount_disks_name'), '.blob.core.windows.net', concat('/vhds/', variables('virtualMachines_WebAPI1_name'),'201682135949.vhd'))]"
+            },
+            "caching": "ReadWrite"
+          },
+          "dataDisks": []
+        },
+        "osProfile": {
+          "computerName": "[variables('virtualMachines_WebAPI1_name')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true
+          },
+          "secrets": [],
+          "adminPassword": "[parameters('adminPassword')]"
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebAPI1_name'))]"
+            }
+          ]
+        }
+      },
+      "resources": [
+        {
+          "name": "scriptExtension_WebAPI1",
+          "type": "extensions",
+          "location": "[variables('location')]",
+          "apiVersion": "2015-06-15",
+          "dependsOn": [
+            "[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachines_WebAPI1_name'))]"
+          ],
+          "tags": {
+            "displayName": "scriptExtension_WebAPI1"
+          },
+          "properties": {
+            "publisher": "Microsoft.Compute",
+            "type": "CustomScriptExtension",
+            "typeHandlerVersion": "1.7",
+            "autoUpgradeMinorVersion": true,
+            "settings": {
+              "fileUris": [
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIScriptFileName'), parameters('_artifactsLocationSasToken'))]",
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIZipFileName'), parameters('_artifactsLocationSasToken'))]",
+              ],
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIScriptFileName'), ' -artifactLocation ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIZipFileName'), ' -dbservername ', variables('databaseServerName') , ' -dbname ', variables('databaseName') , ' -dbadmin ', parameters('adminUsername') , ' -dbpassword ', parameters('adminPassword') )]"
+            }
+          }
+        }
+      ],
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAPIAV_name'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccount_disks_name'))]",
+        "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebAPI1_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/WebAPI2'.",
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "[variables('virtualMachines_WebAPI2_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "availabilitySet": {
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAPIAV_name'))]"
+        },
+        "hardwareProfile": {
+          "vmSize": "Standard_DS1_v2"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2012-R2-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "name": "[variables('virtualMachines_WebAPI2_name')]",
+            "createOption": "FromImage",
+            "vhd": {
+              "uri": "[concat('https', '://', variables('storageAccount_disks_name'), '.blob.core.windows.net', concat('/vhds/', variables('virtualMachines_WebAPI2_name'),'20168214215.vhd'))]"
+            },
+            "caching": "ReadWrite"
+          },
+          "dataDisks": []
+        },
+        "osProfile": {
+          "computerName": "[variables('virtualMachines_WebAPI2_name')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true
+          },
+          "secrets": [],
+          "adminPassword": "[parameters('adminPassword')]"
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebAPI2_name'))]"
+            }
+          ]
+        }
+      },
+      "resources": [
+        {
+          "name": "scriptExtension_WebAPI2",
+          "type": "extensions",
+          "location": "[variables('location')]",
+          "apiVersion": "2015-06-15",
+          "dependsOn": [
+            "[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachines_WebAPI2_name'))]"
+          ],
+          "tags": {
+            "displayName": "scriptExtension_WebAPI2"
+          },
+          "properties": {
+            "publisher": "Microsoft.Compute",
+            "type": "CustomScriptExtension",
+            "typeHandlerVersion": "1.7",
+            "autoUpgradeMinorVersion": true,
+            "settings": {
+              "fileUris": [
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIScriptFileName'), parameters('_artifactsLocationSasToken'))]",
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIZipFileName'), parameters('_artifactsLocationSasToken'))]",
+              ],
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIScriptFileName'), ' -artifactLocation ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAPIZipFileName'), ' -dbservername ', variables('databaseServerName') , ' -dbname ', variables('databaseName') , ' -dbadmin ', parameters('adminUsername') , ' -dbpassword ', parameters('adminPassword') )]"
+            }
+          }
+        }
+      ],
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAPIAV_name'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccount_disks_name'))]",
+        "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebAPI2_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/WebApp1'.",
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "[variables('virtualMachines_WebApp1_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "availabilitySet": {
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAppAVSet_name'))]"
+        },
+        "hardwareProfile": {
+          "vmSize": "Standard_DS1_v2"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2012-R2-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "name": "[variables('virtualMachines_WebApp1_name')]",
+            "createOption": "FromImage",
+            "vhd": {
+              "uri": "[concat('https', '://', variables('storageAccount_disks_name'), '.blob.core.windows.net', concat('/vhds/', variables('virtualMachines_WebApp1_name'),'201682134021.vhd'))]"
+            },
+            "caching": "ReadWrite"
+          },
+          "dataDisks": []
+        },
+        "osProfile": {
+          "computerName": "[variables('virtualMachines_WebApp1_name')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true
+          },
+          "secrets": [],
+          "adminPassword": "[parameters('adminPassword')]"
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebApp1_name'))]"
+            }
+          ]
+        }
+      },
+      "resources": [
+        {
+          "name": "scriptExtension_WebApp1",
+          "type": "extensions",
+          "location": "[variables('location')]",
+          "apiVersion": "2015-06-15",
+          "dependsOn": [
+            "[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachines_WebApp1_name'))]"
+          ],
+          "tags": {
+            "displayName": "scriptExtension_WebApp1"
+          },
+          "properties": {
+            "publisher": "Microsoft.Compute",
+            "type": "CustomScriptExtension",
+            "typeHandlerVersion": "1.7",
+            "autoUpgradeMinorVersion": true,
+            "settings": {
+              "fileUris": [
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppScriptFileName'), parameters('_artifactsLocationSasToken'))]",
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppZipFileName'), parameters('_artifactsLocationSasToken'))]"
+              ],
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppScriptFileName'), ' -artifactLocation ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppZipFileName'), ' -apiipaddress ', reference(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name'))).frontendIPConfigurations[0].properties.privateIPAddress )]"
+            }
+          }
+        }
+      ],
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAppAVSet_name'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccount_disks_name'))]",
+        "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebApp1_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/WebApp2'.",
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "[variables('virtualMachines_WebApp2_name')]",
+      "apiVersion": "2015-06-15",
+      "location": "[variables('location')]",
+      "properties": {
+        "availabilitySet": {
+          "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAppAVSet_name'))]"
+        },
+        "hardwareProfile": {
+          "vmSize": "Standard_DS1_v2"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2012-R2-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "name": "[variables('virtualMachines_WebApp2_name')]",
+            "createOption": "FromImage",
+            "vhd": {
+              "uri": "[concat('https', '://', variables('storageAccount_disks_name'), '.blob.core.windows.net', concat('/vhds/', variables('virtualMachines_WebApp2_name'),'201682134224.vhd'))]"
+            },
+            "caching": "ReadWrite"
+          },
+          "dataDisks": []
+        },
+        "osProfile": {
+          "computerName": "[variables('virtualMachines_WebApp2_name')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true
+          },
+          "secrets": [],
+          "adminPassword": "[parameters('adminPassword')]"
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebApp2_name'))]"
+            }
+          ]
+        }
+      },
+      "resources": [
+        {
+          "name": "scriptExtension_WebApp2",
+          "type": "extensions",
+          "location": "[variables('location')]",
+          "apiVersion": "2015-06-15",
+          "dependsOn": [
+            "[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachines_WebApp2_name'))]"
+          ],
+          "tags": {
+            "displayName": "scriptExtension_WebApp2"
+          },
+          "properties": {
+            "publisher": "Microsoft.Compute",
+            "type": "CustomScriptExtension",
+            "typeHandlerVersion": "1.7",
+            "autoUpgradeMinorVersion": true,
+            "settings": {
+              "fileUris": [
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppScriptFileName'), parameters('_artifactsLocationSasToken'))]",
+                "[concat(parameters('_artifactsLocation'), '/', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppZipFileName'), parameters('_artifactsLocationSasToken'))]"
+              ],
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppScriptFileName'), ' -artifactLocation ', variables('scriptExtension_ScriptFolder'), '/', variables('scriptExtension_WebAppZipFileName'), ' -apiipaddress ', reference(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name'))).frontendIPConfigurations[0].properties.privateIPAddress )]"
+            }
+          }
+        }
+      ],
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySets_WebAppAVSet_name'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccount_disks_name'))]",
+        "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaces_WebApp2_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/WebAPILB'.",
+      "type": "Microsoft.Network/loadBalancers",
+      "name": "[variables('loadBalancers_WebAPILB_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "frontendIPConfigurations": [
+          {
+            "name": "LoadBalancerFrontEnd",
+            "properties": {
+              "privateIPAddress": "10.0.1.6",
+              "privateIPAllocationMethod": "Static",
+              "subnet": {
+                "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name')), '/subnets/API')]"
+              }
+            }
+          }
+        ],
+        "backendAddressPools": [
+          {
+            "name": "WebAPIPool"
+          }
+        ],
+        "loadBalancingRules": [
+          {
+            "name": "WebAPIRule",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAPILB_name'),'/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+              },
+              "frontendPort": 80,
+              "backendPort": 80,
+              "enableFloatingIP": false,
+              "idleTimeoutInMinutes": 4,
+              "protocol": "Tcp",
+              "loadDistribution": "Default",
+              "backendAddressPool": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAPILB_name'),'/backendAddressPools/WebAPIPool')]"
+              },
+              "probe": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAPILB_name'),'/probes/HTTPProbe')]"
+              }
+            }
+          }
+        ],
+        "probes": [
+          {
+            "name": "HTTPProbe",
+            "properties": {
+              "protocol": "Http",
+              "port": 80,
+              "requestPath": "/",
+              "intervalInSeconds": 5,
+              "numberOfProbes": 2
+            }
+          }
+        ],
+        "inboundNatRules": [
+          {
+            "name": "WebAPI2",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAPILB_name'),'/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+              },
+              "frontendPort": 33892,
+              "backendPort": 3389,
+              "protocol": "Tcp"
+            }
+          },
+          {
+            "name": "WebAPI1",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAPILB_name'),'/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+              },
+              "frontendPort": 33891,
+              "backendPort": 3389,
+              "protocol": "Tcp"
+            }
+          }
+        ],
+        "outboundNatRules": [],
+        "inboundNatPools": []
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/WebAppLB'.",
+      "type": "Microsoft.Network/loadBalancers",
+      "name": "[variables('loadBalancers_WebAppLB_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "frontendIPConfigurations": [
+          {
+            "name": "LoadBalancerFrontEnd",
+            "properties": {
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPPLBIP_name'))]"
+              }
+            }
+          }
+        ],
+        "backendAddressPools": [
+          {
+            "name": "WebAppPool"
+          }
+        ],
+        "loadBalancingRules": [
+          {
+            "name": "WebAppRule",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAppLB_name'),'/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+              },
+              "frontendPort": 80,
+              "backendPort": 80,
+              "enableFloatingIP": false,
+              "idleTimeoutInMinutes": 4,
+              "protocol": "Tcp",
+              "loadDistribution": "Default",
+              "backendAddressPool": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAppLB_name'),'/backendAddressPools/WebAppPool')]"
+              },
+              "probe": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAppLB_name'),'/probes/TcpProbe')]"
+              }
+            }
+          }
+        ],
+        "probes": [
+          {
+            "name": "TcpProbe",
+            "properties": {
+              "protocol": "Tcp",
+              "port": 80,
+              "intervalInSeconds": 5,
+              "numberOfProbes": 2
+            }
+          }
+        ],
+        "inboundNatRules": [
+          {
+            "name": "WebApp1",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAppLB_name'),'/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+              },
+              "frontendPort": 33891,
+              "backendPort": 3389,
+              "protocol": "Tcp"
+            }
+          },
+          {
+            "name": "WebApp2",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/resourceGroups/', resourceGroup().name ,'/providers/Microsoft.Network/loadBalancers/', variables('loadBalancers_WebAppLB_name'),'/frontendIPConfigurations/LoadBalancerFrontEnd')]"
+              },
+              "frontendPort": 33892,
+              "backendPort": 3389,
+              "protocol": "Tcp"
+            }
+          }
+        ],
+        "outboundNatRules": [],
+        "inboundNatPools": []
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPPLBIP_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/background1651'.",
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "[variables('networkInterfaces_Background1_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAddress": "10.0.2.4",
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_Background1_ip_name'))]"
+              },
+              "subnet": {
+                "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name')), '/subnets/Background')]"
+              }
+            }
+          }
+        ],
+        "dnsSettings": {
+          "dnsServers": []
+        },
+        "enableIPForwarding": false,
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_Background1_nsg_name'))]"
+        }
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_Background1_ip_name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_Background1_nsg_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/webapi124'.",
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "[variables('networkInterfaces_WebAPI1_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAddress": "10.0.1.4",
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI1_ip_name'))]"
+              },
+              "subnet": {
+                "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name')), '/subnets/API')]"
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name')), '/backendAddressPools/WebAPIPool')]"
+                }
+              ],
+              "loadBalancerInboundNatRules": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name')), '/inboundNatRules/WebAPI1')]"
+                }
+              ]
+            }
+          }
+        ],
+        "dnsSettings": {
+          "dnsServers": []
+        },
+        "enableIPForwarding": false,
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebAPI1_nsg_name'))]"
+        }
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI1_ip_name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name'))]",
+        "[resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebAPI1_nsg_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/webapi2666'.",
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "[variables('networkInterfaces_WebAPI2_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAddress": "10.0.1.5",
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI2_ip_name'))]"
+              },
+              "subnet": {
+                "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name')), '/subnets/API')]"
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name')), '/backendAddressPools/WebAPIPool')]"
+                }
+              ],
+              "loadBalancerInboundNatRules": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name')), '/inboundNatRules/WebAPI2')]"
+                }
+              ]
+            }
+          }
+        ],
+        "dnsSettings": {
+          "dnsServers": []
+        },
+        "enableIPForwarding": false,
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebAPI1_nsg_name'))]"
+        }
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI2_ip_name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name'))]",
+        "[resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAPILB_name'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebAPI1_nsg_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/webapp1969'.",
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "[variables('networkInterfaces_WebApp1_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAddress": "10.0.0.4",
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebApp1_ip_name'))]"
+              },
+              "subnet": {
+                "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name')), '/subnets/App')]"
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAppLB_name')), '/backendAddressPools/WebAppPool')]"
+                }
+              ],
+              "loadBalancerInboundNatRules": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAppLB_name')), '/inboundNatRules/WebApp1')]"
+                }
+              ]
+            }
+          }
+        ],
+        "dnsSettings": {
+          "dnsServers": []
+        },
+        "enableIPForwarding": false,
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebApp1_nsg_name'))]"
+        }
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebApp1_ip_name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name'))]",
+        "[resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAppLB_name'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebApp1_nsg_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/webapp2896'.",
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "[variables('networkInterfaces_WebApp2_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAddress": "10.0.0.5",
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebApp2_ip_name'))]"
+              },
+              "subnet": {
+                "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name')), '/subnets/App')]"
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAppLB_name')), '/backendAddressPools/WebAppPool')]"
+                }
+              ],
+              "loadBalancerInboundNatRules": [
+                {
+                  "id": "[concat(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAppLB_name')), '/inboundNatRules/WebApp2')]"
+                }
+              ]
+            }
+          }
+        ],
+        "dnsSettings": {
+          "dnsServers": []
+        },
+        "enableIPForwarding": false,
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebApp1_nsg_name'))]"
+        }
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebApp2_ip_name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworks_OptimizedVNET_name'))]",
+        "[resourceId('Microsoft.Network/loadBalancers', variables('loadBalancers_WebAppLB_name'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebApp1_nsg_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/Background1-nsg'.",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "[variables('networkSecurityGroups_Background1_nsg_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "RDP",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3389",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1000,
+              "direction": "Inbound"
+            }
+          }
+        ]
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/WebAPI1-nsg'.",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "[variables('networkSecurityGroups_WebAPI1_nsg_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "HTTP",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "80",
+              "sourceAddressPrefix": "AzureLoadBalancer",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "default-allow-rdp",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3389",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1000,
+              "direction": "Inbound"
+            }
+          }
+        ]
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/WebApp1-nsg'.",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "[variables('networkSecurityGroups_WebApp1_nsg_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "default-allow-rdp",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3389",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 1000,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "HTTP",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "80",
+              "sourceAddressPrefix": "Internet",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound"
+            }
+          }
+        ]
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/Background1-ip'.",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[variables('publicIPAddresses_Background1_ip_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic",
+        "idleTimeoutInMinutes": 4
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/WebAPI1-ip'.",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[variables('publicIPAddresses_WebAPI1_ip_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/WebAPI2-ip'.",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[variables('publicIPAddresses_WebAPI2_ip_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/WebApp1-ip'.",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[variables('publicIPAddresses_WebApp1_ip_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic",
+        "idleTimeoutInMinutes": 4
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/WebApp2-ip'.",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[variables('publicIPAddresses_WebApp2_ip_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic",
+        "idleTimeoutInMinutes": 4
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/WebAPPLBIP'.",
+      "type": "Microsoft.Network/publicIPAddresses",
+      "name": "[variables('publicIPAddresses_WebAPPLBIP_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4,
+        "dnsSettings": {
+          "domainNameLabel": "[variables('publicIPAddresses_WebAPPLBIP_domainNameLabel')]"
+        }
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/OptimizedVNET'.",
+      "type": "Microsoft.Network/virtualNetworks",
+      "name": "[variables('virtualNetworks_OptimizedVNET_name')]",
+      "apiVersion": "2016-03-30",
+      "location": "[variables('location')]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "App",
+            "properties": {
+              "addressPrefix": "10.0.0.0/24",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebApp1_nsg_name'))]"
+              }
+            }
+          },
+          {
+            "name": "API",
+            "properties": {
+              "addressPrefix": "10.0.1.0/24",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebAPI1_nsg_name'))]"
+              }
+            }
+          },
+          {
+            "name": "Background",
+            "properties": {
+              "addressPrefix": "10.0.2.0/24",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_Background1_nsg_name'))]"
+              }
+            }
+          }
+        ]
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebApp1_nsg_name'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_WebAPI1_nsg_name'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroups_Background1_nsg_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{databaseServerName}'.",
+      "type": "Microsoft.Sql/servers",
+      "kind": "v12.0",
+      "name": "[variables('databaseServerName')]",
+      "apiVersion": "2014-04-01-preview",
+      "location": "[variables('location')]",
+      "properties": {
+        "administratorLogin": "[parameters('adminUsername')]",
+        "administratorLoginPassword": "[parameters('adminPassword')]",
+        "version": "12.0"
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{resourceGroupName}diag823'.",
+      "type": "Microsoft.Storage/storageAccounts",
+      "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+      },
+      "kind": "Storage",
+      "name": "[variables('storageAccount_diag_name')]",
+      "apiVersion": "2016-01-01",
+      "location": "[variables('location')]",
+      "tags": {},
+      "properties": {},
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{resourceGroupName}disks360'.",
+      "type": "Microsoft.Storage/storageAccounts",
+      "sku": {
+        "name": "Premium_LRS",
+        "tier": "Premium"
+      },
+      "kind": "Storage",
+      "name": "[variables('storageAccount_disks_name')]",
+      "apiVersion": "2016-01-01",
+      "location": "[variables('location')]",
+      "tags": {},
+      "properties": {},
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/optimizeddb/databases/contosofinancialdb'.",
+      "type": "Microsoft.Sql/servers/databases",
+      "kind": "v12.0,user",
+      "name": "[variables('databases_contosofinancialdb_name')]",
+      "apiVersion": "2014-04-01-preview",
+      "location": "[variables('location')]",
+      "properties": {
+        "edition": "Basic",
+        "status": "Online",
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": "2147483648",
+        "elasticPoolName": null,
+        "containmentState": 2
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', variables('databaseServerName'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{databaseServerName}/databases/master'.",
+      "type": "Microsoft.Sql/servers/databases",
+      "kind": "v12.0,system",
+      "name": "[variables('databases_master_name')]",
+      "apiVersion": "2014-04-01-preview",
+      "location": "[variables('location')]",
+      "properties": {
+        "edition": "System",
+        "status": "Online",
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": "32212254720",
+        "elasticPoolName": null,
+        "containmentState": 2
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', variables('databaseServerName'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{databaseServerName}/firewallRules/AllowAllWindowsAzureIps'.",
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "kind": "v12.0",
+      "name": "[variables('firewallRules_AllowAllWindowsAzureIps_name')]",
+      "apiVersion": "2014-04-01-preview",
+      "location": "[variables('location')]",
+      "properties": {
+        "startIpAddress": "0.0.0.0",
+        "endIpAddress": "0.0.0.0"
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', variables('databaseServerName'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{databaseServerName}/firewallRules/WebAPI1'.",
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "kind": "v12.0",
+      "name": "[variables('firewallRules_WebAPI1_name')]",
+      "apiVersion": "2014-04-01-preview",
+      "location": "[variables('location')]",
+      "properties": {
+        "startIpAddress": "[reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI1_ip_name'))).ipAddress]",
+        "endIpAddress": "[reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI1_ip_name'))).ipAddress]"
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', variables('databaseServerName'))]",
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI1_ip_name'))]"
+      ]
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{databaseServerName}/firewallRules/WebAPI2'.",
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "kind": "v12.0",
+      "name": "[variables('firewallRules_WebAPI2_name')]",
+      "apiVersion": "2014-04-01-preview",
+      "location": "[variables('location')]",
+      "properties": {
+        "startIpAddress": "[reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI2_ip_name'))).ipAddress]",
+        "endIpAddress": "[reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI2_ip_name'))).ipAddress]"
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Sql/servers', variables('databaseServerName'))]",
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPI2_ip_name'))]"
+      ]
+    }
+  ],
+  "outputs": {
+    "InternetLoadBalancerIPAddress": {
+      "type":  "string",
+      "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPPLBIP_name'))).ipAddress]"
+    },
+    "InternetLoadBalancerURL": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddresses_WebAPPLBIP_name'))).dnsSettings.fqdn]"
+    }
+  }
+}

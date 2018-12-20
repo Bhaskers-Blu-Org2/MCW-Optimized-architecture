@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron homepage">
+    <h1 style="white-space: nowrap;"><img style="width: 2em;" src="~/Content/Images/contoso-logo-black.png" /> Contoso Financial</h1>
+    <p class="lead">Etiam convallis diam sit amet nisi dapibus mollis. Morbi semper, libero sit amet tincidunt vulputate, ex nisl vestibulum erat, vitae placerat elit ipsum nec odio. Fusce dictum consequat rhoncus. Cras commodo velit at neque eleifend, nec egestas ex hendrerit. Etiam sollicitudin mauris sit amet urna eleifend laoreet.</p>
+    <p>
+        @Html.ActionLink("Log in", "Login", new { controller = "Account" }, new { @class="btn btn-primary btn-lg" })
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Bank with Us</h2>
+        <p>
+            Etiam convallis diam sit amet nisi dapibus mollis. Morbi semper, libero sit amet tincidunt vulputate, ex nisl vestibulum erat, vitae placerat elit ipsum nec odio. Fusce dictum consequat rhoncus. Cras commodo velit at neque eleifend, nec egestas ex hendrerit. Etiam sollicitudin mauris sit amet urna eleifend laoreet.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Save Money</h2>
+        <p>Etiam convallis diam sit amet nisi dapibus mollis. Morbi semper, libero sit amet tincidunt vulputate, ex nisl vestibulum erat, vitae placerat elit ipsum nec odio. Fusce dictum consequat rhoncus. Cras commodo velit at neque eleifend, nec egestas ex hendrerit. Etiam sollicitudin mauris sit amet urna eleifend laoreet.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Earn More</h2>
+        <p>Etiam convallis diam sit amet nisi dapibus mollis. Morbi semper, libero sit amet tincidunt vulputate, ex nisl vestibulum erat, vitae placerat elit ipsum nec odio. Fusce dictum consequat rhoncus. Cras commodo velit at neque eleifend, nec egestas ex hendrerit. Etiam sollicitudin mauris sit amet urna eleifend laoreet.</p>
+    </div>
+</div>

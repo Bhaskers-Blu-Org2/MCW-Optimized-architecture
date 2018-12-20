@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 
@@ -52,9 +52,9 @@ Duration: 20 minutes
 In this exercise, you will set up an environment to use for the rest of
 the exercises.
 
-### Task 1: Create a virtual machine for your lab environment 
+### Task 1: Create a virtual machine for your lab environment
 
-1.  Launch a browser using incognite or in-private mode, and navigate to
+1.  Launch a browser using incognito or in-private mode, and navigate to
     <https://portal.azure.com>. Once prompted, login with your Microsoft
     Azure credentials. If prompted, choose whether your account is an
     organization account or just a Microsoft Account.
@@ -73,31 +73,25 @@ the exercises.
 
 4.  In the Marketplace solution blade, click **Create**.
 
-5.  Set the following configuration on the Basics tab, and click **OK**:
+5.  Set the following configuration on the Basics tab:
 
-    -   Name: **LABVM**
+    - Subscription: **If you have multiple subscriptions choose the subscription to execute your labs in**.
 
-    -   VM disk type: **Premium SSD**
+    - Resource Group: **OPSLABRG**
 
-    -   User name: **demouser**
+    - Name: **LABVM**
 
-    -   Password: **demo@pass123**
+    - Region: **Choose the closest Azure region to you**.
 
-    -   Subscription: **If you have multiple subscriptions choose the subscription to execute your labs in**.
+    - Size: choose **D2\_V3 Standard**
 
-    -   Resource Group: **OPSLABRG**
+    - User name: **demouser**
 
-    -   Location: **Choose the closest Azure region to you**.
+    - Password: **demo@pass123**
 
-6.  Choose the **DS1\_V2 Standard** instance size on the Size blade.
+6. Be sure to configure the **Inbound Port Rules** to allow connected on inbound port **RDP (3389)**, then click **Review + create**.
 
-7.  Accept the remaining default values on the Settings blade, and click
-    **OK**. On the Summary page, click **OK**. The deployment should
-    begin provisioning. It may take more than 10 minutes for the virtual
-    machine to complete provisioning.
-
-    ![Screenshot of the Deploying Visual Studio Community 2017
-    icon.](images/Setup/image4.png)
+7.  On the Validation step, click **Create**. The deployment should begin provisioning. It may take more than 10 minutes for the virtual machine to complete provisioning.
 
 ### Task 2: Disable IE Enhanced Security
 
@@ -144,61 +138,41 @@ the exercises.
 
 ### Task 4: Deploy Sample App and "Existing" environment
 
-1.  From the *C:\\HOL\\ARMTemplate* folder, open the Visual Studio
-    Solution: **Contoso.Financial.ARMTemplate.sln**.
+1. From the *C:\\HOL\\ARMTemplate* folder, open the Visual Studio Solution: **Contoso.Financial.ARMTemplate.sln**.
 
-2.  In the **Solution Explorer** window, right-click on the
-    **Contoso.Financial.ARMTemplate** project, click **Deploy**, and
-    then click **New...**
-    
-    ![In Solution Explorer, Contoso.Financial.ARMTemplate is selected.
-    From its right-click menu, Deploy / New is
-    selected.](images/Setup/image9.png)
+2. In the **Solution Explorer** window, right-click on the **Contoso.Financial.ARMTemplate** project, click **Deploy**, and then click **New...**
 
-3.  If your Microsoft or Organization account for your Azure
-    Subscription has not been added to Visual Studio yet, click on **Add
-    an account**, then **Add an account...**, and follow the prompts to
-    login.
-    
-    ![Add an account is selected in the Deploy to Resource Group
-    dialog
-    box.](images/Setup/image10.png)
+    ![In Solution Explorer, Contoso.Financial.ARMTemplate is selected. From its right-click menu, Deploy / New is selected.](images/Setup/image9.png)
 
-4.  Click on the **Resource group** dropdown, followed by selecting
-    **\<Create New...\>**.
+3. If your Microsoft or Organization account for your Azure Subscription has not been added to Visual Studio yet, click on **Add an account**, then **Add an account...**, and follow the prompts to login.
 
-    ![In the Deploy to Resource Group dialog box, Create New is selected
-    from the Resource group drop-down
-    menu.](images/Setup/image11.png)
+    ![Add an account is selected in the Deploy to Resource Group dialog box.](images/Setup/image10.png)
 
-5.  On the **Create Resource Group** dialog, enter the following values:
+4. Click on the **Resource group** dropdown, followed by selecting **Create New...**.
 
-    -   Resource group name: **ContosoExistingRG**
+    ![In the Deploy to Resource Group dialog box, Create New is selected from the Resource group drop-down menu.](images/Setup/image11.png)
 
-    -   Resource group location: **North Central US (note if your
-        subscription allows this otherwise pick up subscription where
-        you are allowed to deploy to)**.
+5. On the **Create Resource Group** dialog, enter the following values:
 
-        ![Fields in the Create Resource Group dialog box are set to the
-        previously defined
-        settings.](images/Setup/image12.png)
+    - Resource group name: **ContosoExistingRG**
 
-6.  Click the **Create** button.
+    - Resource group location: **North Central US (note if your subscription allows this otherwise pick up subscription where you are allowed to deploy to)**.
 
-7.  In the **Deploy to Resource Group** dialog, click the **Deploy**
-    button to deploy the ARM Template to the newly created Resource
-    Group.
+    ![Fields in the Create Resource Group dialog box are set to the previously defined settings.](images/Setup/image12.png)
+
+6. Click the **Create** button.
+
+7. In the **Deploy to Resource Group** dialog, click the **Deploy** button to deploy the ARM Template to the newly created Resource Group.
 
     ![In the Deploy to Resource Group dialog box, the Deploy button is
     selected.](images/Setup/image13.png)
 
-8.  Deployment status of the ARM Template will be displayed in the
-    **Output** window within Visual Studio.
+8. Deployment status of the ARM Template will be displayed in the **Output** window within Visual Studio.
 
     ![Deployment status displays in the Visual Studio Output
     Window.](images/Setup/image14.png)
 
-9.  Once the deployment has completed successfully, the **IP Address**
+9. Once the deployment has completed successfully, the **IP Address**
     and **FQDN** of the External / Internet Load Balancer for the Web
     App tier will be displayed in the output window.
 
@@ -206,33 +180,24 @@ the exercises.
     circled in the Output
     Window.](images/Setup/image15.png)
 
->**Note**: The **Username** and **Password** for the VMs and SQL Database created
-by the ARM Template are:
-> - Username: **demouser**
-> - Password: **demo@pass123**
+    >**Note**: The **Username** and **Password** for the VMs and SQL Database created by the ARM Template are:
+    > - Username: **demouser**
+    > - Password: **demo@pass123**
 
-10.  Open a new **Web Browser** window, and navigate to the Web App tier
+10. Open a new **Web Browser** window, and navigate to the Web App tier
     using the **Internet Load Balancer IP Address**.
-    
-   ![The Contoso Financial Login webpage
+
+    ![The Contoso Financial Login webpage
     displays.](images/Setup/image16.png)
 
-11.  To login to the Web App Tier of the Contoso Financial sample
-    application, simply enter **any email address and password**
-    followed by clicking on **Sign in**. If you can't immediately sign
-    in, give the site a few minutes to run the background process and
-    then attempt to sign in again. If any email address does not work then leave the default email address which is bill@contoso.com and put any password.
+11. To login to the Web App Tier of the Contoso Financial sample application, simply enter **any email address and password** followed by clicking on **Sign in**. If you can't immediately sign in, give the site a few minutes to run the background process and then attempt to sign in again.
 
-12.  Once logged in, the sample application will display a simple
-    **Account Transaction** ledger.
-    
-   ![The Contoso Financial Account Overview webpage displays with
-    Transaction details in an account transaction
-    ledger.](images/Setup/image17.png)
+    > If any email address does not work then leave the default email address which is bill@contoso.com and put any password.
 
-Leaving the browser open to the Account Overview page will automatically
-load new transactions as they are generated by the background process,
-since the web page has a JavaScript timer that checks for new
-transactions periodically. 
+12. Once logged in, the sample application will display a simple **Account Transaction** ledger.
+
+    ![The Contoso Financial Account Overview webpage displays with Transaction details in an account transaction ledger.](images/Setup/image17.png)
+
+Leaving the browser open to the Account Overview page will automatically load new transactions as they are generated by the background process, since the web page has a JavaScript timer that checks for new transactions periodically.
 
 You should follow all steps provided *before* attending the Hands-on lab.

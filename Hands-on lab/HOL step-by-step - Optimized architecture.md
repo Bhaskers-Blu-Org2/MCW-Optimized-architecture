@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-September 2018 
+December 2018
 </div>
 
 
@@ -116,7 +116,7 @@ PaaS services. You will need to determine the appropriate hosting tiers
 and estimate the total cost savings on a monthly and annual basis.
 
 ### Help references
- 
+
 |         |            |
 | ------------- |:-------------:|
 | Azure Pricing Calculator    | <https://azure.microsoft.com/en-us/pricing/calculator> |
@@ -169,378 +169,301 @@ the exercises in this lab.
 
 ### Task 1: Calculate estimated hosting cost of existing solution
 
-1.  From a new browser tab or instance, navigate to the **Azure Pricing
-    Calculator** <https://azure.microsoft.com/en-us/pricing/calculator>.
+1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator** <https://azure.microsoft.com/en-us/pricing/calculator>.
 
-2.  Click on **Compute**, followed by **Virtual Machines**.
+2. Click on **Compute**, followed by **Virtual Machines**.
 
-    ![On the Azure Pricing Calculator webpage, Compute and Virtual Machines are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image20.png)    
+    ![On the Azure Pricing Calculator webpage, Compute and Virtual Machines are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image20.png)
 
-3.  Click on **Databases**, followed by **Azure SQL Database**.
+3. Click on **Databases**, followed by **Azure SQL Database**.
 
     ![On the Azure Pricing Calculator webpage, Databases and Azure SQL Database are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image21.png)
 
-4.  Scroll down to the **Your Estimate** section of the page.
-    
+4. Scroll down to the **Your Estimate** section of the page.
+
     ![The Your Estimate section displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image22.png)
 
-5.  On the **Azure SQL Database**, set the following values:
+5. On the **Azure SQL Database**, set the following values:
 
-    -   Region: **North Central US**
-    
-    -   Purchase Model: **DTU**
-    
-    -   Pricing Tier: **Premium**
+    - Region: **North Central US**
+
+    - Purchase Model: **DTU**
+
+    - Pricing Tier: **Premium**
 
     ![In the SQL Database section, North Central US is selected for the
     region, DTU for Purchase Model and Premium for the
     Tier.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image23.png)
 
-6.  Set the **Performance Level** to **P4**.
-    
-    ![The Performance Level field is set to P4: 500 DTUs, 500 GB
-    included storage per DB,
-    \$2.5000/hour](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image24.png)
+6. Set the **Performance Level** to **P4**.
 
-7.  In the **Virtual Machines** section, set the following values:
+    ![The Performance Level field is set to P4: 500 DTUs, 500 GB included storage per DB, \$2.5000/hour](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image24.png)
 
-    -   Region: **North Central US**
-    
-    -   Pricing Tier: **Standard**
-   
+7. In the **Virtual Machines** section, set the following values:
+
+    - Region: **North Central US**
+
+    - Pricing Tier: **Standard**
+
     ![Under Virtual Machines, Region is set to North Central US\< and Tier is Standard.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image25.png)
 
-8.  Change the **Instance Size** to **D3**.
-    
+8. Change the **Instance Size** to **D3**.
+
     ![The Instance field is set to D3: 4 vCPU(s), 14 GB RAM, 200 GB Temporary storage, \$0.560/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image26.png)
 
-9.  Change the **Billing Option** to **Pay as you go**,
-    **Virtual Machines Count** to **5** and **Hours** to **732**. The count now includes the 2x Web App Tier, 2x API Tier, and 1x Background Tier virtual machines.
-    
+9. Change the **Billing Option** to **Pay as you go**, **Virtual Machines Count** to **5** and **Hours** to **732**. The count now includes the 2x Web App Tier, 2x API Tier, and 1x Background Tier virtual machines.
+
     ![Under Billing Option, Pay as you go is selected. The number of virtual machines is set to 5, multiplied by 732 hours, for a total of $2,049.60.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image27.png)
 
-10. Click the **Collapse all** button, and Record the **Estimated
-    monthly cost**. This is the total estimated cost of the existing
-    environment Virtual Machines and SQL Database only.
-    
+10. Click the **Collapse all** button, and Record the **Estimated monthly cost**. This is the total estimated cost of the existing environment Virtual Machines and SQL Database only.
+
     ![On the Your Estimate page, the estimate of $3,879.60 in US Dollars is boxed in red, as is the collapse all button (two arrows in a circle pointing in toward each other).](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image28.png)
 
 ### Task 2: Calculate estimated hosting cost of VMs with reserved instances
 
-1.  From a new browser tab or instance, navigate to the **Azure Pricing Calculator** <https://azure.microsoft.com/en-us/pricing/calculator>.
+1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator**.
 
-2.  Click on **Compute**, followed by **Virtual Machines**.
-    
+    <https://azure.microsoft.com/en-us/pricing/calculator>
+
+2. Click on **Compute**, followed by **Virtual Machines**.
+
     ![On the Azure Pricing Calculator webpage, Compute, and Virtual Machines are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image20.png)
 
-3.  Click on **Databases**, followed by **Azure SQL Database**.
-    
+3. Click on **Databases**, followed by **Azure SQL Database**.
+
     ![On the Azure Pricing Calculator webpage, Databases, and Azure SQL Database are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image21.png)
 
-4.  Scroll down to the **Your Estimate** section of the page.
-    
+4. Scroll down to the **Your Estimate** section of the page.
+
     ![On the Azure Pricing Calculator webpage, the Your Estimate section displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image22.png)
 
-5.  On the **Azure SQL Database**, set the following values:
+5. On the **Azure SQL Database**, set the following values:
 
-    -   Region: **North Central US**
-    
-    -   Purchase Model: **DTU**
-    
-    -   Pricing Tier: **Premium**
+    - Region: **North Central US**
+
+    - Purchase Model: **DTU**
+
+    - Pricing Tier: **Premium**
 
     ![In the Azure SQL Database section, North Central US is selected for the region, DTU for Purchase Model and Premium for the Tier.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image23.png)
 
-6.  Set the **Performance Level** to **P4**.
-    
+6. Set the **Performance Level** to **P4**.
+
     ![The Performance Level field is set to P4: 500 DTUs, 500 GB included storage per DB \$2.5000/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image24.png)
 
-7.  On **Virtual Machines**, set the following values:
+7. On **Virtual Machines**, set the following values:
 
-    -   Region: **North Central US**
+    - Region: **North Central US**
 
-    -   Pricing Tier: **Standard**
+    - Pricing Tier: **Standard**
 
     ![In the Azure SQL Database section, Region is set to North Central US, and
     Tier is
     Standard.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image25.png)
 
-8.  Change the **Instance Size** to **D3**.
-    
-    ![The Instance field is set to D3: 4 vCPU(s), 14 GB RAM, 200 GB
-    Temporary storage,
-    \$0.560/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image26.png)
+8. Change the **Instance Size** to **D3**.
 
-9.  Change the **Billing Option** to **3-year reserved**, and change the
-    **Virtual Machines Count** to **5**, so the count includes the 2x
-    Web App Tier, 2x API Tier, and 1x Background Tier virtual machines.
+    ![The Instance field is set to D3: 4 vCPU(s), 14 GB RAM, 200 GB Temporary storage, \$0.560/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image26.png)
 
-    ![In the Billing Option section, the 3 year reserved option is
-    selected. Virtual machines is set to 5, and the total amount is
-    \$1,054.83.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image29.png)
+9. Change the **Billing Option** to **3-year reserved**, and change the **Virtual Machines Count** to **5**, so the count includes the 2x Web App Tier, 2x API Tier, and 1x Background Tier virtual machines.
 
-10. Click the **Collapse all** button, and Record the **Estimated
-    monthly cost**. This is the total estimated cost of the existing
-    environment Virtual Machines and SQL Database only using **Reserved Instances**. 
-          
-    ![On the Your Estimate page, the collapse all button is selected.
-    Below that, the the SQL Database cost is \$1,830.00, the Virtual
-    Machines are \$1,054.83, and the estimated monthly cost is
-    \$2,884.83.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image30.png)
+    ![In the Billing Option section, the 3 year reserved option is selected. Virtual machines is set to 5, and the total amount is \$1,054.83.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image29.png)
+
+10. Click the **Collapse all** button, and Record the **Estimated monthly cost**. This is the total estimated cost of the existing environment Virtual Machines and SQL Database only using **Reserved Instances**. 
+
+    ![On the Your Estimate page, the collapse all button is selected. Below that, the the SQL Database cost is \$1,830.00, the Virtual Machines are \$1,054.83, and the estimated monthly cost is \$2,884.83.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image30.png)
 
 ### Task 3: Estimate necessary app service tiers
 
 #### Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)
 
-1.  From a new browser tab or instance, navigate to the **Windows**
-    **Virtual Machines Pricing** page:
-    <https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/>.
+1. From a new browser tab or instance, navigate to the **Windows Virtual Machines Pricing** page: <https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/>.
 
-2.  Scroll down to the **Explore all VM options** section of the page.
-    
-    ![The Explore all VM options section of the Windows Virtual Machines
-    Pricing webpage
-    displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image31.png)
+2. Scroll down to the **Explore all VM options** section of the page.
 
-3.  Set the **OS/Software** drop down to **Windows OS**, and the
-    **Region** to **North Central US**.
+    ![The Explore all VM options section of the Windows Virtual Machines Pricing webpage displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image31.png)
 
-    ![In the Explore all VM options section, OS/Software is set to
-    Windows OS, Region is North Central US, and Pricing will be
-    displayed by
-    hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image32.png)
+3. Set the **OS/Software** drop down to **Windows OS**, and the **Region** to **North Central US**.
 
-4.  Click on **General purpose**.
+    ![In the Explore all VM options section, OS/Software is set to Windows OS, Region is North Central US, and Pricing will be displayed by hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image32.png)
 
-    ![At the bottom of the Explore all VM options section, the General
-    purpose category is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image33.png)
+4. Click on **General purpose**.
 
-5.  Scroll down below the VM Instance Size listings, and click on the
-    **Check the Previous Generation page...** link.
+    ![At the bottom of the Explore all VM options section, the General purpose category is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image33.png)
 
-    ![Screenshot of the Check the Previous Generation page for ...
-    link](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image34.png)
+5. Scroll down below the VM Instance Size listings, and click on the **Check the Previous Generation page...** link.
 
-6.  Scroll down to the **D1-4 v1** section and make note of the VM
-    Instance specs, specifically the **CPU Cores** and **RAM** for the
-    **D3** instance size
+    ![Screenshot of the Check the Previous Generation page for ... link](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image34.png)
 
-    ![In the D1-4 - v1 section, The D3 instance is circled, with the
-    following values: vCPU, 4; RAM, 14.00GiB; Temporary Storage,
-    200GiB.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image35.png)
+6. Scroll down to the **D1-4 v1** section and make note of the VM Instance specs, specifically the **CPU Cores** and **RAM** for the **D3** instance size
+
+    ![In the D1-4 - v1 section, The D3 instance is circled, with the following values: vCPU, 4; RAM, 14.00GiB; Temporary Storage, 200GiB.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image35.png)
 
 #### Subtask 2: Calculate web app tier VM utilization
 
-1.  Calculate the **Average CPU Utilization** between the 2 Web App Tier
-    VMs with individual CPU utilization of **36%** and **38%**:
+1. Calculate the **Average CPU Utilization** between the 2 Web App Tier VMs with individual CPU utilization of **36%** and **38%**:
 
-    -   36 + 38 = 74
+    > 36 + 38 = 74
+    >
+    > 74 / 2 = **37% Average CPU Utilization**
 
-    -   74 / 2 = **37% Average CPU Utilization**
+    ![The Front-end Web App Tier percentages for VM Size Standard D3, CPU is 36 percent and RAM 46 percent, or CPU 38 percent and RAM 44 percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image36.png)
 
-    ![The Front-end Web App Tier percentages for VM Size Standard D3, CPU
-    is 36 percent and RAM 46 percent, or CPU 38 percent and RAM 44
-    percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image36.png)
+2. Calculate the amount of **CPU Cores** the **Average CPU Utilization** represents:
 
-2.  Calculate the amount of **CPU Cores** the **Average CPU
-    Utilization** represents:
+    > **4** (CPU Cores) **\* 0.37** (37%) = 1.48 CPU Cores
 
-    -   **4** (CPU Cores) **\* 0.37** (37%) = 1.48 CPU Cores
-
-3.  Calculate the **Average RAM Utilization** between the 2 Web App Tier
+3. Calculate the **Average RAM Utilization** between the 2 Web App Tier
     VMs with individual RAM Utilization of **46%** and **44%**:
 
-    -   46 + 44 = 90
+    > 46 + 44 = 90
+    >
+    > 90 / 2 = **45% Average RAM Utilization**
 
-    -   90 / 2 = **45% Average RAM Utilization**
+4. Calculate the amount of **RAM** the **Average RAM Utilization** represents:
 
-4.  Calculate the amount of **RAM** the **Average RAM Utilization**
-    represents:
-
-    -   **14 GB** (RAM) **\* 0.45** (45%) **= 6.3 GB RAM**
+    > **14 GB** (RAM) **\* 0.45** (45%) **= 6.3 GB RAM**
 
 #### Subtask 3: Calculate API tier VM utilization
 
-1.  Calculate the **Average CPU Utilization** between the 2 API Tier VMs
+1. Calculate the **Average CPU Utilization** between the 2 API Tier VMs
     with individual CPU utilization of **58%** and **56%**:
 
-    -   58 + 56 = 114
-
-    -   114 / 2 = **57% Average CPU Utilization**
+    > 58 + 56 = 114
+    >
+    > 114 / 2 = **57% Average CPU Utilization**
 
     ![The Back-end Web App Tier percentages for VM Size Standard D3, CPU
     is 58 percent and RAM 34 percent, or CPU 56 percent and RAM 31
     percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image37.png)
 
-2.  Calculate the amount of **CPU Cores** the **Average CPU Utilization** represents:
+2. Calculate the amount of **CPU Cores** the **Average CPU Utilization** represents:
 
-    -   **4** (CPU Cores) **\* 0.57** (57%) **= 2.28 CPU Cores**
+    > **4** (CPU Cores) **\* 0.57** (57%) **= 2.28 CPU Cores**
 
-3.  Calculate the **Average RAM Utilization** between the 2 API Tier VMs
-    with individual RAM utilization of **34%** and **31%**:
+3. Calculate the **Average RAM Utilization** between the 2 API Tier VMs with individual RAM utilization of **34%** and **31%**:
 
-    -   34 + 31 = 65
+    > 34 + 31 = 65
+    >
+    > 65 / 2 = **32.5% Average RAM Utilization**
 
-    -   65 / 2 = **32.5% Average RAM Utilization**
+4.  Calculate the amount of **RAM** the **Average RAM Utilization** represents:
 
-4.  Calculate the amount of **RAM** the **Average RAM Utilization**
-    represents:
-
-    -   **14 GB** (RAM) **\* 0.325** (32.5%) **= 4.55 GB RAM**
+    > **14 GB** (RAM) **\* 0.325** (32.5%) **= 4.55 GB RAM**
 
 #### Subtask 4: Calculate background tier VM utilization
 
-1.  The **Average CPU Utilization** of the single Background Tier VM is
-    **49%**.
-    
+1. The **Average CPU Utilization** of the single Background Tier VM is **49%**.
+
     ![The Back-end Processing Tier percentages for VM Size Standard D3,
     CPU is 49 percent and RAM 25
     percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image38.png)
 
-2.  Calculate the amount of **CPU Cores** the **Average CPU Utilization** represents:
+2. Calculate the amount of **CPU Cores** the **Average CPU Utilization** represents:
 
-    -   **4** (CPU Cores) **\* 0.49** (49%) **= 1.96 CPU Cores**
+     > **4** (CPU Cores) **\* 0.49** (49%) **= 1.96 CPU Cores**
 
-3.  The **Average RAM Utilization** of the single Background Tier VM is
-    **25%**.
+3. The **Average RAM Utilization** of the single Background Tier VM is **25%**.
 
-4.  Calculate the amount of **RAM** the **Average RAM Utilization**
-    represents:
+4. Calculate the amount of **RAM** the **Average RAM Utilization** represents:
 
-    -   **14 GB** (RAM) **\* 0.25** (25%) **= 3.5 GB RAM**
+    > **14 GB** (RAM) **\* 0.25** (25%) **= 3.5 GB RAM**
 
 #### Subtask 5: Identify appropriate app service tier
 
-1.  From a new browser tab or instance, navigate to the **App Service Pricing** page:  
-    <https://azure.microsoft.com/en-us/pricing/details/app-service>.
+1. From a new browser tab or instance, navigate to the **App Service Pricing** page:  
 
-2.  Set the **Region** filter to **North Central US**.
-    
-    ![On the the App Service Pricing page, Region is set to North
-    Central US, and Currency is US Dollar
-    (\$).](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image39.png)
+    <https://azure.microsoft.com/en-us/pricing/details/app-service>
 
-3.  Scroll down to the **Standard Service Plan** section.
+2. Set the **Region** filter to **North Central US**.
 
-    ![The Standard Service Plan section displays a table of service plan
-    instances, and corresponding number of cores, amount of ram and
-    storage, and prices. Instance S1 has 1 core, 1.75 GB RAM, 50 GB
-    storage, and costs \$0.10/hour. Instance S2 has 2 cores, 3.50 GB
-    RAM, 50 GB storage, and costs \$0.20/hour. Instance S3 has 4 cores,
-    7 gb RAM, 50 GB storage, and costs
-    \$0.40/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image40.png)
+    ![On the the App Service Pricing page, Region is set to North Central US, and Currency is US Dollar (\$).](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image39.png)
 
-4.  Map the **CPU / RAM** **Utilization** of the **Web App Tier**
-    **(1.48 CPU Cores / 6.3 GB RAM)** to the closest **Standard Service
-    Plan** tier. These maps to be the **Standard S3** pricing tier.
+3. Scroll down to the **Standard Service Plan** section.
 
-5.  Map the **CPU / RAM** **Utilization** of the **API Tier** **(2.28
-    CPU Cores / 4.55 GB RAM)** to the closest **Standard Service Plan**
-    tier. These maps to be the **Standard S3** pricing tier.
+    ![The Standard Service Plan section displays a table of service plan instances, and corresponding number of cores, amount of ram and storage, and prices. Instance S1 has 1 core, 1.75 GB RAM, 50 GB storage, and costs \$0.10/hour. Instance S2 has 2 cores, 3.50 GB RAM, 50 GB storage, and costs \$0.20/hour. Instance S3 has 4 cores, 7 gb RAM, 50 GB storage, and costs \$0.40/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image40.png)
 
-6.  Map the **CPU / RAM** **Utilization** of the **Background Tier**
-    **(1.96 CPU Cores / 3.5 GB RAM)** to the closest **Standard Service
-    Plan** tier. These maps to be the **Standard S3** pricing tier.
+4. Map the **CPU / RAM** **Utilization** of the **Web App Tier** **(1.48 CPU Cores / 6.3 GB RAM)** to the closest **Standard Service Plan** tier. These maps to be the **Standard S3** pricing tier.
 
-    >**Note**: The **Background Tier** matches almost identical to 100% of the CPU /
-    RAM resources of the **Standard S2** pricing tier. However, 100%
-    utilization would hinder the performance of the server since the
-    resources would be at their maximum. For this reason, it is appropriate
-    to go with the **Standard S3** pricing tier instead to leave extra room
-    for best performance and possible spikes in load / usage.
+5. Map the **CPU / RAM** **Utilization** of the **API Tier** **(2.28 CPU Cores / 4.55 GB RAM)** to the closest **Standard Service Plan** tier. These maps to be the **Standard S3** pricing tier.
 
-7.  Overall, it has been identified that the **Standard S3** is the
-    appropriate **App Service Plan** pricing tier to use for the Web
-    App, API, and Background tiers.
+6. Map the **CPU / RAM** **Utilization** of the **Background Tier (1.96 CPU Cores / 3.5 GB RAM)** to the closest **Standard Service Plan** tier. These maps to be the **Standard S3** pricing tier.
+
+    >**Note**: The **Background Tier** matches almost identical to 100% of the CPU / RAM resources of the **Standard S2** pricing tier. However, 100% utilization would hinder the performance of the server since the resources would be at their maximum. For this reason, it is appropriate to go with the **Standard S3** pricing tier instead to leave extra room for best performance and possible spikes in load / usage.
+
+7. Overall, it has been identified that the **Standard S3** is the appropriate **App Service Plan** pricing tier to use for the Web App, API, and Background tiers.
 
 ## Task 4: Calculate estimated hosting cost of Azure app service
 
-1.  From a new browser tab or instance, navigate to the **Azure Pricing Calculator:** <https://azure.microsoft.com/en-us/pricing/calculator>.
+1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator:** <https://azure.microsoft.com/en-us/pricing/calculator>.
 
-2.  Click on **App Service**.
+2. Click on **App Service**.
 
     ![On the Azure Pricing Calculator webpage, Featured and App Service are both selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image41.png)
-    
 
-3.  If the **Azure SQL Database** is not in the calculator from the previous
-    VM estimation, scroll up, add it, and set it to **Premium P4**
-    performance level.
-    
+3. If the **Azure SQL Database** is not in the calculator from the previous VM estimation, scroll up, add it, and set it to **Premium P4** performance level.
+
     ![The SQL Database section displays with the following settings Region, East US; Type, Single Database; Tier, Premium; Performance Level, P4: 500 DTUs, 500 GB included storage per DB, \$2.5000/hour. 1 Database multiplied by 732 hours equals \$1,830.00.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image42.png)
 
-4.  On **App Service**, change the **Region** to **North Central US**.
-    
+4. On **App Service**, change the **Region** to **North Central US**.
+
     ![In the App Service section, Region is set to North Central US.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image43.png)
 
-5.  Change the **Tier** to **Standard** and the **Instance Size** to
-    **S3** to reflect the App Service Plan tier identified as the
-    appropriate hosting tier for the Web App, API, and Background
-    application tiers.
-    
+5. Change the **Tier** to **Standard** and the **Instance Size** to **S3** to reflect the App Service Plan tier identified as the appropriate hosting tier for the Web App, API, and Background application tiers.
+
     ![In the App Service Section, Region is North Central US, Tier is Standard, and Instance is S3: 4 vCPU(s), 7 GB RAM, 50 GB Storage, $0.400.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image44.png)
 
-6.  Change the **Instances** count to **5** to reflect the same number of instances of the existing VM architecture (2x Web App Tier, 2x API Tier, 1x Background Tier). Addtionally, change the number of hours to **732**.
-    
+6. Change the **Instances** count to **5** to reflect the same number of instances of the existing VM architecture (2x Web App Tier, 2x API Tier, 1x Background Tier). Additionally, change the number of hours to **732**.
+
     ![At the bottom of the App Service Section, 5 instances multiplied by 732 hours equals $1,464.00.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image45.png)
 
-    >**Note**: The **Instance Count** should remain **5** since the application will
-    still need the same amount of resources to host; it is just the Azure
-    Service hosting them that is changing. For example, since the Web App
-    Tier needs 2 VM instances, the App Service Plan will also use 2
-    instances for hosting.
+    >**Note**: The **Instance Count** should remain **5** since the application will still need the same amount of resources to host; it is just the Azure Service hosting them that is changing. For example, since the Web App Tier needs 2 VM instances, the App Service Plan will also use 2 instances for hosting.
 
-7.  Click the **Collapse All** button, as before, and record the **Estimated monthly cost**. This is the total estimated cost of the new environment App Service Instances and SQL Database only.
-    
+7. Click the **Collapse All** button, as before, and record the **Estimated monthly cost**. This is the total estimated cost of the new environment App Service Instances and SQL Database only.
+
     ![On the Your Estimate page, the the App Service cost is $1,464.00, the SQL Database cost is \$1,830.00, and the estimated monthly cost is \$3,294.00.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image46.png)
 
 ### Task 5: Calculate estimated cost savings
 
-1.  Copy the **Estimated Cost** of the **Existing Architecture** (VMs
-    and SQL Database).
+1. Copy the **Estimated Cost** of the **Existing Architecture** (VMs and SQL Database).
 
-    > The original **Existing Architecture** cost that was estimated came to
-    approximately **\$6,902**. Your estimate may vary, depending on current
-    Azure pricing.
+    > The original **Existing Architecture** cost that was estimated came to approximately **\$6,902**. Your estimate may vary, depending on current Azure pricing.
 
-2.  Copy the **Estimated Cost** of the **New Architecture** (App Service and SQL Database).
+2. Copy the **Estimated Cost** of the **New Architecture** (App Service and SQL Database).
 
     > The **New Architecture** cost that was estimated came to approximately **$3,582**. Your estimate may vary, depending on current Azure pricing.
 
-3.  **Subtract** the estimated cost of the **New Architecture** from the **Existing Architecture** to calculate the **Estimated Monthly Cost Savings**.
+3. **Subtract** the estimated cost of the **New Architecture** from the **Existing Architecture** to calculate the **Estimated Monthly Cost Savings**.
 
-    -   Existing -- New = Estimated Monthly Cost Savings
-    
-    > From the estimates above this would be:
-    
+    > *Existing - New = Estimated Monthly Cost Savings*
+    >
+
+    From the estimates above this would be:
+
     > \$6,902 - \$3,582 = \$3,320
-    
-    > Remember your results may vary, depending on current Azure pricing.
 
-4.  To calculate the **Annual Cost Savings**, take the **Monthly Cost Savings** and multiply it by **12**.
+    Remember your results may vary, depending on current Azure pricing.
 
-    -   Monthly Cost Savings \* 12 = Annual Cost Savings
-    
-    > From the estimates above this would be:
-    
+4. To calculate the **Annual Cost Savings**, take the **Monthly Cost Savings** and multiply it by **12**.
+
+    > Monthly Cost Savings \* 12 = Annual Cost Savings
+
+    From the estimates above this would be:
+
     > \$3,320 \* 12 = \$39,840
 
-    > Remember your results may vary, depending on current Azure pricing.
+    Remember your results may vary, depending on current Azure pricing.
 
-5.  Make note that these **Estimated Cost Savings** do not include bandwidth, storage and other charges that will be incurred in hosting the application. The estimates calculated above only pertain to the **App Service Plans** and **SQL Database**.
+5. Make note that these **Estimated Cost Savings** do not include bandwidth, storage and other charges that will be incurred in hosting the application. The estimates calculated above only pertain to the **App Service Plans** and **SQL Database**.
 
-    > From the estimates above this would be:
-    
-    > - Estimated Monthly Cost Savings: \$3,320
-    > - Estimated Annual Cost Savings: \$39,840
+    From the estimates above this would be:
+
+    > Estimated Monthly Cost Savings: \$3,320
+    > Estimated Annual Cost Savings: \$39,840
 
 ## Exercise 2: Integrate traffic manager
 
-Contoso Financial needs new load balancing solutions implemented using
-Azure Traffic Manager. The existing architecture uses a Load Balancer,
-but that does not accommodate the growth of Contoso Financial
-appropriately where they will need to add additional hosting regions in
-Europe.
+Contoso Financial needs new load balancing solutions implemented using Azure Traffic Manager. The existing architecture uses a Load Balancer, but that does not accommodate the growth of Contoso Financial appropriately where they will need to add additional hosting regions in Europe.
 
 ### Help references
 
@@ -549,15 +472,13 @@ Europe.
 | Azure Load Balancer    | <https://azure.microsoft.com/en-us/services/load-balancer/> |
 | Azure Traffic Manager   | <https://azure.microsoft.com/en-us/services/virtual-network>  |
 
-
 ### Task 1: Create Traffic Manager
 
-1.  From the Azure Management portal <http://portal.azure.com>, using a
-    new tab or instance, click on **+ Create a resource**, type **Traffic Manager** into the **Search the marketplace** box and press **Enter**.
+1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource**, type **Traffic Manager** into the **Search the marketplace** box and press **Enter**.
 
     ![In the Azure Portal, Create a resource is selected in the left menu. Under Create a resource, traffic manager is typed in the search box.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image47.png)
 
-2.  Click on **Traffic Manager profile** in the list.
+2. Click on **Traffic Manager profile** in the list.
 
     ![In the Everything blade, under Results, Traffic Manager profile is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image48.png)
 
@@ -565,75 +486,65 @@ Europe.
 
     ![In the Traffic Manager profile creation blade, Create button is circled.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image49.png)
 
-4.  On the **Create Traffic Manager profile** blade, enter the following
-    values:
+4. On the **Create Traffic Manager profile** blade, enter the following values:
 
-    -   Name: **Enter a unique name for the Traffic Manager**.
+    - Name: **Enter a unique name for the Traffic Manager**.
 
-    -   Routing method: **Geographic**
+    - Routing method: **Geographic**
 
-    -   Resource group: **Create New - OptimizedTFRG**
+    - Resource group: **Create New - OptimizedTFRG**
 
-    -   Resource group location: **North Central US (or the location you deployed the initial resource group during pre-lab setup)**.
-      
-        ![Fields in the Create Traffic Manager profile blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image50.png)
+    - Resource group location: **North Central US (or the location you deployed the initial resource group during pre-lab setup)**.
 
-5.  Click **Create**.
+    ![Fields in the Create Traffic Manager profile blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image50.png)
+
+5. Click **Create**.
 
 ### Task 2: Point traffic manager to external / internet load balancer
 
-1.  Click on **Resource groups**, select the **OptimizedTFRG** resource
-    group, and click on the **Traffic Manager** that was just created.
+1. Click on **Resource groups**, select the **OptimizedTFRG** resource group, and click on the **Traffic Manager** that was just created.
 
-    ![In the left menu of the Azure Portal, the Resource groups icon is
-    selected. In the Optimized TFRG blade, the title and Overview is
-    selected, and under Name, contosotrafficmanager is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image51.png)
+    ![In the left menu of the Azure Portal, the Resource groups icon is selected. In the Optimized TFRG blade, the title and Overview is selected, and under Name, contosotrafficmanager is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image51.png)
 
-2.  On the **Traffic Manager** blade, click on **Endpoints** under
-    **Settings**.
+2. On the **Traffic Manager** blade, click on **Endpoints** under **Settings**.
 
     ![Screenshot of the Endpoints option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image52.png)
 
-3.  On the **Endpoints** blade, click on the **Add** button.
-    
+3. On the **Endpoints** blade, click on the **Add** button.
+
     ![In the contosowebapp - Endpoints blade, the Add button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image53.png)
 
-4.  On the **Add endpoint** blade, enter the following values:
+4. On the **Add endpoint** blade, enter the following values:
 
-    -   Type: **Azure endpoint**
+    - Type: **Azure endpoint**
 
-    -   Name: **External Load Balancer**
+    - Name: **External Load Balancer**
 
-    -   Target resource type: **Public IP address**
-       
-        ![On the Add endpoint blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image54.png)
+    - Target resource type: **Public IP address**
 
-5.  Click on **Choose a public IP address**, and select the
-    **WebAPPLBIP** IP Address in the **ContosoExistingRG** resource
-    group.
-    
+    ![On the Add endpoint blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image54.png)
+
+5.  Click on **Choose a public IP address**, and select the **WebAPPLBIP** IP Address in the **ContosoExistingRG** resource group.
+
     ![In the Add endpoint blade, Target resource, which is selected to WebAPPLBIP, is selected. In the Resource blade, WebAPPLBIP (ContosoExistingRG) is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image55.png)
 
-6.  Set **Regional grouping** to **All (World)** so this endpoint will load balanced against all traffic going to Traffic Manager for now.
+6. Set **Regional grouping** to **All (World)** so this endpoint will load balanced against all traffic going to Traffic Manager for now.
 
     ![In the Add endpoint blade, the Regional grouping field is set to All (World). The remaining fields are set to the following settings: Type, Azure endpoint; Name, External Load Balancer; Target resource type, Public IP address; Target resource, WebAPPLBIP.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image56.png)
 
-7.  Click **OK**.
+7. Click **OK**.
 
-8.  Click on **Overview**, and select the **DNS Name** for the Traffic Manager to navigate to the sample application in a new browser window.
+8. Click on **Overview**, and select the **DNS Name** for the Traffic Manager to navigate to the sample application in a new browser window.
 
     ![In the left pane of the contosowebapp blade, Overview is selected. In the right pane, under Essentials, DNS name contosowebapp.trafficmanager.net is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image57.png)
 
-9.  The sample application loading will indicate the **Traffic Manager** was configured correctly.
-    
+9. The sample application loading will indicate the **Traffic Manager** was configured correctly.
+
     ![The Contoso Financial login webpage displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image58.png)
 
 ## Exercise 3: Setup API tier in Azure app service
 
-In the migration of IaaS to PaaS, the API Tier of Contoso Financials
-application needs to be migrated to run in an Azure App Service Web App
-without requiring any code changes to the application.
+In the migration of IaaS to PaaS, the API Tier of Contoso Financials application needs to be migrated to run in an Azure App Service Web App without requiring any code changes to the application.
 
 ### Help references
 
@@ -643,44 +554,40 @@ without requiring any code changes to the application.
 | Deploy an ASP.NET web app to Azure App Service, using Visual Studio  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-get-started/>  |
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-configure/>  |
 
-
 ### Step 1: Create app service for web API tier
 
-1.  From the Azure Management portal <http://portal.azure.com>, using a
-    new tab or instance, click on **+ Create a resource** -\> **Web** -\> **API App**.
+1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** -\> **Web** -\> **API App**.
 
     ![In the left menu of the Azure Portal, Create a resource is selected. In the Create a resource pane, Web and API App are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image59.png)
 
-2.  On the **API App** blade, enter the following values:
+2. On the **API App** blade, enter the following values:
 
-    -   App name: **Enter a unique name**.
+    - App name: **Enter a unique name**.
 
-    -   Resource group: **Create New -** **OptimizedAPIRG**
+    - Resource group: **Create New -** **OptimizedAPIRG**
 
-    -   App Insights: **Off**
-       
-        ![Fields in the API App blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image61.png)
+    - App Insights: **Off**
 
-3.  Click on **App Service plan/Location**, followed by **Create New**, and fill in the following values:
+    ![Fields in the API App blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image61.png)
 
-    -   App Service plan: **OptimizedAPIPlan**
+3. Click on **App Service plan/Location**, followed by **Create New**, and fill in the following values:
 
-    -   Location: **North Central US**
+    - App Service plan: **OptimizedAPIPlan**
 
-    -   Pricing tier: **S1 Standard**
-    
-        ![In the API App blade, App Service plan/Location is selected. In the App Service plan blade, Create New is selected. In the New App Service Plan blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image62.png)
+    - Location: **North Central US**
 
-4.  Click **OK**
+    - Pricing tier: **S1 Standard**
 
-5.  Click **Create**
+    ![In the API App blade, App Service plan/Location is selected. In the App Service plan blade, Create New is selected. In the New App Service Plan blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image62.png)
+
+4. Click **OK**
+
+5. Click **Create**
 
 ### Step 2: Setup app settings
 
-1.  In the navigation menu to the left in the Azure Portal, click on **Resource groups**, select the **ContosoExistingRG**
-    resource group, and click on the **contosofinancialdb** SQL
-    Database.
-    
+1.  In the navigation menu to the left in the Azure Portal, click on **Resource groups**, select the **ContosoExistingRG** resource group, and click on the **contosofinancialdb** SQL Database.
+
     ![In the Azure Portal, in the left menu, Resource groups is selected. In the ContosoExistingRG blade,
     the title and Overview are selected, and under Essentials, the SQL database contosofinancialdb is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image63.png)
 

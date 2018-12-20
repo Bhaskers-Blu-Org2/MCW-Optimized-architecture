@@ -1,0 +1,49 @@
+﻿@using Contoso.Financial.Website.Models
+@model LoginViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+
+    ViewBag.Title = "Log in";
+}
+
+@section Styles {
+    @Styles.Render("~/Content/signin.css")
+}
+
+<div class="container-signin">
+
+    <h2><img src="~/Content/Images/contoso-logo-black.png" /> Contoso Financial</h2>
+
+
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-signin", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4 class="form-signin-heading">Please log in</h4>
+
+        @Html.LabelFor(m => m.Email, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address", required = "required", autofocus = "autofocus" })
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+        @Html.LabelFor(m => m.Password, new { @class = "sr-only" })
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password", required = "required" })
+        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+        <div class="checkbox">
+            <label>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    }
+
+</div> <!-- /container -->
+<footer>
+    <p>&copy; @DateTime.Now.Year Contoso Financial</p>
+</footer>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

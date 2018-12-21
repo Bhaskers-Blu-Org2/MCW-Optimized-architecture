@@ -586,69 +586,64 @@ In the migration of IaaS to PaaS, the API Tier of Contoso Financials application
 
 ### Step 2: Setup app settings
 
-1.  In the navigation menu to the left in the Azure Portal, click on **Resource groups**, select the **ContosoExistingRG** resource group, and click on the **contosofinancialdb** SQL Database.
+1. In the navigation menu to the left in the Azure Portal, click on **Resource groups**, select the **ContosoExistingRG** resource group, and click on the **contosofinancialdb** SQL Database.
 
-    ![In the Azure Portal, in the left menu, Resource groups is selected. In the ContosoExistingRG blade,
-    the title and Overview are selected, and under Essentials, the SQL database contosofinancialdb is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image63.png)
+    ![In the Azure Portal, in the left menu, Resource groups is selected. In the ContosoExistingRG blade, the title and Overview are selected, and under Essentials, the SQL database contosofinancialdb is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image63.png)
 
-2.  On the **SQL database** blade, click on **Show database connection strings**.
+2. On the **SQL database** blade, click on **Show database connection strings**.
   
     ![In the left pane of the SQL database blade, Overview is selected. In the right pane, under Essentials, the Connection strings link Show database connection strings is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image64.png)
 
-3.  On the **Database connection strings** blade, copy the **ADO.NET (SQL authentication)** connection string to use later.
-    
+3. On the **Database connection strings** blade, copy the **ADO.NET (SQL authentication)** connection string to use later.
+
     ![In the Database connection strings blade, the ADO.NET (SQL authentication) connection string is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image65.png)
 
-4.  Click on **Resource groups**, click on the **OptimizedAPIRG**
-    resource group, and then, click on the previously created **API App**.
-    
+4.  Click on **Resource groups**, click on the **OptimizedAPIRG** resource group, and then, click on the previously created **API App**.
+
     ![In the Azure Portal left menu, Resource groups is selected. In the OptimizedAPIRG blade, the title and Overview are selected, and in the Essentials section, the contosofinapi App Service is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image66.png)
 
-5.  On the **App Service** blade, click on **Application settings**.
-    
+5. On the **App Service** blade, click on **Application settings**.
+
     ![In the App Service blade, under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image67.png)
 
-6.  Scroll down to the **Connection strings** section, and add a **new** connection string with the following values:
+6. Scroll down to the **Connection strings** section, and add a **new** connection string with the following values:
 
-    -   Name: **TransactionDb**
+    - Name: **TransactionDb**
 
-    -   Value: **Paste in the database connection string that was copied earlier**.
+    - Value: **Paste in the database connection string that was copied earlier**.
 
-    -   Type: **SQLAzure**
+    - Type: **SQLAzure**
 
     ![In the Application settings blade, fields in the Connection strings are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image68.png)
 
-7.  Replace the value **{your\_username}** with **demouser** in the
-    connection string.
+7. Replace the value **{your\_username}** with **demouser** in the connection string.
 
-8.  Replace the value **{your\_password}** with **demo@pass123** in the
-    connection string.
+8. Replace the value **{your\_password}** with **demo@pass123** in the connection string.
 
-9.  Click **Save**.
+9. Click **Save**.
 
 ### Step 3: Deploy API to app service
 
-1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
+1. From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
-2.  In the **Solution Explorer** window, expand the **API** folder, right-click the **Contoso.Financial.Api**, and click on **Publish...**
+2. In the **Solution Explorer** window, expand the **API** folder, right-click the **Contoso.Financial.Api**, and click on **Publish...**
 
     ![In Solution Explorer, under API, Contoso.Financial.Api is selected, and from it\'s right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image69.png)
 
-3.  On the **Publish** window, click on **Microsoft Azure App Service**,
-    check the **Select Existing** option, and click **Publish**.
+3. On the **Publish** window, click on **Microsoft Azure App Service**, check the **Select Existing** option, and click **Publish**.
 
     ![In the Publish window, Microsoft Azure App Service, Select Existing, and Publish are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image70.png)
 
-4.  In the top-right corner of the **App Service** dialog, make sure your account is selected. If it is not, click on the button, and add it.
+4. In the top-right corner of the **App Service** dialog, make sure your account is selected. If it is not, click on the button, and add it.
 
     ![Screenshot of the Microsoft account button.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image71.png "Microsoft account button")
 
-5.  Expand the **OptimizedAPIRG** resource group, select the **App Service Web App**, and click **OK**.
-    
+5. Expand the **OptimizedAPIRG** resource group, select the **App Service Web App**, and click **OK**.
+
     ![In the App Service window, the OptimizedAPIRG folder is expanded, and Contosofinancial.api is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image72.png)
 
-6.  Once the deployment has completed, Visual Studio will automatically open a new browser window navigating to the **App Service** app. Note the URL in a text editor such as Notepad as you will need it for modifying the settings of the web app. After that, you can close the window.
-    
+6. Once the deployment has completed, Visual Studio will automatically open a new browser window navigating to the **App Service** app. Note the URL in a text editor such as Notepad as you will need it for modifying the settings of the web app. After that, you can close the window.
+
     ![The Transaction API webpage displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image74.png)
 
 ## Exercise 4: Migrate web app tier to app service
@@ -667,216 +662,182 @@ Service Web App without requiring any code changes to the application.
 
 ### Step 1: Create app service for web app tier
 
-1.  From the Azure Management portal <http://portal.azure.com>, using a
-    new tab or instance, click on **+ Create a resource**, then **Web**, and then click on **Web App**.
+1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource**, then **Web**, and then click on **Web App**.
 
-    ![In the Azure Portal left menu, Create a resource is selected. In the Create a resource pane,
-    under Azure Marketplace, Web is selected. Under Featured, the Web App menu option is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image75.png)
+    ![In the Azure Portal left menu, Create a resource is selected. In the Create a resource pane, under Azure Marketplace, Web is selected. Under Featured, the Web App menu option is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image75.png)
 
-2.  On the **Web App** blade, enter the following values:
+2. On the **Web App** blade, enter the following values:
 
-    -   App name: **Enter a unique name**.
+    - App name: **Enter a unique name**.
 
-    -   Resource Group: **Create New - OptimizedWebAppRG**
+    - Resource Group: **Create New - OptimizedWebAppRG**
 
-    -   App Insights: **Off**
-       
-      ![Fields in the Web App blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image76.png)
-        
-3.  Click on **App Service plan/Location**, then **Create New**, and
-    fill in the following values:
+    - App Insights: **Off**
 
-    -   App Service plan: **OptimizedWebAppPlan**
+    ![Fields in the Web App blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image76.png)
 
-    -   Location: **North Central US (or the location you have been using)**.
+3. Click on **App Service plan/Location**, then **Create New**, and fill in the following values:
 
-    -   Pricing tier: **S1 Standard**
-        
+    - App Service plan: **OptimizedWebAppPlan**
+
+    - Location: **North Central US (or the location you have been using)**.
+
+    - Pricing tier: **S1 Standard**
+
     ![In the Web App blade, App Service plan/Location is selected. In the App Service plan blade, Create New is selected, and fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image77.png)
 
-4.  Click **OK**.
+4. Click **OK**.
 
-5.  Click **Create**.
+5. Click **Create**.
 
 ### Step 2: Setup app settings
 
-1.  Click on **Resource groups**, click on the **OptimizedWebAppRG**
-    resource group, then click on the **Web App**.
+1. Click on **Resource groups**, click on the **OptimizedWebAppRG** resource group, then click on the **Web App**.
 
     ![In the Azure Portal left menu, Resource groups is selected. In the OptimizedWebAppRG blade, the title and Overview are selected, and under Essentials, the contosofinwebapp1 app service is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image78.png)
 
-2.  On the **Web App** blade, click on **Application settings**.
+2. On the **Web App** blade, click on **Application settings**.
 
     ![In the App Service blade, under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image79.png)
 
-3.  Scroll down to the **Application settings** section, and create a **new** app setting with the following values:
+3. Scroll down to the **Application settings** section, and create a **new** app setting with the following values:
 
-    -   Key: **transactionAPIUrl**
-    
-    -   Value: **Paste in the URL of the App Service API App that is hosting
-    the API Tier (this should have been noted in an earlier task)**.
+    - Key: **transactionAPIUrl**
+
+    - Value: **Paste in the URL of the App Service API App that is hosting the API Tier (this should have been noted in an earlier task)**.
 
     ![In the App Service blade, under Application Settings, the settings are set to transactionAPIUrl, and http://contosofinapi\...](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image80.png)
 
-4.  Click **Save**.
+4. Click **Save**.
 
 ### Step 3: Deploy app to web app
 
-1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio
-    Solution: **Contoso.Financial.sln**.
+1. From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
-2.  In the **Solution Explorer** window, expand the **Web** folder, right-click the **Contoso.Financial.Website** project, and click on **Publish...**
+2. In the **Solution Explorer** window, expand the **Web** folder, right-click the **Contoso.Financial.Website** project, and click on **Publish...**
 
     ![In Solution Explorer, Web is expanded, Contoso.Financial.Website is selected, and Publish is selected from its right-click menu.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image81.png)
 
-3.  On the **Publish** window, click on **Microsoft Azure App Service**,
-    check the **Select Existing** option, and click **Publish**.
+3. On the **Publish** window, click on **Microsoft Azure App Service**, check the **Select Existing** option, and click **Publish**.
 
     ![In the Publish window, Microsoft Azure App Service, Select Existing, and Publish are all selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image70.png)
 
-4.  In the top-right corner of the **App Service** dialog, make sure your account is selected. If it is not, click on the button, and add it.
+4. In the top-right corner of the **App Service** dialog, make sure your account is selected. If it is not, click on the button, and add it.
 
     ![Screenshot of the Microsoft account button.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image71.png)
 
-5.  Expand the **OptimizedWebAppRG** resource group, select the **Web App**, and click **OK**.
+5. Expand the **OptimizedWebAppRG** resource group, select the **Web App**, and click **OK**.
 
     ![In the App Service window, OptimizedWebAppRG is expanded, and contosofinancialwebapp is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image82.png)
 
-6.  Once the deployment has completed, Visual Studio will automatically
+6. Once the deployment has completed, Visual Studio will automatically
     open a new browser window navigating to the **Web App**.
 
 ### Step 4: Add web app to traffic manager
 
-1.  From the Azure Management portal <http://portal.azure.com>, using a
-    new tab or instance, click on **Resource groups** followed by the
-    **OptimizedTFRG** resource group, and then, click on the **Traffic Manager**.
-    
-    ![In the left menu of the Azure Portal, Resource groups is selected.
-    In the OptimizedTFRG blade, the title and Overview are selected, and
-    under Essentials, the contosotrafficmgr Traffic Manager is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image83.png "Azure Portal")
+1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **Resource groups** followed by the **OptimizedTFRG** resource group, and then, click on the **Traffic Manager**.
 
-2.  On the **Traffic Manager profile** blade, click on **Endpoints** in settings area.
-    
+    ![In the left menu of the Azure Portal, Resource groups is selected. In the OptimizedTFRG blade, the title and Overview are selected, and under Essentials, the contosotrafficmgr Traffic Manager is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image83.png "Azure Portal")
+
+2. On the **Traffic Manager profile** blade, click on **Endpoints** in settings area.
+
     ![Screenshot of the Endpoints option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image84.png)
 
-3.  Click **Add**.
+3. Click **Add**.
 
-    ![In the contosowebapp - Endpoints blade, the Add button is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image85.png)
+    ![In the contosowebapp - Endpoints blade, the Add button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image85.png)
 
-4.  On the **Add endpoint** blade, enter the following values:
+4. On the **Add endpoint** blade, enter the following values:
 
-    -   Type: **Azure endpoint**
+    - Type: **Azure endpoint**
 
-    -   Name: **Web App**
+    - Name: **Web App**
 
-    -   Target resource type: **App Service**
+    - Target resource type: **App Service**
 
     ![Fields in the Add endpoint blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image86.png)
 
-5.  Click on **Choose an app service**.
+5. Click on **Choose an app service**.
 
     ![Screenshot of the Choose an app service option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image87.png)
 
-6.  Click on the previously created **Web App**.
+6. Click on the previously created **Web App**.
 
     ![In the Resource blade, contosofinancialwebapp is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image88.png)
 
-7.  Set **Regional grouping** to **North America / Central America / Caribbean**.
+7. Set **Regional grouping** to **North America / Central America / Caribbean**.
 
     ![Under contosofinancialwebapp, Regional grouping is set to North America / Central America / Caribbean.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image89.png)
 
-    >**Note**: If you are geographically located outside of the "North America /
-    Central America / Caribbean" region specified, then choose the next
-    closest region to where you are located. It is important that you choose
-    a "Regional grouping" here that matches where you are located so you can
-    run and test the rest of this HOL.
+    >**Note**: If you are geographically located outside of the "North America / Central America / Caribbean" region specified, then choose the next closest region to where you are located. It is important that you choose a "Regional grouping" here that matches where you are located so you can run and test the rest of this HOL.
 
-8.  Click **OK**.
+8. Click **OK**.
 
-9.  Click on the **External Load Balancer** Endpoint.
+9. Click on the **External Load Balancer** Endpoint.
 
-    ![Under Name, External Load Balancer is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image90.png)
+    ![Under Name, External Load Balancer is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image90.png)
 
 10. Select the **Disabled Status**, and click **Save**.
 
-    ![In the External Load Balancer blade, Status is set to Disabled,
-    and Save is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image91.png)
+    ![In the External Load Balancer blade, Status is set to Disabled, and Save is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image91.png)
 
 11. On the **Traffic Manager**, click on **Overview**.
 
-    ![In the contosowebapp blade, Overview is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image92.png)
+    ![In the contosowebapp blade, Overview is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image92.png)
 
 12. Click on the **DNS name** to open it in a new browser window.
 
-    ![In the contosowebapp blade, under Essentials, the DNS name
-    contosowebapp.trafficmanager.net link is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image93.png)
+    ![In the contosowebapp blade, under Essentials, the DNS name contosowebapp.trafficmanager.net link is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image93.png)
 
 13. Verify the site still loads as expected.
 
-    ![The Contoso Financial login webpage
-    displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image94.png)
+    ![The Contoso Financial login webpage displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image94.png)
 
 14. Back in the portal on the Traffic Manager blade, click on **Endpoints**.
 
-    ![Under Settings, Endpoints is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image95.png)
+    ![Under Settings, Endpoints is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image95.png)
 
 15. Click on the **External Load Balancer** endpoint.
 
-    ![Under Name, the External Load Balancer option is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image90.png)
+    ![Under Name, the External Load Balancer option is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image90.png)
 
 16. Click **Delete**.
 
-    ![The Delete button is selected in the External Load Balancer
-    blade.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image96.png)
+    ![The Delete button is selected in the External Load Balancer blade.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image96.png)
 
 17. On the **Delete Traffic Manager endpoint** prompt, click **Yes**.
 
-    ![In the External Load Balancer blade, a message displays confirming
-    that you want to delete the traffic manager endpoint, and the Yes
-    button is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image97.png)
+    ![In the External Load Balancer blade, a message displays confirming that you want to delete the traffic manager endpoint, and the Yes button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image97.png)
 
-    >**Note**: Following this step, the Web App Tier's Load Balancer and VMs will no
-    longer receive requests through the Traffic Manager.
+    >**Note**: Following this step, the Web App Tier's Load Balancer and VMs will no longer receive requests through the Traffic Manager.
 
 18. Re-enable the Web App endpoint on the Traffic Manager.
 
 ### Step 5: Take down Web App and API VMs
 
-1.  Click on **Resource groups**, and then click on the
-    **ContosoExistingRG** resource group.
+1. Click on **Resource groups**, and then click on the **ContosoExistingRG** resource group.
 
-2.  Click on the **WebApp1** virtual machine.
+2. Click on the **WebApp1** virtual machine.
 
-3.  Click the **Stop** button.
+3. Click the **Stop** button.
 
-    ![In the left pane of the WebAPI1 blade, Overview is selected. In
-    the right pane, on the top menu, the Stop button is
-    boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image98.png)
+    ![In the left pane of the WebAPI1 blade, Overview is selected. In the right pane, on the top menu, the Stop button is boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image98.png)
 
-4.  On the **Stop this virtual machine** prompt, click **Yes**.
+4. On the **Stop this virtual machine** prompt, click **Yes**.
 
     ![In the Stop this virtual machine prompt, a confirmation message displays asking if you want to stop WebAPI1, and the Yes button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image99.png)
 
-5.  Repeat the last three steps for the **WebApp2, WebAPI1,** and **WebAPI2** virtual machines.
+5. Repeat the last three steps for the **WebApp2, WebAPI1,** and **WebAPI2** virtual machines.
 
-6.  Open a new browser window / tab, and navigate to the URL for the **Traffic Manager endpoint**.
+6. Open a new browser window / tab, and navigate to the URL for the **Traffic Manager endpoint**.
 
-    >**Note**: If you are unable to reach the endpoint, this may mean that the Traffic Manager endpoint for the Web App may need some more time to become active. Just wait several more minutes and then try again. 
+    >**Note**: If you are unable to reach the endpoint, this may mean that the Traffic Manager endpoint for the Web App may need some more time to become active. Just wait several more minutes and then try again.
 
-7.  **Login** to the Web App, using any character sequence for the password. Ensure it loads all data as expected, demonstrating that the **App Service** hosted Web App and API tiers are functioning properly.
+7. **Login** to the Web App, using any character sequence for the password. Ensure it loads all data as expected, demonstrating that the **App Service** hosted Web App and API tiers are functioning properly.
 
     ![The Account Overview webpage displays with an available balance and a list of account transactions.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image100.png)
 
-8.  After validating the app, close the browser window.
+8. After validating the app, close the browser window.
 
 ## Exercise 5: Migrate background tier to app service
 
@@ -890,117 +851,101 @@ In the migration of IaaS to PaaS, the Background Tier (written as a console app)
 | Run Background tasks with WebJobs  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/>  |
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-configure/>  |
 
-
 ### Step 1: Create app service for background tier
 
-1.  From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** followed by **Web**,
-and then, click on **Web App**.
+1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** followed by **Web**, and then, click on **Web App**.
 
    ![Create a resource is selected in the left menu of the Azure Portal. In the Create a resource pane, under Azure Marketplace, Web is selected, and under Featured the Web App link is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image75.png)
 
-2.  On the **Web App** blade, enter the following values:
+2. On the **Web App** blade, enter the following values:
 
-    -   App name: **Enter a unique name**.
+    - App name: **Enter a unique name**.
 
-    -   Resource Group: **OptimizedBackgroundRG**
+    - Resource Group: **OptimizedBackgroundRG**
 
-    -   Application Insights: **Off**
+    - Application Insights: **Off**
 
-        ![The Web App blade fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image101.png)
+    ![The Web App blade fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image101.png)
 
-3.  Click on **App Service plan/Location**, select **Create New**, and
-    fill in the following values:
+3. Click on **App Service plan/Location**, select **Create New**, and fill in the following values:
 
-    -   App Service plan: **OptimizedBackgroundPlan**
+    - App Service plan: **OptimizedBackgroundPlan**
 
-    -   Location: **North Central US (or the location you have been using)**.
+    - Location: **North Central US (or the location you have been using)**.
 
-    -   Pricing tier: **S1 Standard**
-    
-        ![In the Web App blade, App Service plan OptimizedBackgroundPlan is selected. In the App Service plan blade, Create New is selected, and fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image102.png)
+    - Pricing tier: **S1 Standard**
 
-4.  Click **OK**.
+    ![In the Web App blade, App Service plan OptimizedBackgroundPlan is selected. In the App Service plan blade, Create New is selected, and fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image102.png)
 
-5.  Click **Create**.
+4. Click **OK**.
+
+5. Click **Create**.
 
 ### Step 2: Setup app settings
 
-1.  Click on **Resource groups**, select the **OptimizedBackgroundRG** resource group, and select the **App Service**.
-    
+1. Click on **Resource groups**, select the **OptimizedBackgroundRG** resource group, and select the **App Service**.
+
     ![In the left menu of the Azure Portal, Resource groups is selected. In the OptimizedBackgroundRG blade, the title is boxed in red, Overview is selected, and, in the Essentials section, App Service is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image103.png)
 
-2.  On the **Web app** blade, click on **Application settings**.
-    
+2. On the **Web app** blade, click on **Application settings**.
+
     ![In the contosofinancialbackground blade, under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image104.png)
 
-3.  Scroll down to the **Connection strings** section, and add a **new** connection string with the following values:
+3. Scroll down to the **Connection strings** section, and add a **new** connection string with the following values:
 
-    -   Name: **TransactionDb**
+    - Name: **TransactionDb**
 
-    -   Value: **Paste in the database connection string that was copied earlier**.
+    - Value: **Paste in the database connection string that was copied earlier**.
 
-    -   Type: **SQLAzure**
+    - Type: **SQLAzure**
 
     ![In the contosofinancialbackground - Application settings blade, Connection strings values are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image105.png)
 
-4.  Replace the value **{your\_username}** with **demouser** in the connection string.
+4. Replace the value **{your\_username}** with **demouser** in the connection string.
 
-5.  Replace the value **{your\_password}** with **demo@pass123** in the connection string.
+5. Replace the value **{your\_password}** with **demo@pass123** in the connection string.
 
-6.  Click **Save**.
+6. Click **Save**.
 
 ### Step 3: Deploy app to app service
 
-1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio
-    Solution: **Contoso.Financial.sln**.
+1. From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
-2.  In the **Solution Explorer** window, expand the **Background** folder, and right-click the **Contoso.Financial.Background** project followed by clicking on **Publish as Azure WebJob...**
-    
+2. In the **Solution Explorer** window, expand the **Background** folder, and right-click the **Contoso.Financial.Background** project followed by clicking on **Publish as Azure WebJob...**
+
     ![In Solution Explorer, the Background folder is expanded, and Contoso.Financial.Background is selected. From its right-click menu, Publish as Azure WebJob is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image106.png)
 
-3.  On the **Add Azure WebJob** dialog, enter the following values:
+3. On the **Add Azure WebJob** dialog, enter the following values:
 
-    -   WebJob name: **Background1**
+    - WebJob name: **Background1**
 
-    -   WebJob run mode: **Run on Demand**
-       
-        ![In the Add Azure WebJob window, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image107.png)
+    - WebJob run mode: **Run on Demand**
 
-4.  Click **OK**.
+    ![In the Add Azure WebJob window, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image107.png)
 
-5.  On the **Publish** dialog, click on **Microsoft Azure App Service**.
- 
+4. Click **OK**.
+
+5. On the **Publish** dialog, click on **Microsoft Azure App Service**.
+
     ![In the Publish window, under Select a publish target, Microsoft Azure App Service is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image108.png)
 
-6.  In the top-right corner of the **App Service** dialog, make sure your account is selected. If it is not, click on the button, and add it.
+6. In the top-right corner of the **App Service** dialog, make sure your account is selected. If it is not, click on the button, and add it.
 
     ![Screenshot of the Microsoft account button.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image71.png)
 
-7.  Expand the **OptimizedBackgroundRG** resource group, and select the **App Service Web App**, followed by clicking **OK**.
-    
+7. Expand the **OptimizedBackgroundRG** resource group, and select the **App Service Web App**, followed by clicking **OK**.
+
     ![In the App Service window, the OptimizedBackgroundRG folder is expanded, and contosofinancialbackground is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image109.png)
 
-8.  Click **Publish**.
+8. Click **Publish**.
 
-    ![In the Publish window, the Publish button is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image110.png)
+    ![In the Publish window, the Publish button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image110.png)
 
-    >**Note**: If the WebJob deployment fails due to a code signing error message,
-    simply open up the **Project Properties** for the
-    Contoso.Financial.Background project by right-clicking it in **Solution
-    Explorer**. Then, go to the **Signing** tab, and **uncheck** the **Sign
-    the ClickOnce manifests** checkbox. Upon completion, Publish the WebJob
-    project again.
+    >**Note**: If the WebJob deployment fails due to a code signing error message, simply open up the **Project Properties** for the Contoso.Financial.Background project by right-clicking it in **Solution Explorer**. Then, go to the **Signing** tab, and **uncheck** the **Sign the ClickOnce manifests** checkbox. Upon completion, Publish the WebJob project again.
 
-    ![In Solution Explorer, Background and Contoso.Financial.Background are
-    expanded, and Properties is selected. In the ContosoFinancialBackground
-    Properties pane, Signing is selected, and the checkbox is cleared for
-    Sign the ClickOnce
-    manifests.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image111.png)
+    ![In Solution Explorer, Background and Contoso.Financial.Background are expanded, and Properties is selected. In the ContosoFinancialBackground Properties pane, Signing is selected, and the checkbox is cleared for Sign the ClickOnce manifests.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image111.png)
 
-9.  Navigate to the **contosofinancialbackground** Web App in the Azure
-    Portal, click on the **WebJobs** pane. Then, click on the
-    **Background1** WebJob, and select **Properties**.
+9. Navigate to the **contosofinancialbackground** Web App in the Azure Portal, click on the **WebJobs** pane. Then, click on the **Background1** WebJob, and select **Properties**.
 
     ![In the contosofinancialbackground - WebJobs blade, in the left pane, WebJobs is selected. In the right pane, under WebJobs, Background1 is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image112.png)
 
@@ -1012,121 +957,91 @@ and then, click on **Web App**.
 
 11. From the Azure Portal, click on **+ Create a resource**, and type "**Scheduler**" into the search box. Press **Enter**.
 
-    ![In the left menu of the Azure Portal, the Create a resource option is selected.
-    In the Create a resource blade, Scheduler is typed in the search
-    field.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image114.png)
+    ![In the left menu of the Azure Portal, the Create a resource option is selected. In the Create a resource blade, Scheduler is typed in the search field.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image114.png)
 
 12. Select **Scheduler** from the search results, and click **Create**.
 
-    ![In the Results section, Scheduler is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image115.png)
+    ![In the Results section, Scheduler is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image115.png)
 
 13. On the **Scheduler Job** blade, enter the following values:
 
-    -   Name: **Background-Scheduler**
-    
-        ![In the Scheduler Job blade, under Create, the Name field is set to Background-Scheduler.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image116.png)
+    - Name: **Background-Scheduler**
+
+    ![In the Scheduler Job blade, under Create, the Name field is set to Background-Scheduler.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image116.png)
 
 14. Click on **Job Collection**, click on **Create new** and enter the following values, and click **OK**.
 
-    -   Name: **Background-Scheduler-Job**
+    - Name: **Background-Scheduler-Job**
 
-    -   Resource Group: **Select the existing
-        OptimizedBackgroundRG**.
-        
-    -  Location: **North Central US (or the location you have been using)**.
-    
-        ![In the New job collection blade, Name is set to
-        Background-Scheduler-Job, Pricing tier is S Standard, Resource group is Use existing OptimizedBackgroundRG, and Location is South Central US.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image117.png)
+    - Resource Group: **Select the existing OptimizedBackgroundRG**.
+
+    - Location: **North Central US (or the location you have been using)**.
+
+        ![In the New job collection blade, Name is set to Background-Scheduler-Job, Pricing tier is S Standard, Resource group is Use existing OptimizedBackgroundRG, and Location is South Central US.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image117.png)
 
     Then, click **OK**.
 
 15. On the **Scheduler Job** blade, click to configure **Action Settings**.
 
-    ![Screenshot of the Configure Action Settings
-    option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image118.png)
+    ![Screenshot of the Configure Action Settings option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image118.png)
 
-16. On the **Action settings** pane, enter the **Web Hook URL** copied
-    earlier to the **URL** field, set the **Action** to **Https**, and
-    set the **Method** equal to **Post**.
+16. On the **Action settings** pane, enter the **Web Hook URL** copied earlier to the **URL** field, set the **Action** to **Https**, and set the **Method** equal to **Post**.
 
-    ![In the Action settings blade, Action is set to Https, Method is
-    set to Post, and the URL is the previously copied Web Hook
-    URL.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image119.png)
+    ![In the Action settings blade, Action is set to Https, Method is set to Post, and the URL is the previously copied Web Hook URL.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image119.png)
 
 17. Click on **Authentication settings**.
 
-    ![Under Optional settings, Authentication settings is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image120.png)
+    ![Under Optional settings, Authentication settings is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image120.png)
 
 18. Enter the following values, and click **OK**:
 
-    -   Authenication type: **Basic**
+    - Authenication type: **Basic**
 
-    -   Username: **Webhook username copied earlier**.
+    - Username: **Webhook username copied earlier**.
 
-    -   Password: **Webhook password copied earlier**.
+    - Password: **Webhook password copied earlier**.
 
-        ![Fields in the Authentication blade are set to the previously
-        defined
-        settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image121.png)
+    ![Fields in the Authentication blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image121.png)
 
 19. Click **OK**, then click **OK** again.
 
 20. Click on **Configure Schedule**.
 
-    ![Screenshot of the Configure Schedule
-    option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image122.png)
+    ![Screenshot of the Configure Schedule option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image122.png)
 
 21. Under **recurrence**, select **Recurring**, and specify **Recur every 1 minute** followed by clicking **OK**.
 
-    ![In the Schedule blade, fields are set to the previously defined
-    settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image123.png)
+    ![In the Schedule blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image123.png)
 
 22. Click **OK** and then click **Create**.
 
 23. Wait a couple of minutes, and then, look at the **History** tile of the **Scheduler Job** blade to verify the scheduled job is running. The **bar graph** and **successes count** will reflect that it is running.
-    
-    ![In the Monitoring section, a History bar graph displays, with 6
-    successes, 0 required retries, and 0
-    failures.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image124.png)
+
+    ![In the Monitoring section, a History bar graph displays, with 6 successes, 0 required retries, and 0 failures.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image124.png)
 
 24. Open a new browser window or tab navigating to the **URL** for the **Traffic Manager** for the application, and verify the transactions generated by the background process are showing up.
-    
+
     ![The Account Overview webpage displays with an available balance
     and a list of account
     transactions.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image125.png)
 
 ### Step 4: Take down background tier VM
 
-1.  From the Azure Management Portal (<http://portal.azure.com>), click
-    on **Resource groups**, and then, click on the **ContosoExistingRG**
-    resource group.
+1. From the Azure Management Portal (<http://portal.azure.com>), click on **Resource groups**, and then, click on the **ContosoExistingRG** resource group.
 
-2.  Click on the **Background1** virtual machine.
+2. Click on the **Background1** virtual machine.
 
-3.  Click the **Stop** button.
+3. Click the **Stop** button.
 
-    ![In the left pane of the Background1 blade, Overview is selected.
-    In the right pane, the Stop button is
-    boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image127.png)
+    ![In the left pane of the Background1 blade, Overview is selected. In the right pane, the Stop button is boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image127.png)
 
-4.  On the **Stop this virtual machine** prompt, click **Yes**.
+4. On the **Stop this virtual machine** prompt, click **Yes**.
 
-    ![In the Stop this virtual machine prompt, a confirmation message
-    displays asking if you want to stop Background1, and the Yes button
-    is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image128.png)
+    ![In the Stop this virtual machine prompt, a confirmation message displays asking if you want to stop Background1, and the Yes button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image128.png)
 
 ## Exercise 6: Setup SQL database geo-replication
 
-Due to the rush into Production, the Staging SQL Database currently
-remains as the Production database for the application. You have been
-asked to implement Geo-Replication to the SQL Database in order to add
-the appropriate redundancy to safeguard against failures. This will both
-help eliminate data loss in case of a data center failure as well as
-greatly reduce the potential system downtime in the event of such a
-failure.
+Due to the rush into Production, the Staging SQL Database currently remains as the Production database for the application. You have been asked to implement Geo-Replication to the SQL Database in order to add the appropriate redundancy to safeguard against failures. This will both help eliminate data loss in case of a data center failure as well as greatly reduce the potential system downtime in the event of such a failure.
 
 ### Help references
 
@@ -1135,133 +1050,115 @@ failure.
 | Introduction to SQL Database  | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/> |
 | SQL Database Active Geo-Replication  | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/>  |
 
-
 ### Step 1: Setup SQL database geo-replication
 
-1.  Click on **Resource groups**, click on the **ContosoExistingRG**
-    resource group followed by clicking on the **contosofinancialdb**
-    SQL Database.
+1. Click on **Resource groups**, click on the **ContosoExistingRG** resource group followed by clicking on the **contosofinancialdb** SQL Database.
 
-2.  On the **SQL database** blade, click on **Geo-Replication**.
-    
-    ![In the Contosofinancialdb blade, under Settings, Geo-Replication
-    is
-    boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image130.png)
+2. On the **SQL database** blade, click on **Geo-Replication**.
 
-3.  Click on the **Recommended Target Region** to replicate to.
-    
-    ![In the Contosofinancialdb - Geo-Replication blade, under Target
-    Regions, South Central US is boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image131.png)
+    ![In the Contosofinancialdb blade, under Settings, Geo-Replication is boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image130.png)
 
-4.  On the **Create secondary** blade, click on **Target server**.
+3. Click on the **Recommended Target Region** to replicate to.
+
+    ![In the Contosofinancialdb - Geo-Replication blade, under Target Regions, South Central US is boxed in red.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image131.png)
+
+4. On the **Create secondary** blade, click on **Target server**.
   
-    ![In the Create Secondary blade, Target server is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image132.png)
+    ![In the Create Secondary blade, Target server is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image132.png)
 
-5.  On the **New server** blade, enter the following values:
+5. On the **New server** blade, enter the following values:
 
-    -   Server name: **Enter a unique name**.
+    - Server name: **Enter a unique name**.
 
-    -   Server admin login: **demouser**
+    - Server admin login: **demouser**
 
-    -   Password: **demo@pass123**
-        
-        ![Fields in the New server blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image133.png)
+    - Password: **demo@pass123**
 
-6.  Click **Select**.
+    ![Fields in the New server blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image133.png)
 
-7.  Click **OK**.
+6. Click **Select**.
 
-8.  Database replication is now configured.
-    
+7. Click **OK**.
+
+8. Database replication is now configured.
+
     ![The Contosofinancialdb - Geo-Replication blade displays, with the Primary Server set to North Central US, and the Secondary Server set to South Central US.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image134.png)
-
 
 ## Exercise 7: Take down old architecture / resources
 
-Since the Contoso Financial application has now been migrated to Azure
-PaaS services utilizing Azure App Service, the older, existing
-architecture no longer being used needs to be removed. Since the
-application has been validated to work as expected, you have been asked
-to delete the Azure IaaS components hosting the VM infrastructure.
+Since the Contoso Financial application has now been migrated to Azure PaaS services utilizing Azure App Service, the older, existing architecture no longer being used needs to be removed. Since the application has been validated to work as expected, you have been asked to delete the Azure IaaS components hosting the VM infrastructure.
 
 ### Step 1: Remove Old VM-based tiers
 
-1.  Click on **Resource groups**, and then click on the
-    **ContosoExistingRG** resource group.
+1. Click on **Resource groups**, and then click on the **ContosoExistingRG** resource group.
 
-2.  Delete the following resources that are hosting the OLD Web App,
-    API, and Background tiers:
+2. Delete the following resources that are hosting the OLD Web App, API, and Background tiers:
 
-    -   **BackgroundAV**
+    - **BackgroundAV**
 
-    -   **WebAPIAV**
+    - **WebAPIAV**
 
-    -   **Background1**
+    - **Background1**
 
-    -   **WebAPI1**
+    - **WebAPI1**
 
-    -   **WebAPI2**
+    - **WebAPI2**
 
-    -   **WebApp1**
+    - **WebApp1**
 
-    -   **WebApp2**
+    - **WebApp2**
 
-    -   **WebAPILB**
+    - **WebAPILB**
 
-    -   **WebAppLB**
+    - **WebAppLB**
 
-    -   **background1nic**
+    - **background1nic**
 
-    -   **webapi1nic**
+    - **webapi1nic**
 
-    -   **webapi2nic**
+    - **webapi2nic**
 
-    -   **webapp1nic**
+    - **webapp1nic**
 
-    -   **webapp2nic**
+    - **webapp2nic**
 
-    -   **Background1-ip**
+    - **Background1-ip**
 
-    -   **WebAPI1-ip**
+    - **WebAPI1-ip**
 
-    -   **WebAPI2-ip**
+    - **WebAPI2-ip**
 
-    -   **WebApp1-ip**
+    - **WebApp1-ip**
 
-    -   **WebApp2-ip**
+    - **WebApp2-ip**
 
-    -   **WebAPPLBIP**
+    - **WebAPPLBIP**
 
-    -   **AppVNET**
+    - **AppVNET**
 
-    -   **Background1-nsg**
+    - **Background1-nsg**
 
-    -   **WebAPI1-nsg**
+    - **WebAPI1-nsg**
 
-    -   **WebApp1-nsg**
+    - **WebApp1-nsg**
 
     >**Note**: Be sure **NOT** to delete the Azure SQL Database (**contosofinancialdb**) and Azure SQL Server. These are still in use!
 
-3.  Delete the **Storage Accounts** with the following name prefixes:
+3. Delete the **Storage Accounts** with the following name prefixes:
 
-    -   **diag**
+    - **diag**
 
-    -   **disk**
-       
-        ![The two previously listed Storage Accounts are displayed.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image136.png)
+    - **disk**
 
-4.  Once all of the resources for the VMs that are no longer needed have
-    been deleted / removed from the **ContosoExistingRG** resource
-    group, the only resources left in that resource group should be the
-    **SQL Databases and Servers**.
-    
+    ![The two previously listed Storage Accounts are displayed.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image136.png)
+
+4. Once all of the resources for the VMs that are no longer needed have been deleted / removed from the **ContosoExistingRG** resource group, the only resources left in that resource group should be the **SQL Databases and Servers**.
+
     ![In the left pane of the ContosoExistingRG blade, Overview is selected. In the top menu, the Refresh button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image137.png)
 
 ## Exercise 8: Setup European web app tier Instance
 
-As Contoso Financial expands into Europe, they need to handle the additional growth while maintaining the same application performance. While to fully support global scale, there are pieces of the application that will need to be refactored, as you have been asked to setup a
-secondary region for the Front-end Web App Tier in the Azure North Europe region.
+As Contoso Financial expands into Europe, they need to handle the additional growth while maintaining the same application performance. While to fully support global scale, there are pieces of the application that will need to be refactored, as you have been asked to setup a secondary region for the Front-end Web App Tier in the Azure North Europe region.
 
 ### Help references
 
@@ -1271,169 +1168,137 @@ secondary region for the Front-end Web App Tier in the Azure North Europe region
 | Deploy an ASP.NET web app to Azure App Service, using Visual Studio  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-get-started/>  |
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-configure/>  |
 
-
 ### Step 1: Create European app service
 
-1.  From the Azure Management portal: <http://portal.azure.com>, using a
-    new tab or instance, click on **+ Create a resource**, then **Web**, and
-    then click on **Web App**.
-    
-    ![Create a resource is selected in the Azure Portal left pane. In the Create a resource blade,
-    under Azure Marketplace, Web is selected, and under
-    Featured, the Web App option is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image75.png)
+1. From the Azure Management portal: <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource**, then **Web**, and then click on **Web App**.
 
-2.  On the **Web App** blade, enter the following values:
+    ![Create a resource is selected in the Azure Portal left pane. In the Create a resource blade, under Azure Marketplace, Web is selected, and under Featured, the Web App option is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image75.png)
 
-    -   App name: **Enter a unique name**.
+2. On the **Web App** blade, enter the following values:
 
-    -   Resource Group: **OptimizedWebAppEuropeRG**
+    - App name: **Enter a unique name**.
 
-    -   App Insights: **Off**
-    
-        ![Fields in the Web App blade are set to the previously
+    - Resource Group: **OptimizedWebAppEuropeRG**
+
+    - App Insights: **Off**
+
+    ![Fields in the Web App blade are set to the previously
         defined
         settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image138.png)
-        
-3.  Click on **App Service plan/Location**, then **Create New**, and
-    fill in the following values:
 
-    -   App Service Plan: **OptimizedWebAppEuropePlan**
+3. Click on **App Service plan/Location**, then **Create New**, and fill in the following values:
 
-    -   Location: **North Europe**
+    - App Service Plan: **OptimizedWebAppEuropePlan**
 
-    -   Pricing tier: **S1 Standard**
-        
-        ![Fields in the App Service plan blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image139.png)
+    - Location: **North Europe**
 
-4.  Click **OK**.
+    - Pricing tier: **S1 Standard**
 
-5.  Click **Create**.
+    ![Fields in the App Service plan blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image139.png)
+
+4. Click **OK**.
+
+5. Click **Create**.
 
 ### Step 2: Set app settings
 
-1.  Click on **Resource groups**, and select the
-    **OptimizedWebAppEuropeRG** resource group. Then, click on the **Web App**.
+1. Click on **Resource groups**, and select the **OptimizedWebAppEuropeRG** resource group. Then, click on the **Web App**.
 
-2.  On the **Web App** blade, click on **Application settings**.
+2. On the **Web App** blade, click on **Application settings**.
 
     ![In the Web App blade, under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image141.png)
 
-3.  Scroll down to the **App settings** section, and create a **new** app setting with the following values:
+3. Scroll down to the **App settings** section, and create a **new** app setting with the following values:
 
-    -   Key: **transactionAPIUrl**
+    - Key: **transactionAPIUrl**
 
-    -   Value: **Paste in the URL of the App Service Web App that is
-        hosting the API tier. This should be set to the same value used
-        for your other Web App Tier.**
+    - Value: **Paste in the URL of the App Service Web App that is hosting the API tier. This should be set to the same value used for your other Web App Tier.**
 
     ![In the App Service blade, under Application Settings, the settings are set to transactionAPIUrl, and
     http://contosofinapi\...](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image80.png)
 
-4.  Click **Save**.
+4. Click **Save**.
 
 ### Step 3: Deploy web app to European region
 
-1.  From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio
-    Solution: **Contoso.Financial.sln**.
+1. From the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
-2.  In the **Solution Explorer** window, expand the **Web** folder, then
-    right-click the **Contoso.Financial.Website** project, and click on
-    **Publish...**
-    
-    ![In Solution Explorer, the Web folder is expanded, and
-    Contoso.Financial.Website is selected. From its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image143.png)
+2. In the **Solution Explorer** window, expand the **Web** folder, then right-click the **Contoso.Financial.Website** project, and click on **Publish...**
 
-3.  Click the **Create new profile** link.
+    ![In Solution Explorer, the Web folder is expanded, and Contoso.Financial.Website is selected. From its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image143.png)
+
+3. Click the **Create new profile** link.
 
     ![In the Publish window, the Create new profile link is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image144.png)
 
-4.  On the **Pick a publish target** dialog, click on **Microsoft Azure App Service**, and choose **Select Existing**, Then, click **Publish**.
+4. On the **Pick a publish target** dialog, click on **Microsoft Azure App Service**, and choose **Select Existing**, Then, click **Publish**.
 
     ![In the Pick a publish target window, Microsoft Azure App Service, Select Existing, and the Publish button are all selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image145.png)
 
-5.  On the **App Service** dialog, expand the
-    **OptimizedWebAppEuropeRG** resource group, select the **Web App** in the North Europe region, and then, click **OK**.
+5. On the **App Service** dialog, expand the **OptimizedWebAppEuropeRG** resource group, select the **Web App** in the North Europe region, and then, click **OK**.
 
     ![In the App Service dialog box, the OptimizedWebAppEuropeRG folder is expanded, and contosofinancialwebappeuro is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image146.png)
 
-7.  Once the deployment has completed, Visual Studio will automatically open a new browser window navigating to the **Web App**.
-    
+7. Once the deployment has completed, Visual Studio will automatically open a new browser window navigating to the **Web App**.
+
     ![The Contoso Financial login page displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image148.png)
 
 ### Step 4: Add European region to traffic manager
 
-1.  From the Azure Management Portal <http://portal.azure.com>, using a
-    new tab or instance, click on **Resource groups**, click on the
-    **OptimizedTFRG** resource group, then click on the **Traffic Manager**.
+1. From the Azure Management Portal <http://portal.azure.com>, using a new tab or instance, click on **Resource groups**, click on the **OptimizedTFRG** resource group, then click on the **Traffic Manager**.
 
-    ![In the Azure Portal left menu, Resource groups is selected. In the OptimizedTFRG blade, the title, Overview and the
-    contosotrafficmgr Traffic Manager are
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image83.png)
+    ![In the Azure Portal left menu, Resource groups is selected. In the OptimizedTFRG blade, the title, Overview and the contosotrafficmgr Traffic Manager are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image83.png)
 
-2.  On the **Traffic Manager profile** blade, in the settings area click on **Endpoints**.
+2. On the **Traffic Manager profile** blade, in the settings area click on **Endpoints**.
   
     ![Screenshot of the Endpoints option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image149.png)
 
-3.  Click **Add**.
-    
-    ![On the contosowebapp - Endpoints blade menu, the Add button is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image150.png)
+3. Click **Add**.
 
-4.  On the **Add endpoint** blade, enter the following values:
+    ![On the contosowebapp - Endpoints blade menu, the Add button is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image150.png)
 
-    -   Type: **Azure endpoint**
+4. On the **Add endpoint** blade, enter the following values:
 
-    -   Name: **Web App (Europe)**
+    - Type: **Azure endpoint**
 
-    -   Target resource type: **App Service**
+    - Name: **Web App (Europe)**
+
+    - Target resource type: **App Service**
 
     ![Fields in the Add endpoint blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image151.png)
 
-5.  Click on **Choose an app service**.
+5. Click on **Choose an app service**.
 
     ![Screenshot of the Choose an app service option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image87.png)
 
-6.  Click on the **Web App** created in the **North Europe** region.
-    
-    ![On the Resource blade, contosofinancialwebappeuro is
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image152.png)
+6. Click on the **Web App** created in the **North Europe** region.
 
-7.  Set the **Regional grouping** to **Europe**.
+    ![On the Resource blade, contosofinancialwebappeuro is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image152.png)
+
+7. Set the **Regional grouping** to **Europe**.
 
     ![Under Geo-mapping, Regional grouping is set to Europe.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image153.png)
 
-8.  Click **OK**.
+8. Click **OK**.
 
-9.  Click on **Overview**.
-    
-    ![Overview is selected in the contosowebapp - Endpoints
-    blade.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image154.png)
+9. Click on **Overview**.
+
+    ![Overview is selected in the contosowebapp - Endpoints blade.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image154.png)
 
 10. On the **Traffic Manager profile** overview blade, click on the **DNS name** to open a new browser window navigating to the **Traffic Manager** endpoint.
-    
-    ![In the Traffic Manager profile blade, Overview, and the DNS name
-    contosowebapp.trafficmanager.net link are
-    selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image155.png)
+
+    ![In the Traffic Manager profile blade, Overview, and the DNS name contosowebapp.trafficmanager.net link are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image155.png)
 
 11. Login to the Web App and ensure it loads all data as expected to test out the App Service hosted Web App and API App tiers are functioning properly. Please make sure your browser security settings are set properly to allow browsing the site.
-    
-    ![The Contoso Financial Account Overview webpage displays with
-    Transaction details in an account transaction
-    ledger.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image100.png)
 
-12.  After validating the app, close the browser window.
+    ![The Contoso Financial Account Overview webpage displays with Transaction details in an account transaction ledger.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image100.png)
 
-## After the hands-on lab 
+12. After validating the app, close the browser window.
+
+## After the hands-on lab
 
 ### Task 1: Delete Resources
 
-1.  Now that the HOL is complete, go ahead and delete all of the
-    Resource Groups created for this HOL. You will no longer need those
-    resources, and it will be beneficial to clean up your Azure
-    Subscription.
+1. Now that the HOL is complete, go ahead and delete all of the Resource Groups created for this HOL. You will no longer need those resources, and it will be beneficial to clean up your Azure Subscription.
 
 You should follow all steps provided *after* attending the HOL.
-
-
-

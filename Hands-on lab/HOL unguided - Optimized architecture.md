@@ -22,7 +22,6 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
-
 **Contents**
 
 <!-- TOC -->
@@ -189,39 +188,23 @@ availability set. All three availability sets are subnets of a VNet,
 which is in the Azure North Central US
 Region.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image18.png "Current scenario diagram")
 
-You have also been provided with the following metrics showing the
-average CPU / RAM utilization of the Virtual Machines hosting the
-solution that are all on the Standard D3 pricing tier.
+You have also been provided with the following metrics showing the average CPU / RAM utilization of the Virtual Machines hosting the solution that are all on the Standard D3 pricing tier.
 
-When calculating the pricing for the environment, there may be some
-differences depending if you use the prices listed in the Azure Portal
-or the Azure Pricing Calculator.
+When calculating the pricing for the environment, there may be some differences depending if you use the prices listed in the Azure Portal or the Azure Pricing Calculator.
 
-![In this Standard D3 pricing tier, the first row is Front-End Web App
-Tier, which offers CPU of 36 percent and RAM of 46 percent, or CPU of 38
-percent or RAM of 44 percent. The second row is the Back-End Web App
-Tier, which has CPU of 58 percent and RAM of 34 percent, or CPU of 56
-percent or RAM of 31 percent. The third row is Back-end processing tier,
-which is CPU of 49 percent, and RAM of 25 percent. The bottom row,
-Database Server SQL Database: Preium P4, has no CPU or RAM
-information.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image19.png "Standard D3 pricing tier")
+![In this Standard D3 pricing tier, the first row is Front-End Web App Tier, which offers CPU of 36 percent and RAM of 46 percent, or CPU of 38 percent or RAM of 44 percent. The second row is the Back-End Web App Tier, which has CPU of 58 percent and RAM of 34 percent, or CPU of 56 percent or RAM of 31 percent. The third row is Back-end processing tier, which is CPU of 49 percent, and RAM of 25 percent. The bottom row, Database Server SQL Database: Preium P4, has no CPU or RAM information.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image19.png "Standard D3 pricing tier")
 
-Additionally, the Azure SQL Database is hosted using the Premium P4
-pricing tier.
+Additionally, the Azure SQL Database is hosted using the Premium P4 pricing tier.
 
-The VM sizes from the Existing architecture that was deployed using the
-ARM Template will be slightly different from the diagram above for this
-scenario. The reason for this was to make the ARM Template deployment
-quicker and cheaper while still deploying enough to allow you to perform
-the exercises in this lab.
+The VM sizes from the Existing architecture that was deployed using the ARM Template will be slightly different from the diagram above for this scenario. The reason for this was to make the ARM Template deployment quicker and cheaper while still deploying enough to allow you to perform the exercises in this lab.
 
 ### Task 1: Calculate estimated hosting cost of existing solution
 
 #### Tasks to complete
 
--   Calculate the estimated hosting cost of the existing architecture.
+- Calculate the estimated hosting cost of the existing architecture.
 
-    -   Factor in the Virtual Machine instances and SQL Database of the
+    - Factor in the Virtual Machine instances and SQL Database of the
         Existing Architecture.
 
 #### Exit criteria
@@ -629,10 +612,6 @@ displays.](images/Hands-onlabunguided-Optimizedarchitectureimages/media/image21.
 
 ### Task 1: Delete resources
 
-1.  Now that the HOL is complete, go ahead and delete all the Resource
-    Groups that were created for this HOL. You will no longer need those
-    resources and it will be beneficial to clean up your Azure
-    Subscription.
+1.  Now that the HOL is complete, go ahead and delete all the Resource Groups that were created for this HOL. You will no longer need those resources and it will be beneficial to clean up your Azure Subscription.
 
 You should follow all steps provided *after* attending the Hands-on lab.
-

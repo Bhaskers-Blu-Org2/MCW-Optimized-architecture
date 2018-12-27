@@ -80,7 +80,7 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 > **Note:** Sometimes this image has IE ESC disabled. Sometimes it does not.
 
-1.  On the new VM, you just created, click the **Server Manager** icon.
+1.  On the new VM you just created, open an RDP session and click the **Server Manager** icon.
 
     ![Screenshot of the Server Manager icon.](images/Setup/image5.png)
 

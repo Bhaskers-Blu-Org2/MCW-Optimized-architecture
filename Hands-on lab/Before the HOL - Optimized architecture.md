@@ -145,6 +145,8 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
     ![Deployment status displays in the Visual Studio Output Window.](images/Setup/image14.png)
 
+    > **Note**: It can take up to 15 minutes for the template to fully deploy.
+
 9. Once the deployment has completed successfully, the **IP Address** and **FQDN** of the External / Internet Load Balancer for the Web App tier will be displayed in the output window.
 
     ![The IP Address for the External / Internal Load Balancer are circled in the Output Window.](images/Setup/image15.png)

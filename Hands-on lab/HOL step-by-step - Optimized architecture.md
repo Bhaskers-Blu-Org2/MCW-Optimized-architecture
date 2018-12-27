@@ -172,7 +172,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
     ![Under Virtual Machines, Region is set to North Central US\< and Tier is Standard.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image25.png)
 
-8. Change the **Instance Size** to **D3**.
+8. Change the **Instance** to **D3**.
 
     ![The Instance field is set to D3: 4 vCPU(s), 14 GB RAM, 200 GB Temporary storage, \$0.560/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image26.png)
 
@@ -190,6 +190,8 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
     <https://azure.microsoft.com/pricing/calculator>
 
+    > **Note**: You must use an Incognito or InPrivate window or the previous pricing information you calculated will still be present.
+
 2. Click on **Compute**, followed by **Virtual Machines**.
 
     ![On the Azure Pricing Calculator webpage, Compute, and Virtual Machines are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image20.png)
@@ -205,10 +207,9 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 5. On the **Azure SQL Database**, set the following values:
 
     - Region: **North Central US**
-
+    - Type: **Single Database**
     - Purchase Model: **DTU**
-
-    - Pricing Tier: **Premium**
+    - Service Tier: **Premium**
 
     ![In the Azure SQL Database section, North Central US is selected for the region, DTU for Purchase Model and Premium for the Tier.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image23.png)
 
@@ -219,30 +220,29 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 7. On **Virtual Machines**, set the following values:
 
     - Region: **North Central US**
+    - Tier: **Standard**
 
-    - Pricing Tier: **Standard**
+    ![In the Azure SQL Database section, Region is set to North Central US, and Tier is Standard.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image25.png)
 
-    ![In the Azure SQL Database section, Region is set to North Central US, and
-    Tier is
-    Standard.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image25.png)
-
-8. Change the **Instance Size** to **D3**.
+8. Change the **Instance** to **D3**.
 
     ![The Instance field is set to D3: 4 vCPU(s), 14 GB RAM, 200 GB Temporary storage, \$0.560/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image26.png)
 
 9. Change the **Billing Option** to **3-year reserved**, and change the **Virtual Machines Count** to **5**, so the count includes the 2x Web App Tier, 2x API Tier, and 1x Background Tier virtual machines.
 
-    ![In the Billing Option section, the 3 year reserved option is selected. Virtual machines is set to 5, and the total amount is \$1,054.83.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image29.png)
+    ![In the Billing Option section, the 3 year reserved option is selected. Virtual machines is set to 5, and the total amount is \$1,052.99.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image29.png)
 
 10. Click the **Collapse all** button, and Record the **Estimated monthly cost**. This is the total estimated cost of the existing environment Virtual Machines and SQL Database only using **Reserved Instances**. 
 
-    ![On the Your Estimate page, the collapse all button is selected. Below that, the the SQL Database cost is \$1,830.00, the Virtual Machines are \$1,054.83, and the estimated monthly cost is \$2,884.83.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image30.png)
+    ![On the Your Estimate page, the collapse all button is selected. Below that, the the SQL Database cost is \$1,825.00, the Virtual Machines are \$1,088.99, and the estimated monthly cost is \$2,913.99.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image30.png)
 
 ### Task 3: Estimate necessary app service tiers
 
 #### Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)
 
-1. From a new browser tab or instance, navigate to the **Windows Virtual Machines Pricing** page: <https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/>.
+1. From a new browser tab or instance, navigate to the **Windows Virtual Machines Pricing** page: 
+   
+   <https://azure.microsoft.com/pricing/details/virtual-machines/windows/>.
 
 2. Scroll down to the **Explore all VM options** section of the page.
 
@@ -298,9 +298,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
     >
     > 114 / 2 = **57% Average CPU Utilization**
 
-    ![The Back-end Web App Tier percentages for VM Size Standard D3, CPU
-    is 58 percent and RAM 34 percent, or CPU 56 percent and RAM 31
-    percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image37.png)
+    ![The Back-end Web App Tier percentages for VM Size Standard D3, CPU is 58 percent and RAM 34 percent, or CPU 56 percent and RAM 31 percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image37.png)
 
 2. Calculate the amount of **CPU Cores** the **Average CPU Utilization** represents:
 
@@ -320,9 +318,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. The **Average CPU Utilization** of the single Background Tier VM is **49%**.
 
-    ![The Back-end Processing Tier percentages for VM Size Standard D3,
-    CPU is 49 percent and RAM 25
-    percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image38.png)
+    ![The Back-end Processing Tier percentages for VM Size Standard D3, CPU is 49 percent and RAM 25 percent.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image38.png)
 
 2. Calculate the amount of **CPU Cores** the **Average CPU Utilization** represents:
 
@@ -338,7 +334,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. From a new browser tab or instance, navigate to the **App Service Pricing** page:  
 
-    <https://azure.microsoft.com/en-us/pricing/details/app-service>
+    <https://azure.microsoft.com/pricing/details/app-service>
 
 2. Set the **Region** filter to **North Central US**.
 
@@ -354,37 +350,56 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 6. Map the **CPU / RAM** **Utilization** of the **Background Tier (1.96 CPU Cores / 3.5 GB RAM)** to the closest **Standard Service Plan** tier. These maps to be the **Standard S3** pricing tier.
 
-    >**Note**: The **Background Tier** matches almost identical to 100% of the CPU / RAM resources of the **Standard S2** pricing tier. However, 100% utilization would hinder the performance of the server since the resources would be at their maximum. For this reason, it is appropriate to go with the **Standard S3** pricing tier instead to leave extra room for best performance and possible spikes in load / usage.
+    >**Note**: The **Background Tier** matches almost identical to 100% of the CPU / RAM resources of the **Standard S2** pricing tier. However, 100% utilization would hinder the performance of the server since the resources would be at their maximum. For this reason, it is appropriate to go with the **Standard S3** pricing tier instead. This leaves extra room for the best performance and possible spikes in load / usage.
 
 7. Overall, it has been identified that the **Standard S3** is the appropriate **App Service Plan** pricing tier to use for the Web App, API, and Background tiers.
 
 ## Task 4: Calculate estimated hosting cost of Azure app service
 
-1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator:** <https://azure.microsoft.com/en-us/pricing/calculator>.
+1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator:** 
+   
+   <https://azure.microsoft.com/pricing/calculator>
+
+   > **Note**: You must use an Incognito or InPrivate window or the previous pricing information you calculated will still be present.
 
 2. Click on **App Service**.
 
     ![On the Azure Pricing Calculator webpage, Featured and App Service are both selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image41.png)
 
-3. If the **Azure SQL Database** is not in the calculator from the previous VM estimation, scroll up, add it, and set it to **Premium P4** performance level.
+3. Click on **Databases**, followed by **Azure SQL Database**.
 
-    ![The SQL Database section displays with the following settings Region, East US; Type, Single Database; Tier, Premium; Performance Level, P4: 500 DTUs, 500 GB included storage per DB, \$2.5000/hour. 1 Database multiplied by 732 hours equals \$1,830.00.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image42.png)
+    ![On the Azure Pricing Calculator webpage, Databases, and Azure SQL Database are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image21.png)
 
-4. On **App Service**, change the **Region** to **North Central US**.
+4. Scroll down to the **Your Estimate** section of the page.
+
+5. On the **Azure SQL Database**, set the following values:
+
+    - Region: **North Central US**
+    - Type: **Single Database**
+    - Purchase Model: **DTU**
+    - Service Tier: **Premium**
+
+    ![In the Azure SQL Database section, North Central US is selected for the region, DTU for Purchase Model and Premium for the Tier.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image23.png)
+
+6. Set the **Performance Level** to **P4**.
+
+    ![The Performance Level field is set to P4: 500 DTUs, 500 GB included storage per DB \$2.5000/hour.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image24.png)
+
+7. On **App Service**, change the **Region** to **North Central US**.
 
     ![In the App Service section, Region is set to North Central US.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image43.png)
 
-5. Change the **Tier** to **Standard** and the **Instance Size** to **S3** to reflect the App Service Plan tier identified as the appropriate hosting tier for the Web App, API, and Background application tiers.
+8. Change the **Tier** to **Standard** and the **Instance Size** to **S3** to reflect the App Service Plan tier identified as the appropriate hosting tier for the Web App, API, and Background application tiers.
 
     ![In the App Service Section, Region is North Central US, Tier is Standard, and Instance is S3: 4 vCPU(s), 7 GB RAM, 50 GB Storage, $0.400.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image44.png)
 
-6. Change the **Instances** count to **5** to reflect the same number of instances of the existing VM architecture (2x Web App Tier, 2x API Tier, 1x Background Tier). Additionally, change the number of hours to **732**.
+9. Change the **Instances** count to **5** to reflect the same number of instances of the existing VM architecture (2x Web App Tier, 2x API Tier, 1x Background Tier). Additionally, change the number of hours to **732**.
 
     ![At the bottom of the App Service Section, 5 instances multiplied by 732 hours equals $1,464.00.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image45.png)
 
     >**Note**: The **Instance Count** should remain **5** since the application will still need the same amount of resources to host; it is just the Azure Service hosting them that is changing. For example, since the Web App Tier needs 2 VM instances, the App Service Plan will also use 2 instances for hosting.
 
-7. Click the **Collapse All** button, as before, and record the **Estimated monthly cost**. This is the total estimated cost of the new environment App Service Instances and SQL Database only.
+10. Click the **Collapse All** button, as before, and record the **Estimated monthly cost**. This is the total estimated cost of the new environment App Service Instances and SQL Database only.
 
     ![On the Your Estimate page, the the App Service cost is $1,464.00, the SQL Database cost is \$1,830.00, and the estimated monthly cost is \$3,294.00.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image46.png)
 
@@ -392,20 +407,19 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. Copy the **Estimated Cost** of the **Existing Architecture** (VMs and SQL Database).
 
-    > The original **Existing Architecture** cost that was estimated came to approximately **\$6,902**. Your estimate may vary, depending on current Azure pricing.
+    > The original **Existing Architecture** cost that was estimated came to approximately **\$3,915.60**. Your estimate may vary, depending on current Azure pricing.
 
 2. Copy the **Estimated Cost** of the **New Architecture** (App Service and SQL Database).
 
-    > The **New Architecture** cost that was estimated came to approximately **$3,582**. Your estimate may vary, depending on current Azure pricing.
+    > The **New Architecture** cost that was estimated came to approximately **$3,294.00**. Your estimate may vary, depending on current Azure pricing.
 
 3. **Subtract** the estimated cost of the **New Architecture** from the **Existing Architecture** to calculate the **Estimated Monthly Cost Savings**.
 
     > *Existing - New = Estimated Monthly Cost Savings*
-    >
 
     From the estimates above this would be:
 
-    > \$6,902 - \$3,582 = \$3,320
+    > \$3,915.60 - \$3,294.00 = \$621.60
 
     Remember your results may vary, depending on current Azure pricing.
 
@@ -415,7 +429,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
     From the estimates above this would be:
 
-    > \$3,320 \* 12 = \$39,840
+    > \$621.60 \* 12 = \$7,459.20
 
     Remember your results may vary, depending on current Azure pricing.
 
@@ -423,8 +437,8 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
     From the estimates above this would be:
 
-    > Estimated Monthly Cost Savings: \$3,320
-    > Estimated Annual Cost Savings: \$39,840
+    > Estimated Monthly Cost Savings: \$621.60
+    > Estimated Annual Cost Savings: \$7,459.20
 
 ## Exercise 2: Integrate traffic manager
 

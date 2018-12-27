@@ -43,7 +43,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
       - [Subtask 3: Calculate API tier VM utilization](#subtask-3-calculate-api-tier-vm-utilization)
       - [Subtask 4: Calculate background tier VM utilization](#subtask-4-calculate-background-tier-vm-utilization)
       - [Subtask 5: Identify appropriate app service tier](#subtask-5-identify-appropriate-app-service-tier)
-  - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
+    - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
     - [Task 5: Calculate estimated cost savings](#task-5-calculate-estimated-cost-savings)
   - [Exercise 2: Integrate traffic manager](#exercise-2-integrate-traffic-manager)
     - [Help references](#help-references-1)
@@ -354,7 +354,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 7. Overall, it has been identified that the **Standard S3** is the appropriate **App Service Plan** pricing tier to use for the Web App, API, and Background tiers.
 
-## Task 4: Calculate estimated hosting cost of Azure app service
+### Task 4: Calculate estimated hosting cost of Azure app service
 
 1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator:** 
    
@@ -442,18 +442,18 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 ## Exercise 2: Integrate traffic manager
 
-Contoso Financial needs new load balancing solutions implemented using Azure Traffic Manager. The existing architecture uses a Load Balancer, but that does not accommodate the growth of Contoso Financial appropriately where they will need to add additional hosting regions in Europe.
+Contoso Financial needs new load balancing solutions implemented using Azure Traffic Manager. The existing architecture uses an Azure Load Balancer, but that does not accommodate the growth of Contoso Financial appropriately where they will need to add additional hosting regions in Europe.
 
 ### Help references
 
 |         |            |
 | ------------- |:-------------:|
-| Azure Load Balancer    | <https://azure.microsoft.com/en-us/services/load-balancer/> |
-| Azure Traffic Manager   | <https://azure.microsoft.com/en-us/services/virtual-network>  |
+| Azure Load Balancer    | <https://azure.microsoft.com/services/load-balancer/> |
+| Azure Traffic Manager   | <https://azure.microsoft.com/services/virtual-network>  |
 
 ### Task 1: Create Traffic Manager
 
-1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource**, type **Traffic Manager** into the **Search the marketplace** box and press **Enter**.
+1. From the Azure Management portal at <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource**, type **Traffic Manager** into the **Search the marketplace** box and press **Enter**.
 
     ![In the Azure Portal, Create a resource is selected in the left menu. Under Create a resource, traffic manager is typed in the search box.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image47.png)
 
@@ -523,19 +523,19 @@ Contoso Financial needs new load balancing solutions implemented using Azure Tra
 
 ## Exercise 3: Setup API tier in Azure app service
 
-In the migration of IaaS to PaaS, the API Tier of Contoso Financials application needs to be migrated to run in an Azure App Service Web App without requiring any code changes to the application.
+In the migration of IaaS to PaaS, the API Tier of Contoso Financial's application needs to be migrated to run in an Azure App Service Web App without requiring any code changes to the application.
 
 ### Help references
 
 |         |            |
 | ------------- |:-------------:|
-| API Apps overview    | <https://docs.microsoft.com/en-us/azure/app-service-api/app-service-api-apps-why-best-platform> |
-| Deploy an ASP.NET web app to Azure App Service, using Visual Studio  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-get-started/>  |
-| Configure web apps in Azure App Service  | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-configure/>  |
+| API Apps overview    | <https://docs.microsoft.com/azure/app-service-api/app-service-api-apps-why-best-platform> |
+| Deploy an ASP\.NET web app to Azure App Service, using Visual Studio  | <https://azure.microsoft.comdocumentation/articles/web-sites-dotnet-get-started/>  |
+| Configure web apps in Azure App Service  | <https://azure.microsoft.com/documentation/articles/web-sites-configure/>  |
 
 ### Step 1: Create app service for web API tier
 
-1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** -\> **Web** -\> **API App**.
+1. From the Azure Management portal at <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** -\> **Web** -\> **API App**.
 
     ![In the left menu of the Azure Portal, Create a resource is selected. In the Create a resource pane, Web and API App are selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image59.png)
 

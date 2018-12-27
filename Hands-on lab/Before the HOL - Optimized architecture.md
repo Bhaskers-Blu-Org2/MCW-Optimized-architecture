@@ -54,7 +54,7 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 1.  Launch a browser using Incognito or InPrivate mode, and navigate to <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an organization account a Microsoft Account.
 
-2.  Click **+ Create a resource**, and in the search box, type in Visual Studio Community 2017 on Windows Server 2016 (x64), and press enter. Click the Visual Studio Community 2017 image running on Windows Server 2016 and with the latest update.
+2.  Click **+ Create a resource**, and in the search box, type in *Visual Studio Community 2017*, and press enter. Click the Visual Studio Community 2017 image running on Windows Server 2016 and with the latest update.
 
 3.  In the returned search results, click the image name.
 

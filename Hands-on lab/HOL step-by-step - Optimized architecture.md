@@ -28,58 +28,58 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 <!-- TOC -->
 
 - [Optimized architecture hands-on lab step-by-step](#optimized-architecture-hands-on-lab-step-by-step)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Overview](#overview)
-    - [Solution architecture](#solution-architecture)
-    - [Requirements](#requirements)
-    - [Exercise 1: Determine appropriate app service tiers and estimate cost savings](#exercise-1-determine-appropriate-app-service-tiers-and-estimate-cost-savings)
-        - [Help references](#help-references)
-        - [Scenario](#scenario)
-        - [Task 1: Calculate estimated hosting cost of existing solution](#task-1-calculate-estimated-hosting-cost-of-existing-solution)
-        - [Task 2: Calculate estimated hosting cost of VMs with reserved instances](#task-2-calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
-        - [Task 3: Estimate necessary app service tiers](#task-3-estimate-necessary-app-service-tiers)
-            - [Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)](#subtask-1-find-existing-vm-instance-size-specifications-cpu-cores-and-ram)
-            - [Subtask 2: Calculate web app tier VM utilization](#subtask-2-calculate-web-app-tier-vm-utilization)
-            - [Subtask 3: Calculate API tier VM utilization](#subtask-3-calculate-api-tier-vm-utilization)
-            - [Subtask 4: Calculate background tier VM utilization](#subtask-4-calculate-background-tier-vm-utilization)
-            - [Subtask 5: Identify appropriate app service tier](#subtask-5-identify-appropriate-app-service-tier)
-    - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
-        - [Task 5: Calculate estimated cost savings](#task-5-calculate-estimated-cost-savings)
-    - [Exercise 2: Integrate traffic manager](#exercise-2-integrate-traffic-manager)
-        - [Help references](#help-references)
-        - [Task 1: Create Traffic Manager](#task-1-create-traffic-manager)
-        - [Task 2: Point traffic manager to external / internet load balancer](#task-2-point-traffic-manager-to-external-internet-load-balancer)
-    - [Exercise 3: Setup API tier in Azure app service](#exercise-3-setup-api-tier-in-azure-app-service)
-        - [Help references](#help-references)
-        - [Step 1: Create app service for web API tier](#step-1-create-app-service-for-web-api-tier)
-        - [Step 2: Setup app settings](#step-2-setup-app-settings)
-        - [Step 3: Deploy API to app service](#step-3-deploy-api-to-app-service)
-    - [Exercise 4: Migrate web app tier to app service](#exercise-4-migrate-web-app-tier-to-app-service)
-        - [Help references](#help-references)
-        - [Step 1: Create app service for web app tier](#step-1-create-app-service-for-web-app-tier)
-        - [Step 2: Setup app settings](#step-2-setup-app-settings)
-        - [Step 3: Deploy app to web app](#step-3-deploy-app-to-web-app)
-        - [Step 4: Add web app to traffic manager](#step-4-add-web-app-to-traffic-manager)
-        - [Step 5: Take down Web App and API VMs](#step-5-take-down-web-app-and-api-vms)
-    - [Exercise 5: Migrate background tier to app service](#exercise-5-migrate-background-tier-to-app-service)
-        - [Help references](#help-references)
-        - [Step 1: Create app service for background tier](#step-1-create-app-service-for-background-tier)
-        - [Step 2: Setup app settings](#step-2-setup-app-settings)
-        - [Step 3: Deploy app to app service](#step-3-deploy-app-to-app-service)
-        - [Step 4: Take down background tier VM](#step-4-take-down-background-tier-vm)
-    - [Exercise 6: Setup SQL database geo-replication](#exercise-6-setup-sql-database-geo-replication)
-        - [Help references](#help-references)
-        - [Step 1: Setup SQL database geo-replication](#step-1-setup-sql-database-geo-replication)
-    - [Exercise 7: Take down old architecture / resources](#exercise-7-take-down-old-architecture-resources)
-        - [Step 1: Remove Old VM-based tiers](#step-1-remove-old-vm-based-tiers)
-    - [Exercise 8: Setup European web app tier Instance](#exercise-8-setup-european-web-app-tier-instance)
-        - [Help references](#help-references)
-        - [Step 1: Create European app service](#step-1-create-european-app-service)
-        - [Step 2: Set app settings](#step-2-set-app-settings)
-        - [Step 3: Deploy web app to European region](#step-3-deploy-web-app-to-european-region)
-        - [Step 4: Add European region to traffic manager](#step-4-add-european-region-to-traffic-manager)
-    - [After the hands-on lab](#after-the-hands-on-lab)
-        - [Task 1: Delete Resources](#task-1-delete-resources)
+  - [Abstract and learning objectives](#abstract-and-learning-objectives)
+  - [Overview](#overview)
+  - [Solution architecture](#solution-architecture)
+  - [Requirements](#requirements)
+  - [Exercise 1: Determine appropriate app service tiers and estimate cost savings](#exercise-1-determine-appropriate-app-service-tiers-and-estimate-cost-savings)
+    - [Help references](#help-references)
+    - [Scenario](#scenario)
+    - [Task 1: Calculate estimated hosting cost of existing solution](#task-1-calculate-estimated-hosting-cost-of-existing-solution)
+    - [Task 2: Calculate estimated hosting cost of VMs with reserved instances](#task-2-calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
+    - [Task 3: Estimate necessary app service tiers](#task-3-estimate-necessary-app-service-tiers)
+      - [Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)](#subtask-1-find-existing-vm-instance-size-specifications-cpu-cores-and-ram)
+      - [Subtask 2: Calculate web app tier VM utilization](#subtask-2-calculate-web-app-tier-vm-utilization)
+      - [Subtask 3: Calculate API tier VM utilization](#subtask-3-calculate-api-tier-vm-utilization)
+      - [Subtask 4: Calculate background tier VM utilization](#subtask-4-calculate-background-tier-vm-utilization)
+      - [Subtask 5: Identify appropriate app service tier](#subtask-5-identify-appropriate-app-service-tier)
+  - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
+    - [Task 5: Calculate estimated cost savings](#task-5-calculate-estimated-cost-savings)
+  - [Exercise 2: Integrate traffic manager](#exercise-2-integrate-traffic-manager)
+    - [Help references](#help-references-1)
+    - [Task 1: Create Traffic Manager](#task-1-create-traffic-manager)
+    - [Task 2: Point traffic manager to external / internet load balancer](#task-2-point-traffic-manager-to-external--internet-load-balancer)
+  - [Exercise 3: Setup API tier in Azure app service](#exercise-3-setup-api-tier-in-azure-app-service)
+    - [Help references](#help-references-2)
+    - [Step 1: Create app service for web API tier](#step-1-create-app-service-for-web-api-tier)
+    - [Step 2: Setup app settings](#step-2-setup-app-settings)
+    - [Step 3: Deploy API to app service](#step-3-deploy-api-to-app-service)
+  - [Exercise 4: Migrate web app tier to app service](#exercise-4-migrate-web-app-tier-to-app-service)
+    - [Help references](#help-references-3)
+    - [Step 1: Create app service for web app tier](#step-1-create-app-service-for-web-app-tier)
+    - [Step 2: Setup app settings](#step-2-setup-app-settings-1)
+    - [Step 3: Deploy app to web app](#step-3-deploy-app-to-web-app)
+    - [Step 4: Add web app to traffic manager](#step-4-add-web-app-to-traffic-manager)
+    - [Step 5: Take down Web App and API VMs](#step-5-take-down-web-app-and-api-vms)
+  - [Exercise 5: Migrate background tier to app service](#exercise-5-migrate-background-tier-to-app-service)
+    - [Help references](#help-references-4)
+    - [Step 1: Create app service for background tier](#step-1-create-app-service-for-background-tier)
+    - [Step 2: Setup app settings](#step-2-setup-app-settings-2)
+    - [Step 3: Deploy app to app service](#step-3-deploy-app-to-app-service)
+    - [Step 4: Take down background tier VM](#step-4-take-down-background-tier-vm)
+  - [Exercise 6: Setup SQL database geo-replication](#exercise-6-setup-sql-database-geo-replication)
+    - [Help references](#help-references-5)
+    - [Step 1: Setup SQL database geo-replication](#step-1-setup-sql-database-geo-replication)
+  - [Exercise 7: Take down old architecture / resources](#exercise-7-take-down-old-architecture--resources)
+    - [Step 1: Remove Old VM-based tiers](#step-1-remove-old-vm-based-tiers)
+  - [Exercise 8: Setup European web app tier Instance](#exercise-8-setup-european-web-app-tier-instance)
+    - [Help references](#help-references-6)
+    - [Step 1: Create European app service](#step-1-create-european-app-service)
+    - [Step 2: Set app settings](#step-2-set-app-settings)
+    - [Step 3: Deploy web app to European region](#step-3-deploy-web-app-to-european-region)
+    - [Step 4: Add European region to traffic manager](#step-4-add-european-region-to-traffic-manager)
+  - [After the hands-on lab](#after-the-hands-on-lab)
+    - [Task 1: Delete Resources](#task-1-delete-resources)
 
 <!-- /TOC -->
 
@@ -87,13 +87,13 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 ## Abstract and learning objectives 
 
-In this hands-on lab, you will determine the appropriate hosting tiers for the Contoso Financial application and estimate the total cost savings on a monthly and annual basis. You will implement and integrate Azure Traffic Manager, then migrate the Web, API and Background App Tiers of the application to the Azure App Service. Next, you will then de-commission the old application infrastructure, and setup geo-replication for the Azure SQL Database in preparation for the next step, which is deploying a European instance of the Web App Tier. Finally, you will add an endpoint for this new Web App Tier to the Azure Traffic Manager.
+In this hands-on lab, you will determine the appropriate hosting tiers for the Contoso Financial application and estimate the total cost savings on a monthly and annual basis. You will implement and integrate Azure Traffic Manager, then migrate the Web, API, and Background App Tiers of the application to Azure App Service. Next, you will then de-commission the old application infrastructure, and setup geo-replication for the Azure SQL Database in preparation for the next step, which is deploying a European instance of the Web App Tier. Finally, you will add an endpoint for this new Web App Tier to the Azure Traffic Manager.
 
 At the end of this hands-on lab, you will be better able to implement optimization of Azure IaaS and PaaS deployments, price solutions using the Azure calculator, and setup multi-region solutions.
 
 ## Overview
 
-The Optimized Architecture hands-on lab (HOL) is a hands-on exercise that will challenge you to calculate Azure spending optimizations by comparing IaaS and PaaS services using a supplied sample application (a 3-tier application written in C\# and ASP.NET MVC) that is based on Microsoft Azure IaaS services such as Virtual Machines, Virtual Network, Load Balancers, Storage and SQL Database. In addition to calculating estimated Azure cost of the existing architecture, you will need to calculate the estimated cost of hosting the sample application using Azure PaaS services. The scenario will include migrating the full sample application to be hosted on Azure PaaS services such as Azure App Service Web Apps, Web Jobs, and Traffic Manager as well as implementing a secondary hosting region for the Web App tier and database replication.
+The Optimized Architecture hands-on lab (HOL) is a hands-on exercise that will challenge you to calculate Azure spending optimizations by comparing IaaS and PaaS services using a supplied sample application (a 3-tier application written in C\# and ASP\.NET MVC) that is based on Microsoft Azure IaaS services such as Virtual Machines, Virtual Networks, Load Balancers, Storage, and SQL Database. In addition to calculating estimated Azure cost of the existing architecture, you will need to calculate the estimated cost of hosting the sample application using Azure PaaS services. The scenario will include migrating the full sample application to be hosted on Azure PaaS services such as Azure App Service Web Apps, Web Jobs, and Traffic Manager as well as implementing a secondary hosting region for the Web App tier and database replication.
 
 The HOL can be implemented on your own, but it is highly recommended to pair up with other members at the HOL to model a real-world experience much closer and to allow each member to share their expertise for the overall solutions.
 
@@ -104,72 +104,41 @@ The HOL can be implemented on your own, but it is highly recommended to pair up 
 ## Requirements
 
 1.  Microsoft Azure subscription
-
-2.  Local machine or a virtual machine configured with Visual Studio
-    2017 Community Edition or better.
+2.  Local machine or a virtual machine configured with Visual Studio 2017 Community Edition or better.
 
 ## Exercise 1: Determine appropriate app service tiers and estimate cost savings
 
-Contoso Financial has asked you to optimize their Azure spending by
-migrating their existing Azure IaaS based architecture over to Azure
-PaaS services. You will need to determine the appropriate hosting tiers
-and estimate the total cost savings on a monthly and annual basis.
+Contoso Financial has asked you to optimize their Azure spending by migrating their existing Azure IaaS based architecture over to Azure PaaS services. You will need to determine the appropriate hosting tiers and estimate the total cost savings on a monthly and annual basis.
 
 ### Help references
 
 |         |            |
 | ------------- |:-------------:|
-| Azure Pricing Calculator    | <https://azure.microsoft.com/en-us/pricing/calculator> |
-| Virtual Machines Pricing    | <https://azure.microsoft.com/en-us/pricing/details/virtual-machines/>  |
-| App Service Pricing         | <https://azure.microsoft.com/en-us/pricing/details/app-service> |
+| Azure Pricing Calculator    | <https://azure.microsoft.com/pricing/calculator> |
+| Virtual Machines Pricing    | <https://azure.microsoft.com/pricing/details/virtual-machines/>  |
+| App Service Pricing         | <https://azure.microsoft.com/pricing/details/app-service> |
 
 ### Scenario
 
-Contoso Financial recently performed a lift-and-shift to move their
-application into Microsoft Azure using the North Central US region. As a
-result, the existing architecture of the application is implemented with
-Virtual Machines, Load Balancers, Availability Sets, SQL Database, and a
-Virtual Network.
+Contoso Financial recently performed a lift-and-shift to move their application into Microsoft Azure using the North Central US region. As a result, the existing architecture of the application is implemented with Virtual Machines, Load Balancers, Availability Sets, SQL Database, and a Virtual Network.
 
-![The current scenario diagram for Contoso Financial has three users on
-the internet passing through an external load balancer to access the
-Availability Set (Web App) with two virtual machines. Both the first
-availability set, and a second availability set (background processes)
-pass through an internal load balancer to a third availability set (Web
-API). A SQL Database shares bi-directional access with the Web API
-availability set. All three availability sets are subnets of a VNet,
-which is in the Azure North Central US
-Region.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image18.png)
+![The current scenario diagram for Contoso Financial has three users on the internet passing through an external load balancer to access the Availability Set (Web App) with two virtual machines. Both the first availability set, and a second availability set (background processes) pass through an internal load balancer to a third availability set (Web API). A SQL Database shares bi-directional access with the Web API availability set. All three availability sets are subnets of a VNet, which is in the Azure North Central US Region.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image18.png)
 
-You have also been provided with the following metrics showing the
-average CPU / RAM utilization of the Virtual Machines hosting the
-solution that are all on the Standard D3 pricing tier.
+You have also been provided with the following metrics showing the average CPU / RAM utilization of the Virtual Machines hosting the solution that are all on the Standard D3 pricing tier.
 
-When calculating the pricing for the environment, there may be some
-differences depending if you use the prices listed in the Azure Portal
-or the Azure Pricing Calculator.
+When calculating the pricing for the environment, there may be some differences depending if you use the prices listed in the Azure Portal or the Azure Pricing Calculator.
 
-![In this Standard D3 pricing tier, the first row is Front-End Web App
-Tier, which offers CPU of 36 percent and RAM of 46 percent, or CPU of 38
-percent or RAM of 44 percent. The second row is the Back-End Web App
-Tier, which has CPU of 58 percent and RAM of 34 percent, or CPU of 56
-percent or RAM of 31 percent. The third row is Back-end processing tier,
-which is CPU of 49 percent, and RAM of 25 percent. The bottom row,
-Database Server SQL Database: Premium P4, has no CPU or RAM
-information.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image19.png)
+![In this Standard D3 pricing tier, the first row is Front-End Web App Tier, which offers CPU of 36 percent and RAM of 46 percent, or CPU of 38 percent or RAM of 44 percent. The second row is the Back-End Web App Tier, which has CPU of 58 percent and RAM of 34 percent, or CPU of 56 percent or RAM of 31 percent. The third row is Back-end processing tier, which is CPU of 49 percent, and RAM of 25 percent. The bottom row, Database Server SQL Database: Premium P4, has no CPU or RAM information.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image19.png)
 
-Additionally, the Azure SQL Database is hosted using the Premium P4
-pricing tier.
+Additionally, the Azure SQL Database is hosted using the Premium P4 pricing tier.
 
-The VM sizes from the Existing architecture that was deployed using the
-ARM Template will be slightly different from the diagram above for this
-scenario. The reason for this was to make the ARM Template deployment
-quicker and cheaper while still deploying enough to allow you to perform
-the exercises in this lab.
+The VM sizes from the existing architecture that was deployed using the ARM Template will be slightly different from the diagram above for this scenario. The reason for this was to make the ARM Template deployment quicker and cheaper while still deploying enough to allow you to perform the exercises in this lab.
 
 ### Task 1: Calculate estimated hosting cost of existing solution
 
-1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator** <https://azure.microsoft.com/en-us/pricing/calculator>.
+1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator**:
+   
+    <https://azure.microsoft.com/pricing/calculator>
 
 2. Click on **Compute**, followed by **Virtual Machines**.
 
@@ -186,14 +155,11 @@ the exercises in this lab.
 5. On the **Azure SQL Database**, set the following values:
 
     - Region: **North Central US**
-
+    - Type: **Single Database**
     - Purchase Model: **DTU**
+    - Service Tier: **Premium**
 
-    - Pricing Tier: **Premium**
-
-    ![In the SQL Database section, North Central US is selected for the
-    region, DTU for Purchase Model and Premium for the
-    Tier.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image23.png)
+    ![In the SQL Database section, North Central US is selected for the region, DTU for Purchase Model and Premium for the Service Tier.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image23.png)
 
 6. Set the **Performance Level** to **P4**.
 
@@ -202,8 +168,7 @@ the exercises in this lab.
 7. In the **Virtual Machines** section, set the following values:
 
     - Region: **North Central US**
-
-    - Pricing Tier: **Standard**
+    - Tier: **Standard**
 
     ![Under Virtual Machines, Region is set to North Central US\< and Tier is Standard.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image25.png)
 
@@ -217,13 +182,13 @@ the exercises in this lab.
 
 10. Click the **Collapse all** button, and Record the **Estimated monthly cost**. This is the total estimated cost of the existing environment Virtual Machines and SQL Database only.
 
-    ![On the Your Estimate page, the estimate of $3,879.60 in US Dollars is boxed in red, as is the collapse all button (two arrows in a circle pointing in toward each other).](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image28.png)
+    ![On the Your Estimate page, the estimate of $3,910.60 in US Dollars is boxed in red, as is the collapse all button (two arrows in a circle pointing in toward each other).](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image28.png)
 
 ### Task 2: Calculate estimated hosting cost of VMs with reserved instances
 
 1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator**.
 
-    <https://azure.microsoft.com/en-us/pricing/calculator>
+    <https://azure.microsoft.com/pricing/calculator>
 
 2. Click on **Compute**, followed by **Virtual Machines**.
 

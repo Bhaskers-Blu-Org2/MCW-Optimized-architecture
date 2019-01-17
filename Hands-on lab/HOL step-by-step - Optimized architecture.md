@@ -12,7 +12,6 @@ Hands-on lab step-by-step
 December 2018
 </div>
 
-
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
@@ -21,7 +20,6 @@ The names of manufacturers, products, or URLs are provided for informational pur
 © 2018 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
-
 
 **Contents**
 
@@ -103,8 +101,8 @@ The HOL can be implemented on your own, but it is highly recommended to pair up 
 
 ## Requirements
 
-1.  Microsoft Azure subscription
-2.  Local machine or a virtual machine configured with Visual Studio 2017 Community Edition or better.
+1. Microsoft Azure subscription
+2. Local machine or a virtual machine configured with Visual Studio 2017 Community Edition or better.
 
 ## Exercise 1: Determine appropriate app service tiers and estimate cost savings
 
@@ -137,7 +135,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 ### Task 1: Calculate estimated hosting cost of existing solution
 
 1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator**:
-   
+
     <https://azure.microsoft.com/pricing/calculator>
 
 2. Click on **Compute**, followed by **Virtual Machines**.

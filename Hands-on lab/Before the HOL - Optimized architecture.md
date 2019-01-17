@@ -41,8 +41,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
-1.  Microsoft Azure subscription
-2.  Local machine or a virtual machine configured with Visual Studio 2017 Community Edition or better.
+1. Microsoft Azure subscription
+2. Local machine or a virtual machine configured with Visual Studio 2017 Community Edition or better.
 
 ## Before the hands-on lab
 
@@ -52,17 +52,17 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 ### Task 1: Create a virtual machine for your lab environment
 
-1.  Launch a browser using Incognito or InPrivate mode, and navigate to <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an organization account a Microsoft Account.
+1. Launch a browser using Incognito or InPrivate mode, and navigate to <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an organization account a Microsoft Account.
 
-2.  Click **+ Create a resource**, and in the search box, type in *Visual Studio Community 2017*, and press enter. Click the Visual Studio Community 2017 image running on Windows Server 2016 and with the latest update.
+2. Click **+ Create a resource**, and in the search box, type in *Visual Studio Community 2017*, and press enter. Click the Visual Studio Community 2017 image running on Windows Server 2016 and with the latest update.
 
-3.  In the returned search results, click the image name.
+3. In the returned search results, click the image name.
 
     ![In the Everything blade, Visual Studio Community 2017 is typed in the Search field. Under Name, Visual Studio Community on Windows Server 2016 is circled.](images/Setup/image3.png)
 
-4.  In the Marketplace solution blade, click **Create**.
+4. In the Marketplace solution blade, click **Create**.
 
-5.  Set the following configuration on the Basics tab:
+5. Set the following configuration on the Basics tab:
 
     - Subscription: **If you have multiple subscriptions choose the subscription to execute your labs in**.
     - Resource Group: **OPSLABRG**
@@ -72,7 +72,7 @@ In this exercise, you will set up an environment to use for the rest of the exer
     - User name: **demouser**
     - Password: **demo@pass123**
 
-6. Be sure to configure the **Inbound Port Rules** to allow connected on inbound port **RDP (3389)**, then click **Review + create**.
+6. Be sure to configure the **Inbound Port Rules** to allow connected on inbound port **RDP (3389)**, then click **Review + create**. Opening the inbound port 3389 is necessary so that you can connect to the Windows VM with Remote Desktop after it's provisioned.
 
 7. On the Validation step, click **Create**. The deployment should begin provisioning. It may take more than 10 minutes for the virtual machine to complete provisioning.
 
@@ -80,37 +80,37 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 > **Note:** Sometimes this image has IE ESC disabled. Sometimes it does not.
 
-1.  On the new VM you just created, open an RDP session and click the **Server Manager** icon.
+1. On the new VM you just created, open an RDP session and click the **Server Manager** icon.
 
     ![Screenshot of the Server Manager icon.](images/Setup/image5.png)
 
-2.  Click **Local Server**.
+2. Click **Local Server**.
 
     ![Local Server is selected from the Server Manager icon drop-down menu.](images/Setup/image6.png)
 
-3.  On the right side of the pane, click **On** by IE Enhanced Security
+3. On the right side of the pane, click **On** by IE Enhanced Security
     Configuration.
 
     ![IE Enhanced Security Configuration is set to On.](images/Setup/image7.png)
 
-4.  Change to **Off** for Administrators, and click **OK**.
+4. Change to **Off** for Administrators, and click **OK**.
 
     ![In the Internet Explorer Enhanced Security Configuration Dialog box, Administrators is set to Off.](images/Setup/image8.png)
 
-### Task 3: Download the Sample App Files 
+### Task 3: Download the Sample App Files
 
-1.  Create a new folder on your **C:\\** drive named **HOL** (**C:\\HOL**).
+1. Create a new folder on your **C:\\** drive named **HOL** (**C:\\HOL**).
 
-2.  Download the sample application and ARM template
+2. Download the sample application and ARM template
     (optimized-architecture-student.zip) from here:
-    
+
     <https://cloudworkshop.blob.core.windows.net/optimized-architecture/OptimizedArchitecture-StudentFiles-6-2017.zip>
 
-3.  Right click on the downloaded .zip file, and click **Properties**. On the properties pane, check **Unblock** to ensure the files are marked safe.
+3. Right click on the downloaded .zip file, and click **Properties**. On the properties pane, check **Unblock** to ensure the files are marked safe.
 
-4.  Extract the zip file contents to the **C:\\HOL** folder.
+4. Extract the zip file contents to the **C:\\HOL** folder.
 
-5.  From the **ARMTemplate** folder under **C:\\HOL**, open the Visual Studio Solution file: **Contoso.Financial.ARMTemplate.sln**.
+5. From the **ARMTemplate** folder under **C:\\HOL**, open the Visual Studio Solution file: **Contoso.Financial.ARMTemplate.sln**.
 
 ### Task 4: Deploy Sample App and "Existing" environment
 

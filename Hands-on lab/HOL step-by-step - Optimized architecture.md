@@ -525,8 +525,8 @@ In the migration of IaaS to PaaS, the API Tier of Contoso Financial's applicatio
 |         |            |
 | ------------- |:-------------:|
 | API Apps overview    | <https://docs.microsoft.com/azure/app-service-api/app-service-api-apps-why-best-platform> |
-| Deploy an ASP\.NET web app to Azure App Service, using Visual Studio  | <https://azure.microsoft.comdocumentation/articles/web-sites-dotnet-get-started/>  |
-| Configure web apps in Azure App Service  | <https://azure.microsoft.com/documentation/articles/web-sites-configure/>  |
+| Create an ASP.NET Core web app in Azure  | <https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet>  |
+| Configure apps in Azure App Service  | <https://docs.microsoft.com/en-us/azure/app-service/web-sites-configure>  |
 
 ### Step 1: Create App Service for Web API tier
 
@@ -623,8 +623,8 @@ In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financia
 |         |            |
 | ------------- |:-------------:|
 | Azure Web Apps overview  | <https://docs.microsoft.com/azure/app-service-api/app-service-api-apps-why-best-platform> |
-| Deploy an ASP.NET web app to Azure App Service, using Visual Studio  | <https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/>  |
-| Configure web apps in Azure App Service  | <https://azure.microsoft.com/documentation/articles/web-sites-configure/>  |
+| Create an ASP.NET Core web app in Azure  | <https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet>  |
+| Configure apps in Azure App Service  | <https://docs.microsoft.com/en-us/azure/app-service/web-sites-configure>  |
 
 ### Step 1: Create App Service for Web App Tier
 

@@ -427,26 +427,25 @@ Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
-##  Additional references
+## Additional references
 
 |    |            |
 |----------|:-------------:|
 | **Description** | **Links** |
-| Windows Virtual Machines documentation | <https://azure.microsoft.com/en-us/documentation/services/virtual-machines/windows/> |
+| Windows Virtual Machines documentation | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/> |
 | Azure Reserved VM instances| <https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/> |
 | Virtual Machine Pricing | <https://azure.microsoft.com/en-us/pricing/details/virtual-machines/#Windows> |
 | Virtual Machine Scale Sets pricing | <https://azure.microsoft.com/en-us/pricing/details/virtual-machine-scale-sets/> |
-| Virtual Network overview | <https://azure.microsoft.com/en-us/documentation/articles/virtual-networks-overview/>|
-| Network security group (NSG) overview | <https://azure.microsoft.com/en-us/documentation/articles/virtual-networks-nsg>|
-| Load Balancer overview | <https://azure.microsoft.com/en-us/documentation/articles/load-balancer-overview/>|
-| Traffic Manager overview| <https://azure.microsoft.com/en-us/documentation/articles/traffic-manager-overview/>|
-| Web apps overview | <https://azure.microsoft.com/en-us/documentation/articles/app-service-web-overview/>|
+| Virtual Network overview | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview>|
+| Network security group (NSG) overview | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg>|
+| Load Balancer overview | <https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview>|
+| Traffic Manager overview| <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview>|
+| Web apps overview | <https://docs.microsoft.com/en-us/azure/app-service/overview>|
 | Web jobs overview | <https://azure.microsoft.com/en-us/documentation/articles/app-service-webjobs-readme/>|
-| Scale a Web App | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-scale/> |
-| Introduction to Azure SQL database | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/> |
-| Azure SQL Database benchmark overview | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-benchmark-overview/> |
+| Scale a Web App | <https://docs.microsoft.com/en-us/azure/app-service/web-sites-scale> |
+| Introduction to Azure SQL database | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-technical-overview> |
+| Azure SQL Database DTU-based service tiers | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-dtu> |
 | Azure SQL Database pricing | <https://azure.microsoft.com/en-us/pricing/details/sql-database/> |
 | Azure Channel Pricing calculator | <https://azure.microsoft.com/en-us/pricing/calculator/channel/> |
 | Azure Pricing Calculator | <https://azure.microsoft.com/en-us/pricing/calculator>|
 | Azure SQL database DTU calculator| <http://dtucalculator.azurewebsites.net/> |
-	

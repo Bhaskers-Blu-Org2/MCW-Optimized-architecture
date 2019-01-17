@@ -515,11 +515,11 @@ design.
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution.
+1. Identify any customer needs that are not addressed with the proposed solution.
 
-2.  Identify the benefits of your solution.
+2. Identify the benefits of your solution.
 
-3.  Determine how you will respond to the customer's objections.
+3. Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -535,21 +535,21 @@ Timeframe: 30 minutes
 
 Directions:
 
-1.  Pair with another table.
+1. Pair with another table.
 
-2.  One table is the Microsoft team and the other table is the customer.
+2. One table is the Microsoft team and the other table is the customer.
 
-3.  The Microsoft team presents their proposed solution to the customer.
+3. The Microsoft team presents their proposed solution to the customer.
 
-4.  The customer makes one of the objections from the list of objections.
+4. The customer makes one of the objections from the list of objections.
 
-5.  The Microsoft team responds to the objection.
+5. The Microsoft team responds to the objection.
 
-6.  The customer team gives feedback to the Microsoft team.
+6. The customer team gives feedback to the Microsoft team.
 
-7.  Tables switch roles and repeat Steps 2-6.
+7. Tables switch roles and repeat Steps 2-6.
 
-##  Wrap-up 
+## Wrap-up
 
 Timeframe: 15 minutes
 
@@ -582,48 +582,49 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer.
+- Check in with your table participants to introduce yourself as the trainer.
 
--   Ask, "What questions do you have about the customer case study?"
+- Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and timeframes of the whiteboard design session.
+- Briefly review the steps and timeframes of the whiteboard design session.
 
--   Ready, set, go! Let the table participants begin.
+- Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure that they are transitioning from step to step on time.
+- Check in with your tables to ensure that they are transitioning from step to step on time.
 
--   Provide some feedback on their responses to the business needs and design.
+- Provide some feedback on their responses to the business needs and design.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    - Try asking questions first that will lead the participants to discover the answers on their own.
 
--   Provide feedback for their responses to the customer's objections.
+- Provide feedback for their responses to the customer's objections.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    - Try asking questions first that will lead the participants to discover the answers on their own.
+
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3 begins.
+- Determine which table will be paired with your table before Step 3 begins.
 
--   For the first round, assign one table as the presenting team and the other table as the customer.
+- For the first round, assign one table as the presenting team and the other table as the customer.
 
--   Have the presenting team present their solution to the customer team.
+- Have the presenting team present their solution to the customer team.
 
-    -   Have the customer team provide one objection for the presenting team to respond to.
+    - Have the customer team provide one objection for the presenting team to respond to.
 
-    -   The presentation, objections, and feedback should take no longer than 15 minutes.
+    - The presentation, objections, and feedback should take no longer than 15 minutes.
 
-    -   If needed, the trainer may also provide feedback.
+    - If needed, the trainer may also provide feedback.
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
+- Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ##  Preferred target audience
 
--   Jay Calvin, Chief Executive Officer
+- Jay Calvin, Chief Executive Officer
 
--   Percy Bowman, Director of IT Operations
+- Percy Bowman, Director of IT Operations
 
 ## Preferred solution
 
@@ -634,32 +635,27 @@ The Phase 1 design remains centered on the use of Azure Infrastructure
 The Phase 1 design solution involves the following technologies and
 modifications:
 
--   Implementing VM Scale Sets for the Font-end Web App and Back-end Web
+- Implementing VM Scale Sets for the Font-end Web App and Back-end Web
     API application tiers.
 
--   Resizing the VM Sizes used for each of the application tiers should
+- Resizing the VM Sizes used for each of the application tiers should
     be done to eliminate any over provisioning. Over provisioning wastes
     money by paying for resources that are not necessary.
 
-    -   Resize the Front-end Web App Tier VMs to the *Standard F4* VM
+    - Resize the Front-end Web App Tier VMs to the *Standard F4* VM
         size.
 
-    -   Resize the Back-end Web API Tier VMs to the *Standard F4* VM
-        size.
+    - Resize the Back-end Web API Tier VMs to the *Standard F4* VM size.
 
-    -   Resize the Back-end Processing Tier VMs to the *Standard F2* VM
-        size.
+    -   Resize the Back-end Processing Tier VMs to the *Standard F2* VM size.
 
--   Migrating the SQL Database server to the *North Central US* region
-    (same region the rest of the application resides).
+-  Migrating the SQL Database server to the *North Central US* region (same region the rest of the application resides).
 
--   Migrating the SQL Database VM to Azure SQL Database using the
-    *Premium P4* pricing tier.
+-  Migrating the SQL Database VM to Azure SQL Database using the *Premium P4* pricing tier.
 
--   Configure SQL Database Active Geo-Replication for added resiliency.
+- Configure SQL Database Active Geo-Replication for added resiliency.
 
-![Diagram of the previously described Preferred solution Phase
-1.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image6.png)
+![Diagram of the previously described Preferred solution Phase 1.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image6.png)
 
 **Phase 2 design**
 
@@ -681,8 +677,7 @@ services as much as possible to further reduce overall spending.
 -   Implementing Traffic Manager in Geographic mode instead of the
     External Load Balancer.
 
-![Diagram of the previously described Preferred solution Phase
-2.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image7.png)
+![Diagram of the previously described Preferred solution Phase 2.](images/Whiteboarddesignsessiontrainerguide-Optimizedarchitectureimages/media/image7.png)
 
 **Total cost savings**
 

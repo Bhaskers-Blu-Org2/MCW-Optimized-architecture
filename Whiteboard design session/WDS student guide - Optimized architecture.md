@@ -153,7 +153,7 @@ Processing tier receives messages of work to be done from the Back-end
 Web API tier using an Azure Service Bus Queue.
 
 The database server is somewhat of a problem area with the current
-architecture. During the migration, the production Pilot environment was
+architecture. During the migration, the production pilot environment was
 setup in the Azure West US region. When the final production environment
 was built out, it was determined the Azure North Central US region would
 be used to better serve users and be located geographically closer to

@@ -115,7 +115,7 @@ Contoso Financial has asked you to optimize their Azure spending by migrating th
 |         |            |
 | ------------- |:-------------:|
 | Azure Pricing Calculator    | <https://azure.microsoft.com/pricing/calculator> |
-| Virtual Machines Pricing    | <https://azure.microsoft.com/pricing/details/virtual-machines/>  |
+| Windows Virtual Machines Pricing    | <https://azure.microsoft.com/pricing/details/virtual-machines/windows/>  |
 | App Service Pricing         | <https://azure.microsoft.com/pricing/details/app-service> |
 
 ### Scenario
@@ -232,7 +232,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
     ![In the Billing Option section, the 3 year reserved option is selected. Virtual machines is set to 5, and the total amount is \$1,052.99.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image29.png)
 
-10. Click the **Collapse all** button, and Record the **Estimated monthly cost**. This is the total estimated cost of the existing environment Virtual Machines and SQL Database only using **Reserved Instances**. 
+10. Click the **Collapse all** button, and Record the **Estimated monthly cost**. This is the total estimated cost of the existing environment Virtual Machines and SQL Database only using **Reserved Instances**.
 
     ![On the Your Estimate page, the collapse all button is selected. Below that, the the SQL Database cost is \$1,825.00, the Virtual Machines are \$1,088.99, and the estimated monthly cost is \$2,913.99.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image30.png)
 
@@ -240,9 +240,9 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 #### Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)
 
-1. From a new browser tab or instance, navigate to the **Windows Virtual Machines Pricing** page: 
-   
-   <https://azure.microsoft.com/pricing/details/virtual-machines/windows/>.
+1. From a new browser tab or instance, navigate to the **Windows Virtual Machines Pricing** page:
+
+    https://azure.microsoft.com/pricing/details/virtual-machines/windows/>.
 
 2. Scroll down to the **Explore all VM options** section of the page.
 

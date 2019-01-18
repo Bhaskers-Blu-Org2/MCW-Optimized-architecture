@@ -78,7 +78,7 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 ### Task 2: Disable IE Enhanced Security
 
-> **Note:** Sometimes this image has IE ESC disabled. Sometimes it does not.
+> **Note:** Sometimes this image has IE ESC disabled, sometimes it does not.
 
 1. On the new VM you just created, open an RDP session and click the **Server Manager** icon.
 
@@ -131,7 +131,7 @@ In this exercise, you will set up an environment to use for the rest of the exer
 5. On the **Create Resource Group** dialog, enter the following values:
 
     - Resource group name: **ContosoExistingRG**
-    - Resource group location: **North Central US (note if your subscription allows this otherwise pick a subscription where you are allowed to deploy to)**.
+    - Resource group location: **North Central US (If your subscription allows this, otherwise pick a subscription where you are allowed to deploy to.)**
 
     ![Fields in the Create Resource Group dialog box are set to the previously defined settings.](images/Setup/image12.png)
 
@@ -161,7 +161,7 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 11. To login to the Web App Tier of the Contoso Financial sample application, simply enter **any email address and password** followed by clicking on **Sign in**. If you can't immediately sign in, give the site a few minutes to run the background process and then attempt to sign in again.
 
-    > If any email address does not work then leave the default email address which is *bill@contoso.com* and put any password.
+    >**Note**: If any email address does not work then leave the default email address which is *bill@contoso.com* and put any password.
 
 12. Once logged in, the sample application will display a simple **Account Transaction** ledger.
 

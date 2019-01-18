@@ -10,7 +10,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-September 2018 
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -153,7 +153,7 @@ Processing tier receives messages of work to be done from the Back-end
 Web API tier using an Azure Service Bus Queue.
 
 The database server is somewhat of a problem area with the current
-architecture. During the migration, the production Pilot environment was
+architecture. During the migration, the production pilot environment was
 setup in the Azure West US region. When the final production environment
 was built out, it was determined the Azure North Central US region would
 be used to better serve users and be located geographically closer to
@@ -427,26 +427,25 @@ Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
-##  Additional references
+## Additional references
 
 |    |            |
 |----------|:-------------:|
 | **Description** | **Links** |
-| Windows Virtual Machines documentation | <https://azure.microsoft.com/en-us/documentation/services/virtual-machines/windows/> |
+| Windows Virtual Machines documentation | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/> |
 | Azure Reserved VM instances| <https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/> |
 | Virtual Machine Pricing | <https://azure.microsoft.com/en-us/pricing/details/virtual-machines/#Windows> |
 | Virtual Machine Scale Sets pricing | <https://azure.microsoft.com/en-us/pricing/details/virtual-machine-scale-sets/> |
-| Virtual Network overview | <https://azure.microsoft.com/en-us/documentation/articles/virtual-networks-overview/>|
-| Network security group (NSG) overview | <https://azure.microsoft.com/en-us/documentation/articles/virtual-networks-nsg>|
-| Load Balancer overview | <https://azure.microsoft.com/en-us/documentation/articles/load-balancer-overview/>|
-| Traffic Manager overview| <https://azure.microsoft.com/en-us/documentation/articles/traffic-manager-overview/>|
-| Web apps overview | <https://azure.microsoft.com/en-us/documentation/articles/app-service-web-overview/>|
+| Virtual Network overview | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview>|
+| Network security group (NSG) overview | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg>|
+| Load Balancer overview | <https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview>|
+| Traffic Manager overview| <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview>|
+| Web apps overview | <https://docs.microsoft.com/en-us/azure/app-service/overview>|
 | Web jobs overview | <https://azure.microsoft.com/en-us/documentation/articles/app-service-webjobs-readme/>|
-| Scale a Web App | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-scale/> |
-| Introduction to Azure SQL database | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/> |
-| Azure SQL Database benchmark overview | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-benchmark-overview/> |
+| Scale a Web App | <https://docs.microsoft.com/en-us/azure/app-service/web-sites-scale> |
+| Introduction to Azure SQL database | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-technical-overview> |
+| Azure SQL Database DTU-based service tiers | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-dtu> |
 | Azure SQL Database pricing | <https://azure.microsoft.com/en-us/pricing/details/sql-database/> |
 | Azure Channel Pricing calculator | <https://azure.microsoft.com/en-us/pricing/calculator/channel/> |
 | Azure Pricing Calculator | <https://azure.microsoft.com/en-us/pricing/calculator>|
 | Azure SQL database DTU calculator| <http://dtucalculator.azurewebsites.net/> |
-	

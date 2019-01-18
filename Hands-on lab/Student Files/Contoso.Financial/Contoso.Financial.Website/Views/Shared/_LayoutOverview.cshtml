@@ -1,0 +1,14 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year Contoso Financial</p>
+        </footer>
+    </div>
+
+@section scripts {
+    @RenderSection("scripts", required: false)
+}

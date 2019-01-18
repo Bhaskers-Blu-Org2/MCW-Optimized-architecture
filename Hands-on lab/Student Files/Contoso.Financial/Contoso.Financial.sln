@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Financial.Website", "Contoso.Financial.Website\Contoso.Financial.Website.csproj", "{8B34607B-CB83-4DA3-8D98-EEC006E9E541}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{6BC1D180-0D6E-45BB-B6E2-2B79655A7CCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{7121AF7A-B2A2-47C4-AEDB-0AAB7E132643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Financial.Api", "Contoso.Financial.Api\Contoso.Financial.Api.csproj", "{2D736188-9ADE-4119-8F04-2315F1BF5C96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Background", "Background", "{692570C0-7E92-46C3-A561-B28A7D88DC0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Financial.Background", "Contoso.Financial.Background\Contoso.Financial.Background.csproj", "{1D896A83-5886-4E5F-97F1-20F5E730A4F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{DC0BC6EF-5707-4C58-8227-1C578B5116C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{A6135A7B-646E-4125-9BC3-BF831AADBD2A}"
+	ProjectSection(SolutionItems) = preProject
+		Database\Scripts\Create.sql = Database\Scripts\Create.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B34607B-CB83-4DA3-8D98-EEC006E9E541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B34607B-CB83-4DA3-8D98-EEC006E9E541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B34607B-CB83-4DA3-8D98-EEC006E9E541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B34607B-CB83-4DA3-8D98-EEC006E9E541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D736188-9ADE-4119-8F04-2315F1BF5C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D736188-9ADE-4119-8F04-2315F1BF5C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D736188-9ADE-4119-8F04-2315F1BF5C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D736188-9ADE-4119-8F04-2315F1BF5C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D896A83-5886-4E5F-97F1-20F5E730A4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D896A83-5886-4E5F-97F1-20F5E730A4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D896A83-5886-4E5F-97F1-20F5E730A4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D896A83-5886-4E5F-97F1-20F5E730A4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B34607B-CB83-4DA3-8D98-EEC006E9E541} = {6BC1D180-0D6E-45BB-B6E2-2B79655A7CCC}
+		{2D736188-9ADE-4119-8F04-2315F1BF5C96} = {7121AF7A-B2A2-47C4-AEDB-0AAB7E132643}
+		{1D896A83-5886-4E5F-97F1-20F5E730A4F6} = {692570C0-7E92-46C3-A561-B28A7D88DC0F}
+		{A6135A7B-646E-4125-9BC3-BF831AADBD2A} = {DC0BC6EF-5707-4C58-8227-1C578B5116C8}
+	EndGlobalSection
+EndGlobal

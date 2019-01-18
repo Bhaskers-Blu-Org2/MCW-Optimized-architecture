@@ -7,5 +7,3 @@
 
 [HOL step-by-step - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Hands-on%20lab/HOL%20step-by-step%20-%20Optimized%20architecture.html)
 
-[HOL unguided - Optimized architecture.html](https://cloudworkshop.blob.core.windows.net/optimized-architecture/Hands-on%20lab/HOL%20unguided%20-%20Optimized%20architecture.html)
-

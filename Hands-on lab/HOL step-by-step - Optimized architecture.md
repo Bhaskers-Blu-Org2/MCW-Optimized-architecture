@@ -49,33 +49,33 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Task 2: Point Traffic Manager to external / Internet Load Balancer](#task-2-point-traffic-manager-to-external--internet-load-balancer)
   - [Exercise 3: Setup API tier in Azure App Service](#exercise-3-setup-api-tier-in-azure-app-service)
     - [Help references](#help-references-2)
-    - [Step 1: Create App Service for Web API tier](#step-1-create-app-service-for-web-api-tier)
-    - [Step 2: Setup app settings](#step-2-setup-app-settings)
-    - [Step 3: Deploy API to App Service](#step-3-deploy-api-to-app-service)
+    - [Task 1: Create App Service for Web API tier](#task-1-create-app-service-for-web-api-tier)
+    - [Task 2: Setup app settings](#task-2-setup-app-settings)
+    - [Task 3: Deploy API to App Service](#task-3-deploy-api-to-app-service)
   - [Exercise 4: Migrate Web App Tier to App Service](#exercise-4-migrate-web-app-tier-to-app-service)
     - [Help references](#help-references-3)
-    - [Step 1: Create App Service for Web App Tier](#step-1-create-app-service-for-web-app-tier)
-    - [Step 2: Setup app settings](#step-2-setup-app-settings-1)
-    - [Step 3: Deploy app to web app](#step-3-deploy-app-to-web-app)
-    - [Step 4: Add App Service Web App to Traffic Manager](#step-4-add-app-service-web-app-to-traffic-manager)
-    - [Step 5: Take down Web App and API VMs](#step-5-take-down-web-app-and-api-vms)
+    - [Taks 1: Create App Service for Web App Tier](#task-1-create-app-service-for-web-app-tier)
+    - [Task 2: Setup app settings](#task-2-setup-app-settings-1)
+    - [Task 3: Deploy app to web app](#task-3-deploy-app-to-web-app)
+    - [Task 4: Add App Service Web App to Traffic Manager](#task-4-add-app-service-web-app-to-traffic-manager)
+    - [Task 5: Take down Web App and API VMs](#task-5-take-down-web-app-and-api-vms)
   - [Exercise 5: Migrate Background Tier to App Service](#exercise-5-migrate-background-tier-to-app-service)
     - [Help references](#help-references-4)
-    - [Step 1: Create app service for background tier](#step-1-create-app-service-for-background-tier)
-    - [Step 2: Setup app settings](#step-2-setup-app-settings-2)
-    - [Step 3: Deploy app to app service](#step-3-deploy-app-to-app-service)
-    - [Step 4: Take down background tier VM](#step-4-take-down-background-tier-vm)
+    - [Task 1: Create app service for background tier](#task-1-create-app-service-for-background-tier)
+    - [Task 2: Setup app settings](#task-2-setup-app-settings-2)
+    - [Task 3: Deploy app to app service](#task-3-deploy-app-to-app-service)
+    - [Task 4: Take down background tier VM](#task-4-take-down-background-tier-vm)
   - [Exercise 6: Setup SQL Database geo-replication](#exercise-6-setup-sql-database-geo-replication)
     - [Help references](#help-references-5)
-    - [Step 1: Setup SQL Database geo-replication](#step-1-setup-sql-database-geo-replication)
+    - [Task 1: Setup SQL Database geo-replication](#task-1-setup-sql-database-geo-replication)
   - [Exercise 7: Take down old architecture / resources](#exercise-7-take-down-old-architecture--resources)
-    - [Step 1: Remove Old VM-based tiers](#step-1-remove-old-vm-based-tiers)
+    - [Task 1: Remove Old VM-based tiers](#task-1-remove-old-vm-based-tiers)
   - [Exercise 8: Setup European Web App Tier Instance](#exercise-8-setup-european-web-app-tier-instance)
     - [Help references](#help-references-6)
-    - [Step 1: Create European app service](#step-1-create-european-app-service)
-    - [Step 2: Set app settings](#step-2-set-app-settings)
-    - [Step 3: Deploy web app to European region](#step-3-deploy-web-app-to-european-region)
-    - [Step 4: Add European Region to Traffic Manager](#step-4-add-european-region-to-traffic-manager)
+    - [Task 1: Create European app service](#task-1-create-european-app-service)
+    - [Task 2: Set app settings](#task-2-set-app-settings)
+    - [Task 3: Deploy web app to European region](#task-3-deploy-web-app-to-european-region)
+    - [Task 4: Add European Region to Traffic Manager](#task-4-add-european-region-to-traffic-manager)
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Delete Resources](#task-1-delete-resources)
 
@@ -258,7 +258,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
     ![Screenshot of the Check the Previous Generation page for ... link](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image34.png)
 
-6. Scroll down to the **D1-4 v1** section and make note of the VM Instance specs, specifically the **CPU Cores** and **RAM** for the **D3** instance size
+6. Scroll down to the **D1-4 v1** section and make note of the VM Instance specs, specifically the **CPU Cores** and **RAM** for the **D3** instance size.
 
     ![In the D1-4 - v1 section, The D3 instance is circled, with the following values: vCPU, 4; RAM, 14.00GiB; Temporary Storage, 200GiB.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image35.png)
 
@@ -526,7 +526,7 @@ In the migration of IaaS to PaaS, the API Tier of Contoso Financial's applicatio
 | Create an ASP.NET Core web app in Azure  | <https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet>  |
 | Configure apps in Azure App Service  | <https://docs.microsoft.com/en-us/azure/app-service/web-sites-configure>  |
 
-### Step 1: Create App Service for Web API tier
+### Task 1: Create App Service for Web API tier
 
 1. From the Azure Management portal at <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** -\> **Web** -\> **API App**.
 
@@ -548,11 +548,11 @@ In the migration of IaaS to PaaS, the API Tier of Contoso Financial's applicatio
 
     ![In the API App blade, App Service plan/Location is selected. In the App Service plan blade, Create New is selected. In the New App Service Plan blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image62.png)
 
-4. Click **OK**
+4. Click **OK**.
 
-5. Click **Create**
+5. Click **Create**.
 
-### Step 2: Setup app settings
+### Task 2: Setup app settings
 
 1. In the navigation menu to the left in the Azure Portal, click on **Resource groups**, select the **ContosoExistingRG** resource group, and click on the **contosofinancialdb** SQL Database.
 
@@ -588,7 +588,7 @@ In the migration of IaaS to PaaS, the API Tier of Contoso Financial's applicatio
 
 9. Click **Save**.
 
-### Step 3: Deploy API to App Service
+### Task 3: Deploy API to App Service
    
 1. In your **LABVM**, from the **C:\\HOL\\Contoso.Financial** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
@@ -624,7 +624,7 @@ In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financia
 | Create an ASP.NET Core web app in Azure  | <https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet>  |
 | Configure apps in Azure App Service  | <https://docs.microsoft.com/en-us/azure/app-service/web-sites-configure>  |
 
-### Step 1: Create App Service for Web App Tier
+### Task 1: Create App Service for Web App Tier
 
 1. From the Azure Management portal <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource**, then **Web**, and then click on **Web App**.
 
@@ -650,7 +650,7 @@ In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financia
 
 5. Click **Create**.
 
-### Step 2: Setup app settings
+### Task 2: Setup app settings
 
 1. Click on **Resource groups**, click on the **OptimizedWebAppRG** resource group, then click on the **Web App**.
 
@@ -669,7 +669,7 @@ In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financia
 
 4. Click **Save**.
 
-### Step 3: Deploy app to web app
+### Task 3: Deploy app to web app
 
 1. In your **LABVM**, from the **C:\\HOL\\Contoso.Financial** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
@@ -689,10 +689,9 @@ In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financia
 
     ![In the App Service window, OptimizedWebAppRG is expanded, and contosofinancialwebapp is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image82.png)
 
-6. Once the deployment has completed, Visual Studio will automatically
-    open a new browser window navigating to the **Web App**.
+6. Once the deployment has completed, Visual Studio will automatically open a new browser window navigating to the **Web App**.
 
-### Step 4: Add App Service Web App to Traffic Manager
+### Task 4: Add App Service Web App to Traffic Manager
 
 1. From the Azure Management portal at <http://portal.azure.com>, using a new tab or instance, click on **Resource groups** followed by the **OptimizedTFRG** resource group, and then, click on the **Traffic Manager**.
 
@@ -768,7 +767,7 @@ In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financia
 
     > **Note**: Following this step, the Web App Tier's Load Balancer and VMs will no longer receive requests through the Traffic Manager.
 
-### Step 5: Take down Web App and API VMs
+### Task 5: Take down Web App and API VMs
 
 1. Click on **Resource groups**, and then click on the **ContosoExistingRG** resource group.
 
@@ -806,7 +805,7 @@ In the migration of IaaS to PaaS, the Background Tier (written as a console app)
 | Run Background tasks with WebJobs  | <https://azure.microsoft.com/documentation/articles/web-sites-create-web-jobs/>  |
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/documentation/articles/web-sites-configure/>  |
 
-### Step 1: Create app service for background tier
+### Task 1: Create app service for background tier
 
 1. From the Azure Management portal at <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource** followed by **Web**, and then, click on **Web App**.
 
@@ -832,7 +831,7 @@ In the migration of IaaS to PaaS, the Background Tier (written as a console app)
 
 5. Click **Create**.
 
-### Step 2: Setup app settings
+### Task 2: Setup app settings
 
 1. Click on **Resource groups**, select the **OptimizedBackgroundRG** resource group, and select the **App Service**.
 
@@ -856,7 +855,7 @@ In the migration of IaaS to PaaS, the Background Tier (written as a console app)
 
 6. Click **Save**.
 
-### Step 3: Deploy app to app service
+### Task 3: Deploy app to app service
 
 1. In your **LABVM**, from the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
@@ -925,49 +924,49 @@ In the migration of IaaS to PaaS, the Background Tier (written as a console app)
 
         ![In the New job collection blade, Name is set to Background-Scheduler-Job, Pricing tier is S Standard, Resource group is Use existing OptimizedBackgroundRG, and Location is South Central US.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image117.png)
 
-1. Click **OK**.
+15. Click **OK**.
 
-15. On the **Scheduler Job** blade, click to configure **Action Settings**.
+16. On the **Scheduler Job** blade, click to configure **Action Settings**.
 
     ![Screenshot of the Configure Action Settings option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image118.png)
 
-16. On the **Action settings** pane, enter the **Web Hook URL** copied earlier to the **URL** field, set the **Action** to **Https**, and set the **Method** equal to **Post**.
+17. On the **Action settings** pane, enter the **Web Hook URL** copied earlier to the **URL** field, set the **Action** to **Https**, and set the **Method** equal to **Post**.
 
     ![In the Action settings blade, Action is set to Https, Method is set to Post, and the URL is the previously copied Web Hook URL.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image119.png)
 
-17. Click on **Authentication settings**.
+18. Click on **Authentication settings**.
 
     ![Under Optional settings, Authentication settings is selected.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image120.png)
 
-18. Enter the following values, and click **OK**:
+19. Enter the following values, and click **OK**:
 
-    - Authenication type: **Basic**
+    - Authentication type: **Basic**
     - Username: **Webhook username copied earlier**.
     - Password: **Webhook password copied earlier**.
 
     ![Fields in the Authentication blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image121.png)
 
-19. Click **OK**, then click **OK** again.
+20. Click **OK**, then click **OK** again.
 
-20. Click on **Configure Schedule**.
+21. Click on **Configure Schedule**.
 
     ![Screenshot of the Configure Schedule option.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image122.png)
 
-21. Under **recurrence**, select **Recurring**, and specify **Recur every 1 minute** followed by clicking **OK**.
+22. Under **recurrence**, select **Recurring**, and specify **Recur every 1 minute** followed by clicking **OK**.
 
     ![In the Schedule blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image123.png)
 
-22. Click **OK** and then click **Create**.
+23. Click **OK** and then click **Create**.
 
-23. Wait a couple of minutes, and then, look at the **History** tile of the **Scheduler Job** blade to verify the scheduled job is running. The **bar graph** and **successes count** will reflect that it is running.
+24. Wait a couple of minutes, and then, look at the **History** tile of the **Scheduler Job** blade to verify the scheduled job is running. The **bar graph** and **successes count** will reflect that it is running.
 
     ![In the Monitoring section, a History bar graph displays, with 6 successes, 0 required retries, and 0 failures.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image124.png)
 
-24. Open a new browser window or tab navigating to the **URL** for the **Traffic Manager** for the application, and verify the transactions generated by the background process are showing up.
+25. Open a new browser window or tab navigating to the **URL** for the **Traffic Manager** for the application, and verify the transactions generated by the background process are showing up.
 
     ![The Account Overview webpage displays with an available balanc and a list of account transactions.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image125.png)
 
-### Step 4: Take down background tier VM
+### Task 4: Take down background tier VM
 
 1. From the Azure Management Portal at <http://portal.azure.com>, click on **Resource groups**, and then, click on the **ContosoExistingRG** resource group.
 
@@ -992,7 +991,7 @@ Due to the rush into Production, the Staging SQL Database currently remains as t
 | Introduction to SQL Database  | <https://azure.microsoft.com/documentation/articles/sql-database-technical-overview/> |
 | SQL Database Active Geo-Replication  | <https://azure.microsoft.com/documentation/articles/sql-database-geo-replication-overview/>  |
 
-### Step 1: Setup SQL Database geo-replication
+### Task 1: Setup SQL Database geo-replication
 
 1. From the Azure Management Portal at <http://portal.azure.com>, click on **Resource groups**, click on the **ContosoExistingRG** resource group followed by clicking on the **contosofinancialdb** SQL Database.
 
@@ -1030,7 +1029,7 @@ Due to the rush into Production, the Staging SQL Database currently remains as t
 
 Since the Contoso Financial application has now been migrated to Azure PaaS services utilizing Azure App Service, the older, existing architecture no longer being used needs to be removed. Since the application has been validated to work as expected, you have been asked to delete the Azure IaaS components hosting the VM infrastructure.
 
-### Step 1: Remove Old VM-based tiers
+### Task 1: Remove Old VM-based tiers
 
 1. From the Azure Management Portal at <http://portal.azure.com>, click on **Resource groups**, and then click on the **ContosoExistingRG** resource group.
 
@@ -1087,7 +1086,7 @@ As Contoso Financial expands into Europe, they need to handle the additional gro
 | Deploy an ASP.NET web app to Azure App Service, using Visual Studio  | <https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/>  |
 | Configure web apps in Azure App Service  | <https://azure.microsoft.com/documentation/articles/web-sites-configure/>  |
 
-### Step 1: Create European app service
+### Task 1: Create European app service
 
 1. From the Azure Management portal at <http://portal.azure.com>, using a new tab or instance, click on **+ Create a resource**, then **Web**, and then click on **Web App**.
 
@@ -1113,7 +1112,7 @@ As Contoso Financial expands into Europe, they need to handle the additional gro
 
 5. Click **Create**.
 
-### Step 2: Set app settings
+### Task 2: Set app settings
 
 1. From the Azure Management portal at <http://portal.azure.com>, click on **Resource groups**, and select the **OptimizedWebAppEuropeRG** resource group. Then, click on the **Web App**.
 
@@ -1131,7 +1130,7 @@ As Contoso Financial expands into Europe, they need to handle the additional gro
 
 4. Click **Save**.
 
-### Step 3: Deploy web app to European region
+### Task 3: Deploy web app to European region
 
 1. In your **LABVM**, from the ***C:\\HOL\\Contoso.Financial*** folder, open the Visual Studio Solution: **Contoso.Financial.sln**.
 
@@ -1155,7 +1154,7 @@ As Contoso Financial expands into Europe, they need to handle the additional gro
 
     ![The Contoso Financial login page displays.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image148.png)
 
-### Step 4: Add European Region to Traffic Manager
+### Task 4: Add European Region to Traffic Manager
 
 1. From the Azure Management Portal at <http://portal.azure.com>, using a new tab or instance, click on **Resource groups**, click on the **OptimizedTFRG** resource group, then click on the **Traffic Manager**.
 

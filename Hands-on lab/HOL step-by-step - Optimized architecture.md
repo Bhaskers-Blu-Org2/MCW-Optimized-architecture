@@ -240,7 +240,7 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. From a new browser tab or instance, navigate to the **Windows Virtual Machines Pricing** page:
 
-    https://azure.microsoft.com/pricing/details/virtual-machines/windows/>
+    https://azure.microsoft.com/pricing/details/virtual-machines/windows
 
 2. Scroll down to the **Explore all VM options** section of the page.
 
@@ -447,7 +447,7 @@ Contoso Financial needs new load balancing solutions implemented using Azure Tra
 |         |            |
 | ------------- |:-------------:|
 | Azure Load Balancer    | <https://azure.microsoft.com/services/load-balancer/> |
-| Azure Traffic Manager   | <https://azure.microsoft.com/services/virtual-network>  |
+| Azure Traffic Manager   | <https://azure.microsoft.com/en-us/services/traffic-manager/>  |
 
 ### Task 1: Create Traffic Manager
 

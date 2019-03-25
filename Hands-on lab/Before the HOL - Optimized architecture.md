@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-December 2018
+March 2019
 </div>
 
 
@@ -19,7 +19,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2018 Microsoft Corporation. All rights reserved.
+© 2019 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.# Optimized Architecture setup
 
@@ -28,12 +28,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 <!-- TOC -->
 
 - [Optimized architecture before the hands-on lab setup guide](#optimized-architecture-before-the-hands-on-lab-setup-guide)
-  - [Requirements](#requirements)
-  - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Task 1: Create a virtual machine for your lab environment](#task-1-create-a-virtual-machine-for-your-lab-environment)
-    - [Task 2: Disable IE Enhanced Security](#task-2-disable-ie-enhanced-security)
-    - [Task 3: Download the Sample App Files](#task-3-download-the-sample-app-files)
-    - [Task 4: Deploy Sample App and "Existing" environment](#task-4-deploy-sample-app-and-%22existing%22-environment)
+    - [Requirements](#requirements)
+    - [Before the hands-on lab](#before-the-hands-on-lab)
+        - [Task 1: Create a virtual machine for your lab environment](#task-1-create-a-virtual-machine-for-your-lab-environment)
+        - [Task 2: Disable IE Enhanced Security](#task-2-disable-ie-enhanced-security)
+        - [Task 3: Download the Sample App Files](#task-3-download-the-sample-app-files)
+        - [Task 4: Deploy Sample App and "Existing" environment](#task-4-deploy-sample-app-and-existing-environment)
 
 <!-- /TOC -->
 
@@ -54,15 +54,13 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 1. Launch a browser using Incognito or InPrivate mode, and navigate to <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an organization account a Microsoft Account.
 
-2. Click **+ Create a resource**, and in the search box, type in *Visual Studio Community 2017*, and press enter. Click the Visual Studio Community 2017 image running on Windows Server 2016 and with the latest update.
-
-3. In the returned search results, click the image name.
+2. Click **+ Create a resource**, and in the search box, type in *Visual Studio*, and press enter. Click the Visual Studio image, and then in the software plan dropdown change to **Visual Studio Community** running on Windows Server 2016.
 
     ![In the Everything blade, Visual Studio Community 2017 is typed in the Search field. Under Name, Visual Studio Community on Windows Server 2016 is circled.](images/Setup/image3.png)
 
-4. In the Marketplace solution blade, click **Create**.
+3. In the Marketplace solution blade, click **Create**.
 
-5. Set the following configuration on the Basics tab:
+4. Set the following configuration on the Basics tab:
 
     - Subscription: **If you have multiple subscriptions choose the subscription to execute your labs in**.
     - Resource Group: **OPSLABRG**
@@ -101,10 +99,11 @@ In this exercise, you will set up an environment to use for the rest of the exer
 
 1. Create a new folder on your **C:\\** drive named **HOL** (**C:\\HOL**).
 
-2. Download the sample application and ARM template
-    (optimized-architecture-student.zip) from here:
+2. Download the sample application and ARM template from here:
 
-    <https://cloudworkshop.blob.core.windows.net/optimized-architecture/OptimizedArchitecture-StudentFiles-6-2017.zip>
+    ```
+    https://cloudworkshop.blob.core.windows.net/optimized-architecture/OptimizedArchitecture-StudentFiles-6-2017.zip
+    ```
 
 3. Right click on the downloaded .zip file, and click **Properties**. On the properties pane, check **Unblock** to ensure the files are marked safe.
 

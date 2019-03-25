@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-December 2018
+March 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -17,7 +17,7 @@ Information in this document, including URL and other Internet Web site referenc
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
-© 2018 Microsoft Corporation. All rights reserved.
+© 2019 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
@@ -26,58 +26,58 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 <!-- TOC -->
 
 - [Optimized architecture hands-on lab step-by-step](#optimized-architecture-hands-on-lab-step-by-step)
-  - [Abstract and learning objectives](#abstract-and-learning-objectives)
-  - [Overview](#overview)
-  - [Solution architecture](#solution-architecture)
-  - [Requirements](#requirements)
-  - [Exercise 1: Determine appropriate app service tiers and estimate cost savings](#exercise-1-determine-appropriate-app-service-tiers-and-estimate-cost-savings)
-    - [Help references](#help-references)
-    - [Scenario](#scenario)
-    - [Task 1: Calculate estimated hosting cost of existing solution](#task-1-calculate-estimated-hosting-cost-of-existing-solution)
-    - [Task 2: Calculate estimated hosting cost of VMs with reserved instances](#task-2-calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
-    - [Task 3: Estimate necessary app service tiers](#task-3-estimate-necessary-app-service-tiers)
-      - [Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)](#subtask-1-find-existing-vm-instance-size-specifications-cpu-cores-and-ram)
-      - [Subtask 2: Calculate web app tier VM utilization](#subtask-2-calculate-web-app-tier-vm-utilization)
-      - [Subtask 3: Calculate API tier VM utilization](#subtask-3-calculate-api-tier-vm-utilization)
-      - [Subtask 4: Calculate background tier VM utilization](#subtask-4-calculate-background-tier-vm-utilization)
-      - [Subtask 5: Identify appropriate app service tier](#subtask-5-identify-appropriate-app-service-tier)
-    - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
-    - [Task 5: Calculate estimated cost savings](#task-5-calculate-estimated-cost-savings)
-  - [Exercise 2: Integrate traffic manager](#exercise-2-integrate-traffic-manager)
-    - [Help references](#help-references-1)
-    - [Task 1: Create Traffic Manager](#task-1-create-traffic-manager)
-    - [Task 2: Point Traffic Manager to external / Internet Load Balancer](#task-2-point-traffic-manager-to-external--internet-load-balancer)
-  - [Exercise 3: Setup API tier in Azure App Service](#exercise-3-setup-api-tier-in-azure-app-service)
-    - [Help references](#help-references-2)
-    - [Task 1: Create App Service for Web API tier](#task-1-create-app-service-for-web-api-tier)
-    - [Task 2: Setup app settings](#task-2-setup-app-settings)
-    - [Task 3: Deploy API to App Service](#task-3-deploy-api-to-app-service)
-  - [Exercise 4: Migrate Web App Tier to App Service](#exercise-4-migrate-web-app-tier-to-app-service)
-    - [Help references](#help-references-3)
-    - [Taks 1: Create App Service for Web App Tier](#task-1-create-app-service-for-web-app-tier)
-    - [Task 2: Setup app settings](#task-2-setup-app-settings-1)
-    - [Task 3: Deploy app to web app](#task-3-deploy-app-to-web-app)
-    - [Task 4: Add App Service Web App to Traffic Manager](#task-4-add-app-service-web-app-to-traffic-manager)
-    - [Task 5: Take down Web App and API VMs](#task-5-take-down-web-app-and-api-vms)
-  - [Exercise 5: Migrate Background Tier to App Service](#exercise-5-migrate-background-tier-to-app-service)
-    - [Help references](#help-references-4)
-    - [Task 1: Create app service for background tier](#task-1-create-app-service-for-background-tier)
-    - [Task 2: Setup app settings](#task-2-setup-app-settings-2)
-    - [Task 3: Deploy app to app service](#task-3-deploy-app-to-app-service)
-    - [Task 4: Take down background tier VM](#task-4-take-down-background-tier-vm)
-  - [Exercise 6: Setup SQL Database geo-replication](#exercise-6-setup-sql-database-geo-replication)
-    - [Help references](#help-references-5)
-    - [Task 1: Setup SQL Database geo-replication](#task-1-setup-sql-database-geo-replication)
-  - [Exercise 7: Take down old architecture / resources](#exercise-7-take-down-old-architecture--resources)
-    - [Task 1: Remove Old VM-based tiers](#task-1-remove-old-vm-based-tiers)
-  - [Exercise 8: Setup European Web App Tier Instance](#exercise-8-setup-european-web-app-tier-instance)
-    - [Help references](#help-references-6)
-    - [Task 1: Create European app service](#task-1-create-european-app-service)
-    - [Task 2: Set app settings](#task-2-set-app-settings)
-    - [Task 3: Deploy web app to European region](#task-3-deploy-web-app-to-european-region)
-    - [Task 4: Add European Region to Traffic Manager](#task-4-add-european-region-to-traffic-manager)
-  - [After the hands-on lab](#after-the-hands-on-lab)
-    - [Task 1: Delete Resources](#task-1-delete-resources)
+    - [Abstract and learning objectives](#abstract-and-learning-objectives)
+    - [Overview](#overview)
+    - [Solution architecture](#solution-architecture)
+    - [Requirements](#requirements)
+    - [Exercise 1: Determine appropriate app service tiers and estimate cost savings](#exercise-1-determine-appropriate-app-service-tiers-and-estimate-cost-savings)
+        - [Help references](#help-references)
+        - [Scenario](#scenario)
+        - [Task 1: Calculate estimated hosting cost of existing solution](#task-1-calculate-estimated-hosting-cost-of-existing-solution)
+        - [Task 2: Calculate estimated hosting cost of VMs with reserved instances](#task-2-calculate-estimated-hosting-cost-of-vms-with-reserved-instances)
+        - [Task 3: Estimate necessary app service tiers](#task-3-estimate-necessary-app-service-tiers)
+            - [Subtask 1: Find existing VM instance size specifications (CPU Cores and RAM)](#subtask-1-find-existing-vm-instance-size-specifications-cpu-cores-and-ram)
+            - [Subtask 2: Calculate web app tier VM utilization](#subtask-2-calculate-web-app-tier-vm-utilization)
+            - [Subtask 3: Calculate API tier VM utilization](#subtask-3-calculate-api-tier-vm-utilization)
+            - [Subtask 4: Calculate background tier VM utilization](#subtask-4-calculate-background-tier-vm-utilization)
+            - [Subtask 5: Identify appropriate app service tier](#subtask-5-identify-appropriate-app-service-tier)
+        - [Task 4: Calculate estimated hosting cost of Azure app service](#task-4-calculate-estimated-hosting-cost-of-azure-app-service)
+        - [Task 5: Calculate estimated cost savings](#task-5-calculate-estimated-cost-savings)
+    - [Exercise 2: Integrate traffic manager](#exercise-2-integrate-traffic-manager)
+        - [Help references](#help-references-1)
+        - [Task 1: Create Traffic Manager](#task-1-create-traffic-manager)
+        - [Task 2: Point Traffic Manager to external / Internet Load Balancer](#task-2-point-traffic-manager-to-external--internet-load-balancer)
+    - [Exercise 3: Setup API tier in Azure App Service](#exercise-3-setup-api-tier-in-azure-app-service)
+        - [Help references](#help-references-2)
+        - [Task 1: Create App Service for Web API tier](#task-1-create-app-service-for-web-api-tier)
+        - [Task 2: Setup app settings](#task-2-setup-app-settings)
+        - [Task 3: Deploy API to App Service](#task-3-deploy-api-to-app-service)
+    - [Exercise 4: Migrate Web App Tier to App Service](#exercise-4-migrate-web-app-tier-to-app-service)
+        - [Help references](#help-references-3)
+        - [Task 1: Create App Service for Web App Tier](#task-1-create-app-service-for-web-app-tier)
+        - [Task 2: Setup app settings](#task-2-setup-app-settings-1)
+        - [Task 3: Deploy app to web app](#task-3-deploy-app-to-web-app)
+        - [Task 4: Add App Service Web App to Traffic Manager](#task-4-add-app-service-web-app-to-traffic-manager)
+        - [Task 5: Take down Web App and API VMs](#task-5-take-down-web-app-and-api-vms)
+    - [Exercise 5: Migrate Background Tier to App Service](#exercise-5-migrate-background-tier-to-app-service)
+        - [Help references](#help-references-4)
+        - [Task 1: Create app service for background tier](#task-1-create-app-service-for-background-tier)
+        - [Task 2: Setup app settings](#task-2-setup-app-settings-2)
+        - [Task 3: Deploy app to app service](#task-3-deploy-app-to-app-service)
+        - [Task 4: Take down background tier VM](#task-4-take-down-background-tier-vm)
+    - [Exercise 6: Setup SQL Database geo-replication](#exercise-6-setup-sql-database-geo-replication)
+        - [Help references](#help-references-5)
+        - [Task 1: Setup SQL Database geo-replication](#task-1-setup-sql-database-geo-replication)
+    - [Exercise 7: Take down old architecture / resources](#exercise-7-take-down-old-architecture--resources)
+        - [Task 1: Remove Old VM-based tiers](#task-1-remove-old-vm-based-tiers)
+    - [Exercise 8: Setup European Web App Tier Instance](#exercise-8-setup-european-web-app-tier-instance)
+        - [Help references](#help-references-6)
+        - [Task 1: Create European app service](#task-1-create-european-app-service)
+        - [Task 2: Set app settings](#task-2-set-app-settings)
+        - [Task 3: Deploy web app to European region](#task-3-deploy-web-app-to-european-region)
+        - [Task 4: Add European Region to Traffic Manager](#task-4-add-european-region-to-traffic-manager)
+    - [After the hands-on lab](#after-the-hands-on-lab)
+        - [Task 1: Delete Resources](#task-1-delete-resources)
 
 <!-- /TOC -->
 
@@ -136,7 +136,9 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator**:
 
-    <https://azure.microsoft.com/pricing/calculator>
+    ```
+    https://azure.microsoft.com/pricing/calculator
+    ```
 
 2. Click on **Compute**, followed by **Virtual Machines**.
 
@@ -186,7 +188,9 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator**.
 
-    <https://azure.microsoft.com/pricing/calculator>
+   ```
+   https://azure.microsoft.com/pricing/calculator
+   ```
 
     > **Note**: You must use an Incognito or InPrivate window or the previous pricing information you calculated will still be present.
 
@@ -240,7 +244,9 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. From a new browser tab or instance, navigate to the **Windows Virtual Machines Pricing** page:
 
+    ```
     https://azure.microsoft.com/pricing/details/virtual-machines/windows
+    ```
 
 2. Scroll down to the **Explore all VM options** section of the page.
 
@@ -332,7 +338,9 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. From a new browser tab or instance, navigate to the **App Service Pricing** page:  
 
-    <https://azure.microsoft.com/pricing/details/app-service>
+    ```
+    https://azure.microsoft.com/pricing/details/app-service
+    ```
 
 2. Set the **Region** filter to **North Central US**.
 
@@ -356,7 +364,9 @@ The VM sizes from the existing architecture that was deployed using the ARM Temp
 
 1. From a new browser tab or instance, navigate to the **Azure Pricing Calculator:** 
    
-   <https://azure.microsoft.com/pricing/calculator>
+   ```
+   https://azure.microsoft.com/pricing/calculator
+   ```
 
    > **Note**: You must use an Incognito or InPrivate window or the previous pricing information you calculated will still be present.
 

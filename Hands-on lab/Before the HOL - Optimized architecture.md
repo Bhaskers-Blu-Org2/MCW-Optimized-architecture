@@ -67,7 +67,7 @@ In this exercise, you will set up an environment to use for the rest of the exer
     - Name: **LABVM**
     - Region: **Choose the closest Azure region to you**.
     - Size: choose **D2\_V3 Standard**
-    - User name: **demouser**
+    - Username: **demouser**
     - Password: **demo@pass123**
 
 6. Be sure to configure the **Inbound Port Rules** to allow connected on inbound port **RDP (3389)**, then click **Review + create**. Opening the inbound port 3389 is necessary so that you can connect to the Windows VM with Remote Desktop after it's provisioned.

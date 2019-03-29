@@ -526,7 +526,7 @@ Contoso Financial needs new load balancing solutions implemented using Azure Tra
 
 ## Exercise 3: Setup API tier in Azure App Service
 
-In the migration of IaaS to PaaS, the API Tier of Contoso Financial's application needs to be migrated to run in an Azure App Service Web App without requiring any code changes to the application.
+In the migration of IaaS to PaaS, the API Tier of Contoso Financials' application needs to be migrated to run in an Azure App Service Web App without requiring any code changes to the application.
 
 ### Help references
 
@@ -624,7 +624,7 @@ In the migration of IaaS to PaaS, the API Tier of Contoso Financial's applicatio
 
 ## Exercise 4: Migrate Web App Tier to App Service
 
-In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financial's application needs to be migrated to run in an Azure App Service Web App without requiring any code changes to the application.
+In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financials' application needs to be migrated to run in an Azure App Service Web App without requiring any code changes to the application.
 
 ### Help references
 
@@ -805,7 +805,7 @@ In the migration of IaaS to PaaS, the Front-end Web App Tier of Contoso Financia
 
 ## Exercise 5: Migrate Background Tier to App Service
 
-In the migration of IaaS to PaaS, the Background Tier (written as a console app) of Contoso Financial's application needs to be migrated to run in an Azure App Service Web Job without requiring any code changes to the application.
+In the migration of IaaS to PaaS, the Background Tier (written as a console app) of Contoso Financials' application needs to be migrated to run in an Azure App Service Web Job without requiring any code changes to the application.
 
 ### Help references
 
@@ -929,7 +929,7 @@ In the migration of IaaS to PaaS, the Background Tier (written as a console app)
 14. Click on **Job Collection**, click on **Create new** and enter the following values, and click **OK**.
 
     - Name: **Background-Scheduler-Job**
-    - Resource Group: **OptimizedBackgroundRG**.
+    - Resource Group: **OptimizedBackgroundRG**
     - Location: **North Central US (or the location you have been using)**.
 
         ![In the New job collection blade, Name is set to Background-Scheduler-Job, Pricing tier is S Standard, Resource group is Use existing OptimizedBackgroundRG, and Location is South Central US.](images/Hands-onlabstep-by-step-Optimizedarchitectureimages/media/image117.png)
@@ -1070,6 +1070,7 @@ Since the Contoso Financial application has now been migrated to Azure PaaS serv
     - **Background1-nsg**
     - **WebAPI1-nsg**
     - **WebApp1-nsg**
+    
 
     > **Note**: Be sure **NOT** to delete the Azure SQL Database (**contosofinancialdb**) and Azure SQL Server. These are still in use!
 
@@ -1218,6 +1219,6 @@ As Contoso Financial expands into Europe, they need to handle the additional gro
 
 ### Task 1: Delete Resources
 
-1. Now that the HOL is complete, go ahead and delete all of the Resource Groups created for this HOL. You will no longer need those resources, and it will be beneficial to clean up your Azure Subscription.
+1. Now that the HOL is complete, go ahead and delete all of the Resource Groups created for this lab. You will no longer need those resources, and it will be beneficial to clean up your Azure Subscription.
 
-You should follow all steps provided *after* attending the HOL.
+You should follow all steps provided *after* attending the Hands-on lab.

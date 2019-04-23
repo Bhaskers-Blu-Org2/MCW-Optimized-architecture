@@ -1,5 +1,7 @@
 # Optimized architecture
 
+## This workshop is being minimally maintained until June 28, at which time it will be archived.    
+
 Contoso has recently completed a migration to shift most its enterprise data center footprint to the cloud. "The cloud is the future, and as such, it is essential for us to proactively adopt the cloud before our competitors to remain innovative and as competitive as possible," says Emma Lowton, Chief Technology Officer. "Unfortunately, due to our limited expertise in cloud computing, I have grown concerned that our Azure spending is much higher than it should be."
 
 ## Target audience

@@ -1,6 +1,6 @@
 # Optimized architecture
 
-## This workshop is being minimally maintained until June 28, at which time it will be archived.    
+## This workshop is archived and is no longer being maintained. Content is read-only.   
 
 Contoso has recently completed a migration to shift most its enterprise data center footprint to the cloud. "The cloud is the future, and as such, it is essential for us to proactively adopt the cloud before our competitors to remain innovative and as competitive as possible," says Emma Lowton, Chief Technology Officer. "Unfortunately, due to our limited expertise in cloud computing, I have grown concerned that our Azure spending is much higher than it should be."
 
@@ -41,4 +41,4 @@ At the end of this hands-on lab, you will be better able to implement optimizati
 Security and Management
 
 ## Related references
-- [MCW](https://github.com/Microsoft/MCW)
+- [Microsoft Cloud Workshop](https://microsoftcloudworkshop.com/index.html)
